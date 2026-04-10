@@ -5,6 +5,21 @@
 
 const EXTENSION_NAME = 'theEndless';
 
+// Default worlds shipped with the extension
+const DEFAULT_WORLDS = [
+    { id: 'night-city',        name: 'Night City',          bookName: 'Night City - Cyberpunk Red', note: 'Cyberpunk dystopia' },
+    { id: 'stardust-valley',   name: 'Stardust Valley',     bookName: 'Stardust Valley',            note: 'Cozy supernatural valley' },
+    { id: 'ashlands',          name: 'The Ashlands',         bookName: 'The Ashlands',               note: 'Dark Souls-adjacent dying kingdom' },
+    { id: 'pale-fog',          name: 'Pale Fog',             bookName: 'Pale Fog',                   note: 'Silent Hill-adjacent horror' },
+    { id: 'fallout-wastes',    name: 'The Fallout Wastes',   bookName: 'The Fallout Wastes',         note: 'Post-apocalyptic wasteland' },
+    { id: 'evergreen-vale',    name: 'Evergreen Vale',       bookName: 'Evergreen Vale',             note: 'Ghibli-esque cozy village' },
+    { id: 'endless-library',   name: 'The Endless Library',  bookName: 'The Endless Library',        note: 'Liminal infinite library' },
+    { id: 'ironwater-station', name: 'Ironwater Station',    bookName: 'Ironwater Station',          note: 'Abandoned deep space station' },
+    { id: 'frontier',          name: 'The Frontier',         bookName: 'The Frontier',               note: 'Wild west' },
+    { id: 'dunwater-coast',    name: 'Dunwater Coast',       bookName: 'Dunwater Coast',             note: 'Pirate island chains' },
+    { id: 'aldenmoor',         name: 'Aldenmoor',            bookName: 'Aldenmoor',                  note: 'High fantasy continent' },
+];
+
 const DEFAULT_SETTINGS = {
     enabled: true,
     currentWorldId: null,
@@ -13,19 +28,7 @@ const DEFAULT_SETTINGS = {
     preventRepeatWorld: true,
     showTransitionNotification: true,
     injectionDepth: 4,
-    worldBookNames: {
-        'night-city': 'Night City - Cyberpunk Red',
-        'stardust-valley': 'Stardust Valley',
-        'ashlands': 'The Ashlands',
-        'pale-fog': 'Pale Fog',
-        'fallout-wastes': 'The Fallout Wastes',
-        'evergreen-vale': 'Evergreen Vale',
-        'endless-library': 'The Endless Library',
-        'ironwater-station': 'Ironwater Station',
-        'frontier': 'The Frontier',
-        'dunwater-coast': 'Dunwater Coast',
-        'aldenmoor': 'Aldenmoor',
-    },
+    worlds: structuredClone(DEFAULT_WORLDS),
 };
 
 // Session state — not persisted, lives only in memory
@@ -43,21 +46,26 @@ function initSettings() {
     if (!context.extensionSettings[EXTENSION_NAME]) {
         context.extensionSettings[EXTENSION_NAME] = structuredClone(DEFAULT_SETTINGS);
     }
-    // Merge any missing keys from defaults (for upgrades)
     const settings = context.extensionSettings[EXTENSION_NAME];
+
+    // Merge any missing keys from defaults (for upgrades)
     for (const [key, value] of Object.entries(DEFAULT_SETTINGS)) {
         if (!(key in settings)) {
             settings[key] = structuredClone(value);
         }
     }
-    // Merge any missing book name mappings
-    if (settings.worldBookNames) {
-        for (const [key, value] of Object.entries(DEFAULT_SETTINGS.worldBookNames)) {
-            if (!(key in settings.worldBookNames)) {
-                settings.worldBookNames[key] = value;
-            }
-        }
+
+    // Migrate from old worldBookNames format to new worlds array
+    if (settings.worldBookNames && !settings.worlds) {
+        settings.worlds = structuredClone(DEFAULT_WORLDS);
+        delete settings.worldBookNames;
     }
+
+    // Ensure worlds array exists
+    if (!Array.isArray(settings.worlds)) {
+        settings.worlds = structuredClone(DEFAULT_WORLDS);
+    }
+
     context.saveSettingsDebounced();
 }
 
@@ -89,7 +97,6 @@ function saveChatWorldState(worldId) {
 
 /**
  * Restore world state from chat metadata.
- * Returns the worldId stored in the current chat, or null if none.
  */
 function getChatWorldState() {
     const context = SillyTavern.getContext();
@@ -107,6 +114,7 @@ function getSessionState() {
 export {
     EXTENSION_NAME,
     DEFAULT_SETTINGS,
+    DEFAULT_WORLDS,
     initSettings,
     getSettings,
     saveSettings,

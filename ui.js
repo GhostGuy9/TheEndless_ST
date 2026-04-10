@@ -3,7 +3,7 @@
  */
 
 import { getSettings, saveSettings } from './state.js';
-import { getWorldRegistry, getWorldName, findWorldIdByName, activateWorld, selectRandomWorld } from './world-manager.js';
+import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getUnregisteredBooks, selectRandomWorld, activateWorld } from './world-manager.js';
 import { updateWorldPrompt } from './interceptor.js';
 
 /**
@@ -13,7 +13,6 @@ async function initUI() {
     const context = SillyTavern.getContext();
 
     try {
-        // Use import.meta.url to find our own directory, regardless of folder name
         const baseUrl = new URL('.', import.meta.url).href;
         const response = await fetch(`${baseUrl}settings.html`);
         if (!response.ok) throw new Error(`Failed to load settings.html: ${response.status}`);
@@ -25,40 +24,77 @@ async function initUI() {
     }
 
     populateWorldSelect();
-    populateBookNameMapping();
+    populateAddBookSelect();
+    renderWorldList();
     syncUIToState();
     bindUIEvents();
 }
 
 /**
- * Populate the world dropdown selector.
+ * Populate the world dropdown selector (for manual "Go to" control).
  */
 function populateWorldSelect() {
     const $select = $('#theendless_world_select');
-    const registry = getWorldRegistry();
+    $select.find('option:not(:first)').remove();
 
-    for (const [id, world] of Object.entries(registry)) {
-        $select.append(`<option value="${id}">${world.name}</option>`);
+    for (const world of getWorlds()) {
+        $select.append(`<option value="${world.id}">${world.name}</option>`);
     }
 }
 
 /**
- * Populate the lorebook name mapping fields.
+ * Populate the "Add World" dropdown with unregistered World Info books.
  */
-function populateBookNameMapping() {
-    const $list = $('#theendless_bookname_list');
-    const settings = getSettings();
-    const registry = getWorldRegistry();
+function populateAddBookSelect() {
+    const $select = $('#theendless_add_book_select');
+    $select.find('option:not(:first)').remove();
 
-    for (const [id, world] of Object.entries(registry)) {
-        const currentName = settings.worldBookNames?.[id] ?? world.defaultBook;
-        $list.append(`
-            <div class="theendless-bookname-entry">
-                <label>${world.name}:</label>
-                <input type="text" class="text_pole theendless-bookname-input" data-world-id="${id}" value="${currentName}" />
+    const available = getUnregisteredBooks();
+    for (const bookName of available) {
+        $select.append(`<option value="${bookName}">${bookName}</option>`);
+    }
+}
+
+/**
+ * Render the world list in the settings panel.
+ */
+function renderWorldList() {
+    const $list = $('#theendless_world_list');
+    $list.empty();
+
+    const worlds = getWorlds();
+    if (worlds.length === 0) {
+        $list.append('<div class="theendless-empty">No worlds registered. Add a World Info book above.</div>');
+        return;
+    }
+
+    for (const world of worlds) {
+        const $entry = $(`
+            <div class="theendless-world-entry" data-world-id="${world.id}">
+                <div class="theendless-world-entry-header">
+                    <span class="theendless-world-entry-name">${world.name}</span>
+                    <span class="theendless-world-entry-book" title="World Info book: ${world.bookName}">${world.bookName}</span>
+                    <button class="menu_button theendless-remove-world" data-world-id="${world.id}" title="Remove world">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+                <div class="theendless-world-entry-note">
+                    <input type="text" class="text_pole theendless-note-input" data-world-id="${world.id}"
+                           value="${world.note || ''}" placeholder="Note (optional)" />
+                </div>
             </div>
         `);
+        $list.append($entry);
     }
+}
+
+/**
+ * Refresh all dynamic UI elements.
+ */
+function refreshUI() {
+    populateWorldSelect();
+    populateAddBookSelect();
+    renderWorldList();
 }
 
 /**
@@ -119,6 +155,10 @@ function bindUIEvents() {
         const settings = getSettings();
         const excludeId = settings.preventRepeatWorld ? settings.currentWorldId : null;
         const worldId = selectRandomWorld(excludeId);
+        if (!worldId) {
+            toastr.warning('No worlds registered', 'The Endless');
+            return;
+        }
         await doTransition(worldId);
     });
 
@@ -127,20 +167,53 @@ function bindUIEvents() {
         await doTransition(null);
     });
 
-    // Book name mapping changes
-    $(document).on('change', '.theendless-bookname-input', function () {
-        const worldId = $(this).data('world-id');
-        const bookName = $(this).val().trim();
-        if (worldId && bookName) {
-            getSettings().worldBookNames[worldId] = bookName;
-            saveSettings();
+    // Add world
+    $('#theendless_add_world_btn').on('click', function () {
+        const bookName = $('#theendless_add_book_select').val();
+        if (!bookName) {
+            toastr.warning('Select a World Info book first', 'The Endless');
+            return;
         }
+
+        const world = addWorld(bookName);
+        if (!world) {
+            toastr.warning('This world is already registered', 'The Endless');
+            return;
+        }
+
+        toastr.success(`Added: ${world.name}`, 'The Endless', { timeOut: 3000 });
+        refreshUI();
+    });
+
+    // Remove world (delegated event for dynamic elements)
+    $(document).on('click', '.theendless-remove-world', function () {
+        const worldId = $(this).data('world-id');
+        const world = getWorlds().find(w => w.id === worldId);
+        if (!world) return;
+
+        if (!confirm(`Remove "${world.name}" from the world registry?`)) return;
+
+        removeWorld(worldId);
+
+        // If we're currently in this world, return to Manifold
+        if (getSettings().currentWorldId === worldId) {
+            doTransition(null);
+        }
+
+        refreshUI();
+        toastr.info(`Removed: ${world.name}`, 'The Endless', { timeOut: 3000 });
+    });
+
+    // Update note (delegated event for dynamic elements)
+    $(document).on('change', '.theendless-note-input', function () {
+        const worldId = $(this).data('world-id');
+        const note = $(this).val().trim();
+        updateWorldNote(worldId, note);
     });
 }
 
 /**
  * Perform a world transition from the UI.
- * This mirrors the transition logic in index.js but is triggered manually.
  */
 async function doTransition(worldId) {
     const settings = getSettings();

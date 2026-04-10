@@ -59,13 +59,23 @@
 
         <hr />
 
-        <!-- Book Name Mapping (collapsible) -->
-        <div class="theendless-booknames inline-drawer">
-            <div class="inline-drawer-toggle inline-drawer-header">
-                <span>Lorebook Name Mapping</span>
-                <div class="inline-drawer-icon fa-solid fa-chevron-down down"></div>
+        <!-- World Registry (dynamic) -->
+        <div class="theendless-worlds-section">
+            <div class="theendless-section-header">
+                <b>World Registry</b>
+                <small>Worlds that doors can lead to. Add any World Info lorebook as a destination.</small>
             </div>
-            <div class="inline-drawer-content" id="theendless_bookname_list">
+
+            <!-- Add World -->
+            <div class="theendless-add-world">
+                <select id="theendless_add_book_select" class="text_pole">
+                    <option value="">— Select a World Info book —</option>
+                </select>
+                <input id="theendless_add_world_btn" class="menu_button" type="button" value="Add World" />
+            </div>
+
+            <!-- World List -->
+            <div id="theendless_world_list" class="theendless-world-list">
                 <!-- Populated dynamically by ui.js -->
             </div>
         </div>

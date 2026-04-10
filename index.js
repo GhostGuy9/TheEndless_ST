@@ -7,7 +7,7 @@
  */
 
 import { initSettings, getSettings, saveSettings, saveChatWorldState, getChatWorldState, getSessionState } from './state.js';
-import { selectRandomWorld, activateWorld, getWorldName, getWorldRegistry, findWorldIdByName } from './world-manager.js';
+import { selectRandomWorld, activateWorld, getWorldName, getWorlds, findWorldIdByName } from './world-manager.js';
 import { detectDoorEvent } from './door-detector.js';
 import { updateWorldPrompt, createGenerateInterceptor } from './interceptor.js';
 import { initUI, updateWorldDisplay } from './ui.js';
@@ -171,7 +171,7 @@ function registerSlashCommands() {
             }
             const worldId = findWorldIdByName(value.trim());
             if (!worldId) {
-                const names = Object.values(getWorldRegistry()).map(w => w.name).join(', ');
+                const names = getWorlds().map(w => w.name).join(', ');
                 return `Unknown world. Available: ${names}`;
             }
             await transitionToWorld(worldId);

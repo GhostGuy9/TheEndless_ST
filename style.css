@@ -55,25 +55,91 @@
     flex: 1;
 }
 
-.theendless-booknames .inline-drawer-content {
+/* World Registry Section */
+
+.theendless-worlds-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.theendless-section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.theendless-section-header small {
+    color: var(--SmartThemeQuoteColor, #888);
+    font-size: 0.85em;
+}
+
+.theendless-add-world {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.theendless-add-world select {
+    flex: 1;
+}
+
+.theendless-world-list {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    padding-top: 6px;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
-.theendless-bookname-entry {
+.theendless-world-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    border: 1px solid var(--SmartThemeBorderColor, #444);
+    border-radius: 4px;
+    background: var(--SmartThemeBlurTintColor, rgba(0, 0, 0, 0.15));
+}
+
+.theendless-world-entry-header {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
 
-.theendless-bookname-entry label {
-    min-width: 140px;
-    font-size: 0.9em;
-    color: var(--SmartThemeQuoteColor, #aaa);
+.theendless-world-entry-name {
+    font-weight: bold;
+    color: var(--SmartThemeBodyColor, #ddd);
+    flex-shrink: 0;
 }
 
-.theendless-bookname-entry input {
+.theendless-world-entry-book {
+    font-size: 0.85em;
+    color: var(--SmartThemeQuoteColor, #888);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     flex: 1;
+}
+
+.theendless-world-entry-note {
+    display: flex;
+}
+
+.theendless-world-entry-note input {
+    flex: 1;
+    font-size: 0.9em;
+}
+
+.theendless-remove-world {
+    flex-shrink: 0;
+    padding: 2px 6px !important;
+    font-size: 0.85em;
+}
+
+.theendless-empty {
+    color: var(--SmartThemeQuoteColor, #888);
+    font-style: italic;
+    padding: 8px 0;
 }

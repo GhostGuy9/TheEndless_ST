@@ -1,28 +1,24 @@
 /**
  * World registry, random selection, and lorebook activation/deactivation.
+ * Registry is dynamic — stored in settings, not hardcoded.
  */
 
-import { getSettings } from './state.js';
-
-const WORLD_REGISTRY = {
-    'night-city':        { name: 'Night City',          defaultBook: 'Night City - Cyberpunk Red' },
-    'stardust-valley':   { name: 'Stardust Valley',     defaultBook: 'Stardust Valley' },
-    'ashlands':          { name: 'The Ashlands',         defaultBook: 'The Ashlands' },
-    'pale-fog':          { name: 'Pale Fog',             defaultBook: 'Pale Fog' },
-    'fallout-wastes':    { name: 'The Fallout Wastes',   defaultBook: 'The Fallout Wastes' },
-    'evergreen-vale':    { name: 'Evergreen Vale',       defaultBook: 'Evergreen Vale' },
-    'endless-library':   { name: 'The Endless Library',  defaultBook: 'The Endless Library' },
-    'ironwater-station': { name: 'Ironwater Station',    defaultBook: 'Ironwater Station' },
-    'frontier':          { name: 'The Frontier',         defaultBook: 'The Frontier' },
-    'dunwater-coast':    { name: 'Dunwater Coast',       defaultBook: 'Dunwater Coast' },
-    'aldenmoor':         { name: 'Aldenmoor',            defaultBook: 'Aldenmoor' },
-};
+import { getSettings, saveSettings } from './state.js';
 
 /**
- * Get the world registry.
+ * Get all worlds from the dynamic registry.
+ * Returns an array of { id, name, bookName, note }.
  */
-function getWorldRegistry() {
-    return WORLD_REGISTRY;
+function getWorlds() {
+    const settings = getSettings();
+    return settings.worlds || [];
+}
+
+/**
+ * Get a world by its ID.
+ */
+function getWorld(worldId) {
+    return getWorlds().find(w => w.id === worldId) ?? null;
 }
 
 /**
@@ -30,15 +26,14 @@ function getWorldRegistry() {
  */
 function getWorldName(worldId) {
     if (!worldId) return 'The Manifold';
-    return WORLD_REGISTRY[worldId]?.name ?? 'Unknown World';
+    return getWorld(worldId)?.name ?? 'Unknown World';
 }
 
 /**
- * Get the lorebook book name for a world ID, using user-configured overrides.
+ * Get the lorebook book name for a world ID.
  */
 function getBookName(worldId) {
-    const settings = getSettings();
-    return settings.worldBookNames?.[worldId] ?? WORLD_REGISTRY[worldId]?.defaultBook ?? null;
+    return getWorld(worldId)?.bookName ?? null;
 }
 
 /**
@@ -46,15 +41,18 @@ function getBookName(worldId) {
  */
 function findWorldIdByName(searchName) {
     const lower = searchName.toLowerCase();
-    for (const [id, world] of Object.entries(WORLD_REGISTRY)) {
-        if (world.name.toLowerCase() === lower || id === lower) {
-            return id;
+    const worlds = getWorlds();
+
+    // Exact match first
+    for (const world of worlds) {
+        if (world.name.toLowerCase() === lower || world.id === lower) {
+            return world.id;
         }
     }
     // Partial match
-    for (const [id, world] of Object.entries(WORLD_REGISTRY)) {
-        if (world.name.toLowerCase().includes(lower) || id.includes(lower)) {
-            return id;
+    for (const world of worlds) {
+        if (world.name.toLowerCase().includes(lower) || world.id.includes(lower)) {
+            return world.id;
         }
     }
     return null;
@@ -64,17 +62,89 @@ function findWorldIdByName(searchName) {
  * Select a random world, optionally excluding one.
  */
 function selectRandomWorld(excludeWorldId = null) {
-    const available = Object.keys(WORLD_REGISTRY).filter(id => id !== excludeWorldId);
-    if (available.length === 0) return Object.keys(WORLD_REGISTRY)[0];
+    const worlds = getWorlds();
+    const available = worlds.filter(w => w.id !== excludeWorldId);
+    if (available.length === 0) return worlds[0]?.id ?? null;
     const index = Math.floor(Math.random() * available.length);
-    return available[index];
+    return available[index].id;
+}
+
+/**
+ * Generate a URL-safe ID from a book name.
+ */
+function generateWorldId(bookName) {
+    return bookName
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+}
+
+/**
+ * Add a new world to the registry.
+ * Returns the new world object, or null if it already exists.
+ */
+function addWorld(bookName, note = '') {
+    const settings = getSettings();
+    const id = generateWorldId(bookName);
+
+    // Check for duplicate
+    if (settings.worlds.some(w => w.id === id || w.bookName === bookName)) {
+        return null;
+    }
+
+    const world = { id, name: bookName, bookName, note };
+    settings.worlds.push(world);
+    saveSettings();
+    console.log(`[TheEndless] Added world: ${bookName} (${id})`);
+    return world;
+}
+
+/**
+ * Remove a world from the registry by ID.
+ */
+function removeWorld(worldId) {
+    const settings = getSettings();
+    const index = settings.worlds.findIndex(w => w.id === worldId);
+    if (index === -1) return false;
+
+    const removed = settings.worlds.splice(index, 1)[0];
+    saveSettings();
+    console.log(`[TheEndless] Removed world: ${removed.name} (${worldId})`);
+    return true;
+}
+
+/**
+ * Update a world's note.
+ */
+function updateWorldNote(worldId, note) {
+    const world = getWorld(worldId);
+    if (!world) return false;
+    world.note = note;
+    saveSettings();
+    return true;
+}
+
+/**
+ * Get a list of all World Info book names currently loaded in ST.
+ */
+function getAvailableWorldInfoBooks() {
+    const context = SillyTavern.getContext();
+    // world_names is the array of loaded World Info book names in ST
+    return context.world_names || [];
+}
+
+/**
+ * Get World Info books that are not yet in the registry.
+ */
+function getUnregisteredBooks() {
+    const registered = new Set(getWorlds().map(w => w.bookName));
+    return getAvailableWorldInfoBooks().filter(name => !registered.has(name));
 }
 
 /**
  * Toggle all entries in a world lorebook to enabled or disabled.
  */
 async function toggleWorldBook(bookName, disable) {
-    const context = SillyTavern.getContext();
     try {
         const response = await fetch('/api/worldinfo/get', {
             method: 'POST',
@@ -114,11 +184,12 @@ async function toggleWorldBook(bookName, disable) {
  * Pass null to deactivate all (return to Manifold).
  */
 async function activateWorld(worldId) {
-    // Deactivate ALL world lorebooks
-    const deactivatePromises = Object.keys(WORLD_REGISTRY).map(id => {
-        const bookName = getBookName(id);
-        return bookName ? toggleWorldBook(bookName, true) : Promise.resolve();
-    });
+    const worlds = getWorlds();
+
+    // Deactivate ALL registered world lorebooks
+    const deactivatePromises = worlds.map(w =>
+        w.bookName ? toggleWorldBook(w.bookName, true) : Promise.resolve(),
+    );
     await Promise.all(deactivatePromises);
 
     // Activate the selected world's lorebook
@@ -131,11 +202,17 @@ async function activateWorld(worldId) {
 }
 
 export {
-    WORLD_REGISTRY,
-    getWorldRegistry,
+    getWorlds,
+    getWorld,
     getWorldName,
     getBookName,
     findWorldIdByName,
     selectRandomWorld,
+    generateWorldId,
+    addWorld,
+    removeWorld,
+    updateWorldNote,
+    getAvailableWorldInfoBooks,
+    getUnregisteredBooks,
     activateWorld,
 };
