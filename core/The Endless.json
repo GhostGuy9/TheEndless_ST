@@ -2340,7 +2340,7 @@
       ],
       "keysecondary": [],
       "comment": "[Meta] Dialogue Formatting Guide",
-      "content": "FORMAT: Narration uses *italic asterisks*. NPC dialogue uses font color tags: <font color=\"#E88D67\">Name: \"One sentence.\"</font> — each character gets a unique hex color. One sentence per dialogue line. Actions on separate *italic* lines. Keep responses concise.",
+      "content": "FORMAT: Narration uses *italic asterisks*. NPC dialogue uses font color tags with speech only, no name: <font color=\"#E88D67\">\"One sentence.\"</font> — each character gets a unique hex color. One sentence per dialogue line. Actions on separate *italic* lines. Keep responses concise.",
       "constant": true,
       "vectorized": false,
       "selective": false,
