@@ -13,7 +13,7 @@ async function initUI() {
     const context = SillyTavern.getContext();
 
     try {
-        const html = await context.renderExtensionTemplateAsync('third-party/TheEndless', 'settings');
+        const html = await context.renderExtensionTemplateAsync('third-party/TheEndless_ST', 'settings');
         $('#extensions_settings2').append(html);
     } catch (e) {
         console.warn('[TheEndless] Could not render settings template:', e);
