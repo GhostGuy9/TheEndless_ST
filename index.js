@@ -7,7 +7,7 @@
  */
 
 import { initSettings, getSettings, saveSettings, saveChatWorldState, getChatWorldState, getSessionState } from './state.js';
-import { selectRandomWorld, activateWorld, getWorldName, getWorlds, findWorldIdByName } from './world-manager.js';
+import { selectRandomWorld, activateWorld, disableAllWorldBooks, getWorldName, getWorlds, findWorldIdByName } from './world-manager.js';
 import { detectDoorEvent } from './door-detector.js';
 import { updateWorldPrompt, clearTransitionPrompt, createGenerateInterceptor } from './interceptor.js';
 import { initUI, updateWorldDisplay } from './ui.js';
@@ -245,8 +245,14 @@ async function init() {
     await initUI();
     registerSlashCommands();
 
-    // Set initial world prompt
+    // Disable all world lorebook entries on startup, then activate current world if any
     const settings = getSettings();
+    await disableAllWorldBooks();
+    if (settings.currentWorldId) {
+        await activateWorld(settings.currentWorldId);
+    }
+
+    // Set initial world prompt
     updateWorldPrompt(settings.currentWorldId);
     updateWorldDisplay(settings.currentWorldId);
 

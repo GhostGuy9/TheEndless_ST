@@ -3,7 +3,7 @@
  */
 
 import { getSettings, saveSettings } from './state.js';
-import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld, activateWorld } from './world-manager.js';
+import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld, activateWorld, disableAllWorldBooks } from './world-manager.js';
 import { updateWorldPrompt } from './interceptor.js';
 
 /**
@@ -173,6 +173,17 @@ function bindUIEvents() {
     // Return to Manifold
     $('#theendless_go_manifold').on('click', async function () {
         await doTransition(null);
+    });
+
+    // Disable all world lore (clean slate)
+    $('#theendless_disable_all').on('click', async function () {
+        await disableAllWorldBooks();
+        const settings = getSettings();
+        settings.currentWorldId = null;
+        saveSettings();
+        updateWorldPrompt(null);
+        updateWorldDisplay(null);
+        toastr.info('All world lorebook entries disabled', 'The Endless', { timeOut: 3000 });
     });
 
     // Refresh the "Add World" dropdown every time it's opened

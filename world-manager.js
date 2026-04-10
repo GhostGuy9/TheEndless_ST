@@ -179,30 +179,52 @@ async function toggleWorldBook(bookName, disable) {
         });
         if (!response.ok) {
             console.warn(`[TheEndless] Could not load world book "${bookName}": ${response.status}`);
-            return;
+            return false;
         }
         const data = await response.json();
-        if (!data?.entries) return;
+        if (!data?.entries) {
+            console.warn(`[TheEndless] World book "${bookName}" has no entries`);
+            return false;
+        }
 
-        let changed = false;
+        let changed = 0;
+        const total = Object.keys(data.entries).length;
         for (const entry of Object.values(data.entries)) {
             if (entry.disable !== disable) {
                 entry.disable = disable;
-                changed = true;
+                changed++;
             }
         }
 
-        if (changed) {
+        if (changed > 0) {
             await fetch('/api/worldinfo/edit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name: bookName, data }),
             });
-            console.log(`[TheEndless] ${disable ? 'Disabled' : 'Enabled'} world book: ${bookName}`);
+            console.log(`[TheEndless] ${disable ? 'Disabled' : 'Enabled'} ${changed}/${total} entries in "${bookName}"`);
+        } else {
+            console.log(`[TheEndless] "${bookName}" already ${disable ? 'disabled' : 'enabled'} (${total} entries)`);
         }
+        return true;
     } catch (e) {
         console.warn(`[TheEndless] Error toggling world book "${bookName}":`, e);
+        return false;
     }
+}
+
+/**
+ * Disable all entries in ALL registered world lorebooks.
+ * Call on startup to ensure a clean state.
+ */
+async function disableAllWorldBooks() {
+    const worlds = getWorlds();
+    console.log(`[TheEndless] Disabling all world lorebook entries (${worlds.length} worlds)...`);
+    const results = await Promise.all(
+        worlds.map(w => w.bookName ? toggleWorldBook(w.bookName, true) : Promise.resolve(true)),
+    );
+    const succeeded = results.filter(r => r === true).length;
+    console.log(`[TheEndless] Disabled ${succeeded}/${worlds.length} world lorebooks`);
 }
 
 /**
@@ -242,4 +264,5 @@ export {
     getAllBooksWithStatus,
     getUnregisteredBooks,
     activateWorld,
+    disableAllWorldBooks,
 };
