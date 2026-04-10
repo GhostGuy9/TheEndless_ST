@@ -126,11 +126,40 @@ function updateWorldNote(worldId, note) {
 
 /**
  * Get a list of all World Info book names currently loaded in ST.
+ * Tries multiple known sources since the property name varies by ST version.
  */
 function getAvailableWorldInfoBooks() {
     const context = SillyTavern.getContext();
-    // world_names is the array of loaded World Info book names in ST
-    return context.world_names || [];
+
+    // Try known properties for the world info book list
+    if (Array.isArray(context.world_names) && context.world_names.length > 0) {
+        return [...context.world_names];
+    }
+    if (Array.isArray(context.worldNames) && context.worldNames.length > 0) {
+        return [...context.worldNames];
+    }
+
+    // Fallback: try to get from the world info manager
+    if (context.worldInfoManager?.getWorldNames) {
+        const names = context.worldInfoManager.getWorldNames();
+        if (Array.isArray(names)) return [...names];
+    }
+
+    console.warn('[TheEndless] Could not find world_names in context. Available keys:', Object.keys(context).filter(k => k.toLowerCase().includes('world')));
+    return [];
+}
+
+/**
+ * Get all available World Info books (shows everything, including already registered).
+ * Returns objects with { name, registered } for UI display.
+ */
+function getAllBooksWithStatus() {
+    const registered = new Set(getWorlds().map(w => w.bookName));
+    const allBooks = getAvailableWorldInfoBooks();
+    return allBooks.map(name => ({
+        name,
+        registered: registered.has(name),
+    }));
 }
 
 /**
@@ -213,6 +242,7 @@ export {
     removeWorld,
     updateWorldNote,
     getAvailableWorldInfoBooks,
+    getAllBooksWithStatus,
     getUnregisteredBooks,
     activateWorld,
 };

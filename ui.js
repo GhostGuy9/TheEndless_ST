@@ -3,7 +3,7 @@
  */
 
 import { getSettings, saveSettings } from './state.js';
-import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getUnregisteredBooks, selectRandomWorld, activateWorld } from './world-manager.js';
+import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld, activateWorld } from './world-manager.js';
 import { updateWorldPrompt } from './interceptor.js';
 
 /**
@@ -43,16 +43,24 @@ function populateWorldSelect() {
 }
 
 /**
- * Populate the "Add World" dropdown with unregistered World Info books.
+ * Populate the "Add World" dropdown with all available World Info books.
+ * Already-registered books are shown but marked as such.
  */
 function populateAddBookSelect() {
     const $select = $('#theendless_add_book_select');
+    const currentVal = $select.val();
     $select.find('option:not(:first)').remove();
 
-    const available = getUnregisteredBooks();
-    for (const bookName of available) {
-        $select.append(`<option value="${bookName}">${bookName}</option>`);
+    const books = getAllBooksWithStatus();
+    console.log('[TheEndless] Available World Info books:', books);
+
+    for (const book of books) {
+        const label = book.registered ? `${book.name} (already added)` : book.name;
+        $select.append(`<option value="${book.name}" ${book.registered ? 'disabled' : ''}>${label}</option>`);
     }
+
+    // Restore selection if still valid
+    if (currentVal) $select.val(currentVal);
 }
 
 /**
