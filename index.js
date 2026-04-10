@@ -9,7 +9,7 @@
 import { initSettings, getSettings, saveSettings, saveChatWorldState, getChatWorldState, getSessionState } from './state.js';
 import { selectRandomWorld, activateWorld, getWorldName, getWorlds, findWorldIdByName } from './world-manager.js';
 import { detectDoorEvent } from './door-detector.js';
-import { updateWorldPrompt, createGenerateInterceptor } from './interceptor.js';
+import { updateWorldPrompt, clearTransitionPrompt, createGenerateInterceptor } from './interceptor.js';
 import { initUI, updateWorldDisplay } from './ui.js';
 
 const DEBOUNCE_PLAYER_MS = 5000;
@@ -63,9 +63,9 @@ async function transitionToWorld(worldId) {
         console.log(`[TheEndless] Transitioned to: ${getWorldName(worldId)}`);
     } finally {
         session.isProcessing = false;
-        // Clear pending transition after one generation cycle
+        // Clear transition prompt after one generation cycle
         setTimeout(() => {
-            session.pendingTransition = null;
+            clearTransitionPrompt(worldId);
         }, PENDING_CLEAR_MS);
     }
 }
@@ -254,6 +254,14 @@ async function init() {
     context.eventSource.on(context.event_types.MESSAGE_SENT, onPlayerMessage);
     context.eventSource.on(context.event_types.MESSAGE_RECEIVED, onModelMessage);
     context.eventSource.on(context.event_types.CHAT_CHANGED, onChatChanged);
+
+    // Clear transition prompt after generation completes
+    context.eventSource.on(context.event_types.GENERATION_ENDED, () => {
+        const session = getSessionState();
+        if (session.pendingTransition) {
+            clearTransitionPrompt(getSettings().currentWorldId);
+        }
+    });
 
     console.log('[TheEndless] Door Manager extension activated');
 }
