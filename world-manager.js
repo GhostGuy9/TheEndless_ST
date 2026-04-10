@@ -126,39 +126,22 @@ function updateWorldNote(worldId, note) {
 
 /**
  * Get a list of all World Info book names currently loaded in ST.
- * Reads from ST's World Info select elements in the DOM and falls back to API.
+ * ST's World Info select options use numeric indices as values and book names as text.
  */
 function getAvailableWorldInfoBooks() {
     const names = new Set();
 
-    // Method 1: Read from ST's World Info select dropdown in the DOM
-    // ST uses #world_info select for the main world info list
-    $('#world_info option, #world_editor_select option, [id*="world_info"] option').each(function () {
-        const val = $(this).val();
-        if (val && val !== '' && val !== 'None' && val !== 'none') {
-            names.add(val);
-        }
-    });
-
-    // Method 2: Try context properties (varies by ST version)
-    const context = SillyTavern.getContext();
-    for (const prop of ['world_names', 'worldNames']) {
-        if (Array.isArray(context[prop])) {
-            context[prop].forEach(n => { if (n) names.add(n); });
-        }
-    }
-
-    // Method 3: Read from any visible World Info book list elements
-    $('.world_entry .world_name, .world_info_entry_name').each(function () {
+    // Read from ST's World Info select dropdowns — text() has the name, val() is just an index
+    $('#world_info option, #world_editor_select option').each(function () {
         const text = $(this).text().trim();
-        if (text) names.add(text);
+        if (text && text !== '' && text !== 'None' && text !== 'none' && text !== '--- None ---') {
+            names.add(text);
+        }
     });
 
     const result = [...names].sort();
     if (result.length === 0) {
-        console.warn('[TheEndless] Could not find any World Info books. DOM and context both empty.');
-    } else {
-        console.log(`[TheEndless] Found ${result.length} World Info books`);
+        console.warn('[TheEndless] No World Info books found in DOM selects.');
     }
     return result;
 }
