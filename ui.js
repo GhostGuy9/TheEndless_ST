@@ -3,8 +3,8 @@
  */
 
 import { getSettings, saveSettings } from './state.js';
-import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld, activateWorld, disableAllWorldBooks } from './world-manager.js';
-import { updateWorldPrompt } from './interceptor.js';
+import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld } from './world-manager.js';
+import { updateWorldPrompt, updateWorldLore } from './interceptor.js';
 
 /**
  * Initialize the settings panel UI.
@@ -175,15 +175,10 @@ function bindUIEvents() {
         await doTransition(null);
     });
 
-    // Disable all world lore (clean slate)
+    // Clear all world lore (clean slate — return to Manifold)
     $('#theendless_disable_all').on('click', async function () {
-        await disableAllWorldBooks();
-        const settings = getSettings();
-        settings.currentWorldId = null;
-        saveSettings();
-        updateWorldPrompt(null);
-        updateWorldDisplay(null);
-        toastr.info('All world lorebook entries disabled', 'The Endless', { timeOut: 3000 });
+        await doTransition(null);
+        toastr.info('World lore cleared — back to Manifold', 'The Endless', { timeOut: 3000 });
     });
 
     // Refresh the "Add World" dropdown every time it's opened
@@ -242,7 +237,7 @@ function bindUIEvents() {
 async function doTransition(worldId) {
     const settings = getSettings();
 
-    await activateWorld(worldId);
+    await updateWorldLore(worldId);
 
     settings.previousWorldId = settings.currentWorldId;
     settings.currentWorldId = worldId;

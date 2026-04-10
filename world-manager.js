@@ -1,13 +1,15 @@
 /**
- * World registry, random selection, and lorebook activation/deactivation.
- * Registry is dynamic — stored in settings, not hardcoded.
+ * World registry, random selection, and world lore injection.
+ *
+ * Instead of toggling World Info entries (which doesn't reliably work),
+ * this module reads world lorebook content and provides it for direct
+ * injection via setExtensionPrompt.
  */
 
 import { getSettings, saveSettings } from './state.js';
 
 /**
  * Get all worlds from the dynamic registry.
- * Returns an array of { id, name, bookName, note }.
  */
 function getWorlds() {
     const settings = getSettings();
@@ -37,23 +39,16 @@ function getBookName(worldId) {
 }
 
 /**
- * Find a world ID by partial name match (for slash commands).
+ * Find a world ID by partial name match.
  */
 function findWorldIdByName(searchName) {
     const lower = searchName.toLowerCase();
     const worlds = getWorlds();
-
-    // Exact match first
     for (const world of worlds) {
-        if (world.name.toLowerCase() === lower || world.id === lower) {
-            return world.id;
-        }
+        if (world.name.toLowerCase() === lower || world.id === lower) return world.id;
     }
-    // Partial match
     for (const world of worlds) {
-        if (world.name.toLowerCase().includes(lower) || world.id.includes(lower)) {
-            return world.id;
-        }
+        if (world.name.toLowerCase().includes(lower) || world.id.includes(lower)) return world.id;
     }
     return null;
 }
@@ -65,33 +60,23 @@ function selectRandomWorld(excludeWorldId = null) {
     const worlds = getWorlds();
     const available = worlds.filter(w => w.id !== excludeWorldId);
     if (available.length === 0) return worlds[0]?.id ?? null;
-    const index = Math.floor(Math.random() * available.length);
-    return available[index].id;
+    return available[Math.floor(Math.random() * available.length)].id;
 }
 
 /**
  * Generate a URL-safe ID from a book name.
  */
 function generateWorldId(bookName) {
-    return bookName
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-|-$/g, '');
+    return bookName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
 /**
  * Add a new world to the registry.
- * Returns the new world object, or null if it already exists.
  */
 function addWorld(bookName, note = '') {
     const settings = getSettings();
     const id = generateWorldId(bookName);
-
-    // Check for duplicate
-    if (settings.worlds.some(w => w.id === id || w.bookName === bookName)) {
-        return null;
-    }
-
+    if (settings.worlds.some(w => w.id === id || w.bookName === bookName)) return null;
     const world = { id, name: bookName, bookName, note };
     settings.worlds.push(world);
     saveSettings();
@@ -106,10 +91,9 @@ function removeWorld(worldId) {
     const settings = getSettings();
     const index = settings.worlds.findIndex(w => w.id === worldId);
     if (index === -1) return false;
-
     const removed = settings.worlds.splice(index, 1)[0];
     saveSettings();
-    console.log(`[TheEndless] Removed world: ${removed.name} (${worldId})`);
+    console.log(`[TheEndless] Removed world: ${removed.name}`);
     return true;
 }
 
@@ -125,42 +109,29 @@ function updateWorldNote(worldId, note) {
 }
 
 /**
- * Get a list of all World Info book names currently loaded in ST.
- * ST's World Info select options use numeric indices as values and book names as text.
+ * Get available World Info books from ST's DOM.
  */
 function getAvailableWorldInfoBooks() {
     const names = new Set();
-
-    // Read from ST's World Info select dropdowns — text() has the name, val() is just an index
     $('#world_info option, #world_editor_select option').each(function () {
         const text = $(this).text().trim();
         if (text && text !== '' && text !== 'None' && text !== 'none' && text !== '--- None ---') {
             names.add(text);
         }
     });
-
-    const result = [...names].sort();
-    if (result.length === 0) {
-        console.warn('[TheEndless] No World Info books found in DOM selects.');
-    }
-    return result;
+    return [...names].sort();
 }
 
 /**
- * Get all available World Info books (shows everything, including already registered).
- * Returns objects with { name, registered } for UI display.
+ * Get all available books with registration status.
  */
 function getAllBooksWithStatus() {
     const registered = new Set(getWorlds().map(w => w.bookName));
-    const allBooks = getAvailableWorldInfoBooks();
-    return allBooks.map(name => ({
-        name,
-        registered: registered.has(name),
-    }));
+    return getAvailableWorldInfoBooks().map(name => ({ name, registered: registered.has(name) }));
 }
 
 /**
- * Get World Info books that are not yet in the registry.
+ * Get unregistered books.
  */
 function getUnregisteredBooks() {
     const registered = new Set(getWorlds().map(w => w.bookName));
@@ -168,9 +139,11 @@ function getUnregisteredBooks() {
 }
 
 /**
- * Toggle all entries in a world lorebook to enabled or disabled.
+ * Read a world lorebook and extract its content for direct injection.
+ * Returns a formatted string of the world's key lore entries, or null on failure.
+ * Prioritizes: overview, NPC, naming, and location entries. Caps at ~2000 chars to stay lean.
  */
-async function toggleWorldBook(bookName, disable) {
+async function readWorldLore(bookName) {
     try {
         const response = await fetch('/api/worldinfo/get', {
             method: 'POST',
@@ -178,75 +151,118 @@ async function toggleWorldBook(bookName, disable) {
             body: JSON.stringify({ name: bookName }),
         });
         if (!response.ok) {
-            console.warn(`[TheEndless] Could not load world book "${bookName}": ${response.status}`);
-            return false;
+            console.warn(`[TheEndless] Could not read world book "${bookName}": ${response.status}`);
+            return null;
         }
         const data = await response.json();
         if (!data?.entries) {
             console.warn(`[TheEndless] World book "${bookName}" has no entries`);
-            return false;
+            return null;
         }
 
-        let changed = 0;
-        const total = Object.keys(data.entries).length;
-        for (const entry of Object.values(data.entries)) {
-            if (entry.disable !== disable) {
-                entry.disable = disable;
-                changed++;
+        const entries = Object.values(data.entries);
+        const total = entries.length;
+
+        // Categorize entries by their comment prefix
+        const overviews = [];
+        const npcs = [];
+        const naming = [];
+        const locations = [];
+        const other = [];
+
+        for (const entry of entries) {
+            const comment = (entry.comment || '').toLowerCase();
+            const content = entry.content || '';
+            if (!content.trim()) continue;
+
+            if (comment.includes('[overview]') || comment.includes('[meta]')) {
+                overviews.push(content);
+            } else if (comment.includes('[character]')) {
+                npcs.push(content);
+            } else if (comment.includes('naming')) {
+                naming.push(content);
+            } else if (comment.includes('[location]')) {
+                locations.push(content);
+            } else {
+                other.push(content);
             }
         }
 
-        if (changed > 0) {
-            await fetch('/api/worldinfo/edit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name: bookName, data }),
-            });
-            console.log(`[TheEndless] ${disable ? 'Disabled' : 'Enabled'} ${changed}/${total} entries in "${bookName}"`);
-        } else {
-            console.log(`[TheEndless] "${bookName}" already ${disable ? 'disabled' : 'enabled'} (${total} entries)`);
+        // Build injection: overviews first, then naming, then a few key NPCs, then locations
+        const parts = [];
+        let charCount = 0;
+        const charLimit = 2500;
+
+        // Always include overviews
+        for (const text of overviews) {
+            if (charCount + text.length > charLimit) break;
+            parts.push(text);
+            charCount += text.length;
         }
-        return true;
+
+        // Include naming convention
+        for (const text of naming) {
+            if (charCount + text.length > charLimit) break;
+            parts.push(text);
+            charCount += text.length;
+        }
+
+        // Include NPCs (up to 3)
+        let npcCount = 0;
+        for (const text of npcs) {
+            if (npcCount >= 3 || charCount + text.length > charLimit) break;
+            parts.push(text);
+            charCount += text.length;
+            npcCount++;
+        }
+
+        // Fill remaining budget with locations
+        for (const text of locations) {
+            if (charCount + text.length > charLimit) break;
+            parts.push(text);
+            charCount += text.length;
+        }
+
+        if (parts.length === 0) {
+            console.warn(`[TheEndless] No usable content in "${bookName}"`);
+            return null;
+        }
+
+        console.log(`[TheEndless] Read ${parts.length}/${total} entries from "${bookName}" (${charCount} chars)`);
+        return parts.join('\n\n');
     } catch (e) {
-        console.warn(`[TheEndless] Error toggling world book "${bookName}":`, e);
-        return false;
+        console.warn(`[TheEndless] Error reading world book "${bookName}":`, e);
+        return null;
     }
 }
 
+// Cache for world lore to avoid re-reading on every generation
+const loreCache = new Map();
+
 /**
- * Disable all entries in ALL registered world lorebooks.
- * Call on startup to ensure a clean state.
+ * Get world lore content, using cache if available.
  */
-async function disableAllWorldBooks() {
-    const worlds = getWorlds();
-    console.log(`[TheEndless] Disabling all world lorebook entries (${worlds.length} worlds)...`);
-    const results = await Promise.all(
-        worlds.map(w => w.bookName ? toggleWorldBook(w.bookName, true) : Promise.resolve(true)),
-    );
-    const succeeded = results.filter(r => r === true).length;
-    console.log(`[TheEndless] Disabled ${succeeded}/${worlds.length} world lorebooks`);
+async function getWorldLore(worldId) {
+    if (!worldId) return null;
+    const bookName = getBookName(worldId);
+    if (!bookName) return null;
+
+    if (loreCache.has(bookName)) {
+        return loreCache.get(bookName);
+    }
+
+    const lore = await readWorldLore(bookName);
+    if (lore) {
+        loreCache.set(bookName, lore);
+    }
+    return lore;
 }
 
 /**
- * Activate a specific world's lorebook, deactivating all others.
- * Pass null to deactivate all (return to Manifold).
+ * Clear the lore cache (call when worlds are added/removed).
  */
-async function activateWorld(worldId) {
-    const worlds = getWorlds();
-
-    // Deactivate ALL registered world lorebooks
-    const deactivatePromises = worlds.map(w =>
-        w.bookName ? toggleWorldBook(w.bookName, true) : Promise.resolve(),
-    );
-    await Promise.all(deactivatePromises);
-
-    // Activate the selected world's lorebook
-    if (worldId) {
-        const bookName = getBookName(worldId);
-        if (bookName) {
-            await toggleWorldBook(bookName, false);
-        }
-    }
+function clearLoreCache() {
+    loreCache.clear();
 }
 
 export {
@@ -263,6 +279,6 @@ export {
     getAvailableWorldInfoBooks,
     getAllBooksWithStatus,
     getUnregisteredBooks,
-    activateWorld,
-    disableAllWorldBooks,
+    getWorldLore,
+    clearLoreCache,
 };

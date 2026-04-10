@@ -7,9 +7,9 @@
  */
 
 import { initSettings, getSettings, saveSettings, saveChatWorldState, getChatWorldState, getSessionState } from './state.js';
-import { selectRandomWorld, activateWorld, disableAllWorldBooks, getWorldName, getWorlds, findWorldIdByName } from './world-manager.js';
+import { selectRandomWorld, getWorldName, getWorlds, findWorldIdByName } from './world-manager.js';
 import { detectDoorEvent } from './door-detector.js';
-import { updateWorldPrompt, clearTransitionPrompt, createGenerateInterceptor } from './interceptor.js';
+import { updateWorldPrompt, updateWorldLore, clearTransitionPrompt, createGenerateInterceptor } from './interceptor.js';
 import { initUI, updateWorldDisplay } from './ui.js';
 
 const DEBOUNCE_PLAYER_MS = 5000;
@@ -32,8 +32,8 @@ async function transitionToWorld(worldId) {
             timestamp: Date.now(),
         };
 
-        // Toggle lorebooks
-        await activateWorld(worldId);
+        // Inject world lore directly into prompt (bypasses World Info toggle)
+        await updateWorldLore(worldId);
 
         // Update persistent state
         settings.previousWorldId = settings.currentWorldId;
@@ -48,7 +48,7 @@ async function transitionToWorld(worldId) {
         saveSettings();
         saveChatWorldState(worldId);
 
-        // Update prompt injection
+        // Update context note
         updateWorldPrompt(worldId);
 
         // Update UI
@@ -139,8 +139,8 @@ async function onChatChanged() {
     settings.currentWorldId = chatWorldId;
     saveSettings();
 
-    // Activate the correct lorebook
-    await activateWorld(chatWorldId);
+    // Inject the correct world lore
+    await updateWorldLore(chatWorldId);
 
     // Update prompt and UI
     updateWorldPrompt(chatWorldId);
@@ -245,12 +245,9 @@ async function init() {
     await initUI();
     registerSlashCommands();
 
-    // Disable all world lorebook entries on startup, then activate current world if any
+    // Inject world lore for current world if any
     const settings = getSettings();
-    await disableAllWorldBooks();
-    if (settings.currentWorldId) {
-        await activateWorld(settings.currentWorldId);
-    }
+    await updateWorldLore(settings.currentWorldId);
 
     // Set initial world prompt
     updateWorldPrompt(settings.currentWorldId);
