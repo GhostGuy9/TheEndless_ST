@@ -2340,7 +2340,7 @@
       ],
       "keysecondary": [],
       "comment": "[Meta] Dialogue Formatting Guide",
-      "content": "FORMAT: *Narration in italics.* **Name:** \"One sentence of dialogue.\" Actions on separate *italic* lines. One sentence per dialogue line. Never put multiple quoted sentences on one **Name:** line. Keep responses concise.",
+      "content": "FORMAT: Narration uses *italic asterisks*. NPC dialogue uses font color tags: <font color=\"#E88D67\">Name: \"One sentence.\"</font> — each character gets a unique hex color. One sentence per dialogue line. Actions on separate *italic* lines. Keep responses concise.",
       "constant": true,
       "vectorized": false,
       "selective": false,
