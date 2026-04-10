@@ -1,0 +1,79 @@
+/* The Endless — Door Manager Extension Styles */
+
+.theendless-panel {
+    margin-bottom: 10px;
+}
+
+.theendless-current-world {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.theendless-label {
+    font-weight: bold;
+    color: var(--SmartThemeQuoteColor, #aaa);
+}
+
+.theendless-world-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--SmartThemeBodyColor, #ddd);
+}
+
+.theendless-toggles {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.theendless-depth {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.theendless-depth small {
+    color: var(--SmartThemeQuoteColor, #888);
+    font-size: 0.85em;
+}
+
+.theendless-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.theendless-control-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.theendless-control-row select {
+    flex: 1;
+}
+
+.theendless-booknames .inline-drawer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 6px;
+}
+
+.theendless-bookname-entry {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.theendless-bookname-entry label {
+    min-width: 140px;
+    font-size: 0.9em;
+    color: var(--SmartThemeQuoteColor, #aaa);
+}
+
+.theendless-bookname-entry input {
+    flex: 1;
+}
