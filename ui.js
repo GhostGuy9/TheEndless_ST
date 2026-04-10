@@ -167,6 +167,11 @@ function bindUIEvents() {
         await doTransition(null);
     });
 
+    // Refresh the "Add World" dropdown every time it's opened
+    $('#theendless_add_book_select').on('focus mousedown', function () {
+        populateAddBookSelect();
+    });
+
     // Add world
     $('#theendless_add_world_btn').on('click', function () {
         const bookName = $('#theendless_add_book_select').val();
