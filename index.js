@@ -227,23 +227,28 @@ function registerSlashCommands() {
 
 // ─── Lifecycle ──────────────────────────────────────────────────────
 
-export async function onActivate() {
+let initialized = false;
+
+async function init() {
+    if (initialized) return;
+    initialized = true;
+
+    console.log('[TheEndless] Initializing Door Manager extension...');
+
     const context = SillyTavern.getContext();
 
-    // Initialize settings and UI
+    // Initialize settings and generate interceptor
     initSettings();
     createGenerateInterceptor();
 
-    // Wait for app ready to register commands and UI
-    context.eventSource.on(context.event_types.APP_READY, () => {
-        initUI();
-        registerSlashCommands();
+    // Initialize UI and slash commands
+    await initUI();
+    registerSlashCommands();
 
-        // Set initial world prompt
-        const settings = getSettings();
-        updateWorldPrompt(settings.currentWorldId);
-        updateWorldDisplay(settings.currentWorldId);
-    });
+    // Set initial world prompt
+    const settings = getSettings();
+    updateWorldPrompt(settings.currentWorldId);
+    updateWorldDisplay(settings.currentWorldId);
 
     // Wire up event handlers
     context.eventSource.on(context.event_types.MESSAGE_SENT, onPlayerMessage);
@@ -252,3 +257,13 @@ export async function onActivate() {
 
     console.log('[TheEndless] Door Manager extension activated');
 }
+
+// Hook for manifest.json hooks.activate
+export async function onActivate() {
+    await init();
+}
+
+// jQuery ready fallback — ensures init runs even if hooks don't fire
+jQuery(async () => {
+    await init();
+});
