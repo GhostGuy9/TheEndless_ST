@@ -13,7 +13,11 @@ async function initUI() {
     const context = SillyTavern.getContext();
 
     try {
-        const html = await context.renderExtensionTemplateAsync('third-party/TheEndless_ST', 'settings');
+        // Use import.meta.url to find our own directory, regardless of folder name
+        const baseUrl = new URL('.', import.meta.url).href;
+        const response = await fetch(`${baseUrl}settings.html`);
+        if (!response.ok) throw new Error(`Failed to load settings.html: ${response.status}`);
+        const html = await response.text();
         $('#extensions_settings2').append(html);
     } catch (e) {
         console.warn('[TheEndless] Could not render settings template:', e);
