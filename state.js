@@ -18,6 +18,11 @@ const DEFAULT_WORLDS = [
     { id: 'frontier',          name: 'The Frontier',         bookName: 'The Frontier',               note: 'Wild west' },
     { id: 'dunwater-coast',    name: 'Dunwater Coast',       bookName: 'Dunwater Coast',             note: 'Pirate island chains' },
     { id: 'aldenmoor',         name: 'Aldenmoor',            bookName: 'Aldenmoor',                  note: 'High fantasy continent' },
+    { id: 'red-planet',        name: 'The Red Planet',       bookName: 'The Red Planet',             note: 'Glimpse World — rust terrain, white buildings' },
+    { id: 'white-forest',      name: 'The White Forest',     bookName: 'The White Forest',           note: 'Glimpse World — identical pale trees, silence' },
+    { id: 'lighthouse-world',  name: 'The Lighthouse World', bookName: 'The Lighthouse World',       note: 'Glimpse World — endless ocean, one lighthouse' },
+    { id: 'stopped-city',      name: 'The Stopped City',     bookName: 'The Stopped City',           note: 'Glimpse World — frozen mid-morning, no people' },
+    { id: 'slow-thing',        name: 'The Slow Thing',       bookName: 'The Slow Thing',             note: 'Glimpse World — black sand, something on the horizon' },
 ];
 
 const DEFAULT_SETTINGS = {

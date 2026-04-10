@@ -126,27 +126,41 @@ function updateWorldNote(worldId, note) {
 
 /**
  * Get a list of all World Info book names currently loaded in ST.
- * Tries multiple known sources since the property name varies by ST version.
+ * Reads from ST's World Info select elements in the DOM and falls back to API.
  */
 function getAvailableWorldInfoBooks() {
+    const names = new Set();
+
+    // Method 1: Read from ST's World Info select dropdown in the DOM
+    // ST uses #world_info select for the main world info list
+    $('#world_info option, #world_editor_select option, [id*="world_info"] option').each(function () {
+        const val = $(this).val();
+        if (val && val !== '' && val !== 'None' && val !== 'none') {
+            names.add(val);
+        }
+    });
+
+    // Method 2: Try context properties (varies by ST version)
     const context = SillyTavern.getContext();
-
-    // Try known properties for the world info book list
-    if (Array.isArray(context.world_names) && context.world_names.length > 0) {
-        return [...context.world_names];
-    }
-    if (Array.isArray(context.worldNames) && context.worldNames.length > 0) {
-        return [...context.worldNames];
+    for (const prop of ['world_names', 'worldNames']) {
+        if (Array.isArray(context[prop])) {
+            context[prop].forEach(n => { if (n) names.add(n); });
+        }
     }
 
-    // Fallback: try to get from the world info manager
-    if (context.worldInfoManager?.getWorldNames) {
-        const names = context.worldInfoManager.getWorldNames();
-        if (Array.isArray(names)) return [...names];
-    }
+    // Method 3: Read from any visible World Info book list elements
+    $('.world_entry .world_name, .world_info_entry_name').each(function () {
+        const text = $(this).text().trim();
+        if (text) names.add(text);
+    });
 
-    console.warn('[TheEndless] Could not find world_names in context. Available keys:', Object.keys(context).filter(k => k.toLowerCase().includes('world')));
-    return [];
+    const result = [...names].sort();
+    if (result.length === 0) {
+        console.warn('[TheEndless] Could not find any World Info books. DOM and context both empty.');
+    } else {
+        console.log(`[TheEndless] Found ${result.length} World Info books`);
+    }
+    return result;
 }
 
 /**
