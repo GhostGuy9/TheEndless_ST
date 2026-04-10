@@ -2340,7 +2340,7 @@
       ],
       "keysecondary": [],
       "comment": "[Meta] Dialogue Formatting Guide",
-      "content": "When portraying NPC dialogue, always use bold name attribution before spoken words: **Name:** \"Dialogue here.\" Use *italics* for narrative action and description. When multiple NPCs are present, attribute every spoken line to a named speaker. Maintain clear separation between narration and dialogue with blank lines. Each speaker change begins on a new line. Intersperse action beats between dialogue lines: **Sable:** \"First line.\" *Action description.* **Wren:** \"Response.\" This format ensures proper chat bubble rendering and character distinction.",
+      "content": "OUTPUT FORMAT RULES — ALWAYS FOLLOW:\n1. Narration and actions: *Write in italics using asterisks.*\n2. NPC dialogue: **Name:** \"Spoken words in quotes.\"\n3. NEVER write dialogue without a bold **Name:** prefix\n4. NEVER embed speech in narration like '*they say something*'\n5. Each speaker gets their own line with a line break before it\n6. Action beats between dialogue lines use italics: *action*\n\nCORRECT:\n*The corridor is empty.*\n\n**Sable:** \"You shouldn't be here.\"\n\n*She turns away.*\n\n**Wren:** \"Don't mind her.\"\n\nWRONG:\n*\"You shouldn't be here,\" Sable says, turning away. Wren shrugs. \"Don't mind her.\"*",
       "constant": true,
       "vectorized": false,
       "selective": false,
