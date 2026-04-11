@@ -97,6 +97,13 @@ function onPlayerMessage(messageIndex) {
     const detection = detectDoorEvent(message.mes, 'player');
     if (!detection.detected) return;
 
+    // Don't re-trigger if already in a world (player must return to Manifold first)
+    // Exception: manifold return always works
+    if (settings.currentWorldId && !detection.isManifoldReturn) {
+        console.log('[TheEndless] Already in a world, ignoring door event (return to Manifold first)');
+        return;
+    }
+
     session.lastDoorDetection = Date.now();
 
     if (detection.isManifoldReturn) {
@@ -106,29 +113,11 @@ function onPlayerMessage(messageIndex) {
     }
 }
 
-function onModelMessage(messageIndex) {
-    const settings = getSettings();
-    if (!settings.enabled) return;
-
-    const context = SillyTavern.getContext();
-    const message = context.chat[messageIndex];
-    if (!message?.mes || message.is_user) return;
-
-    const session = getSessionState();
-    // Don't detect if we already have a pending transition or recently detected
-    if (session.pendingTransition || session.isProcessing) return;
-    if (Date.now() - session.lastDoorDetection < DEBOUNCE_MODEL_MS) return;
-
-    const detection = detectDoorEvent(message.mes, 'model');
-    if (!detection.detected) return;
-
-    session.lastDoorDetection = Date.now();
-
-    if (detection.isManifoldReturn) {
-        transitionToManifold();
-    } else {
-        transitionToRandomWorld();
-    }
+// Model messages no longer trigger world transitions.
+// Only player input can initiate door events. This prevents the model's
+// narration about doors from constantly re-rolling the destination.
+function onModelMessage(_messageIndex) {
+    // Intentionally empty — model output does not trigger transitions
 }
 
 async function onChatChanged() {
