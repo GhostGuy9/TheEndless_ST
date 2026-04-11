@@ -191,6 +191,7 @@ async function detachAllWorldsFromChat() {
  * Toggle all entries in a world lorebook to enabled or disabled.
  */
 async function toggleWorldBook(bookName, disable) {
+    console.log(`[TheEndless] toggleWorldBook("${bookName}", disable=${disable})`);
     try {
         const response = await fetch('/api/worldinfo/get', {
             method: 'POST',
@@ -198,7 +199,7 @@ async function toggleWorldBook(bookName, disable) {
             body: JSON.stringify({ name: bookName }),
         });
         if (!response.ok) {
-            console.warn(`[TheEndless] Could not load "${bookName}": ${response.status}`);
+            console.warn(`[TheEndless] API returned ${response.status} for "${bookName}"`);
             return false;
         }
         const data = await response.json();

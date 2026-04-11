@@ -7,7 +7,7 @@ const EXTENSION_NAME = 'theEndless';
 
 // Default worlds shipped with the extension
 const DEFAULT_WORLDS = [
-    { id: 'night-city',        name: 'Night City',          bookName: 'Night City - Cyberpunk Red', note: 'Cyberpunk dystopia' },
+    { id: 'night-city',        name: 'Night City',          bookName: 'Night City', note: 'Cyberpunk dystopia' },
     { id: 'stardust-valley',   name: 'Stardust Valley',     bookName: 'Stardust Valley',            note: 'Cozy supernatural valley' },
     { id: 'ashlands',          name: 'The Ashlands',         bookName: 'The Ashlands',               note: 'Dark Souls-adjacent dying kingdom' },
     { id: 'pale-fog',          name: 'Pale Fog',             bookName: 'Pale Fog',                   note: 'Silent Hill-adjacent horror' },
@@ -69,6 +69,17 @@ function initSettings() {
     // Ensure worlds array exists
     if (!Array.isArray(settings.worlds)) {
         settings.worlds = structuredClone(DEFAULT_WORLDS);
+    }
+
+    // Fix known book name mismatches from earlier versions
+    const bookNameFixes = {
+        'Night City - Cyberpunk Red': 'Night City',
+    };
+    for (const world of settings.worlds) {
+        if (world.bookName in bookNameFixes) {
+            console.log(`[TheEndless] Fixed book name: "${world.bookName}" → "${bookNameFixes[world.bookName]}"`);
+            world.bookName = bookNameFixes[world.bookName];
+        }
     }
 
     context.saveSettingsDebounced();
