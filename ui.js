@@ -4,7 +4,7 @@
 
 import { getSettings, saveSettings } from './state.js';
 import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld } from './world-manager.js';
-import { updateWorldPrompt, updateWorldLore } from './interceptor.js';
+import { updateWorldPrompt, activateWorldLore } from './interceptor.js';
 
 /**
  * Initialize the settings panel UI.
@@ -237,7 +237,7 @@ function bindUIEvents() {
 async function doTransition(worldId) {
     const settings = getSettings();
 
-    await updateWorldLore(worldId);
+    await activateWorldLore(worldId);
 
     settings.previousWorldId = settings.currentWorldId;
     settings.currentWorldId = worldId;

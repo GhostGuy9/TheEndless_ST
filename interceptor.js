@@ -1,22 +1,21 @@
 /**
  * Prompt injection for The Endless.
  *
- * Two injection points via setExtensionPrompt:
- * 1. PROMPT_KEY — world context note (location + transition instructions)
- * 2. LORE_KEY — actual world lore content read from the lorebook
- *
- * This bypasses World Info entry toggling entirely. The extension reads
- * the lorebook content and injects it directly into the prompt.
+ * Strategy:
+ * 1. Always inject a location/transition note via setExtensionPrompt (PROMPT_KEY)
+ * 2. Try to attach world lorebook to chat via chat_metadata (native ST keyword scanning)
+ * 3. If attachment works, ST handles lore injection natively — no LORE_KEY needed
+ * 4. If attachment fails, fall back to direct lore injection via setExtensionPrompt (LORE_KEY)
  */
 
 import { getSettings, getSessionState } from './state.js';
-import { getWorldName, getWorldLore } from './world-manager.js';
+import { getWorldName, getBookName, attachWorldToChat, detachAllWorldsFromChat, readWorldLore } from './world-manager.js';
 
 const PROMPT_KEY = 'theEndless_worldContext';
 const LORE_KEY = 'theEndless_worldLore';
 
 /**
- * Update the persistent world context prompt.
+ * Update the location/transition note.
  */
 function updateWorldPrompt(worldId) {
     const context = SillyTavern.getContext();
@@ -29,66 +28,69 @@ function updateWorldPrompt(worldId) {
         if (!worldId) {
             promptText = '[The Endless: The marble door bears a crescent moon etching. The player is transitioning back to The Manifold — the living brutalist hub world between all doors. Narrate their arrival in The Manifold.]';
         } else {
-            promptText = `[The Endless: The marble door leads to ${worldName}. The player is transitioning into this world. Narrate their arrival in ${worldName} using the world lore provided below.]`;
+            promptText = `[The Endless: The marble door leads to ${worldName}. The player is transitioning into this world. Narrate their arrival in ${worldName}.]`;
         }
     } else {
         if (!worldId) {
             promptText = '[The Endless: Current location is The Manifold — the living hub world between all doors.]';
         } else {
-            promptText = `[The Endless: Current location is ${worldName}. Use the world lore provided below for setting details, NPCs, and tone.]`;
+            promptText = `[The Endless: Current location is ${worldName}.]`;
         }
     }
 
-    context.setExtensionPrompt(
-        PROMPT_KEY,
-        promptText,
-        1,                       // IN_CHAT
-        settings.injectionDepth, // depth
-        false,                   // no WI scan
-        0,                       // SYSTEM role
-    );
+    context.setExtensionPrompt(PROMPT_KEY, promptText, 1, settings.injectionDepth, false, 0);
 }
 
 /**
- * Inject or clear world lore content.
- * When a world is active, injects the lorebook content directly.
- * When in Manifold (null), clears the injection.
+ * Activate world lore — tries native chat attachment first, falls back to direct injection.
  */
-async function updateWorldLore(worldId) {
+async function activateWorldLore(worldId) {
     const context = SillyTavern.getContext();
     const settings = getSettings();
 
+    // Always detach previous worlds first
+    await detachAllWorldsFromChat();
+
     if (!worldId) {
-        // In Manifold — clear world lore injection
+        // Returning to Manifold — clear any direct injection
         context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
-        console.log('[TheEndless] Cleared world lore injection (Manifold)');
+        console.log('[TheEndless] Cleared world lore (Manifold)');
         return;
     }
 
-    const lore = await getWorldLore(worldId);
-    if (!lore) {
-        console.warn(`[TheEndless] No lore content for world "${worldId}"`);
-        context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
+    const bookName = getBookName(worldId);
+    if (!bookName) {
+        console.warn(`[TheEndless] No book name for world "${worldId}"`);
         return;
     }
 
-    const worldName = getWorldName(worldId);
-    const injection = `[World Lore — ${worldName}]\n${lore}`;
+    // Try 1: Attach to chat via metadata (native ST)
+    const attached = await attachWorldToChat(bookName);
+    if (attached) {
+        // Clear any leftover direct injection since native should handle it
+        context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
+        console.log(`[TheEndless] Attached "${bookName}" to chat (native mode)`);
+    }
 
-    context.setExtensionPrompt(
-        LORE_KEY,
-        injection,
-        1,                           // IN_CHAT
-        settings.injectionDepth + 1, // one deeper than the context note
-        false,                       // no WI scan
-        0,                           // SYSTEM role
-    );
-
-    console.log(`[TheEndless] Injected lore for "${worldName}" (~${lore.length} chars)`);
+    // Try 2: Also do direct injection as fallback/supplement
+    // This ensures lore is available even if chat attachment doesn't work
+    const lore = await readWorldLore(bookName);
+    if (lore) {
+        const worldName = getWorldName(worldId);
+        context.setExtensionPrompt(
+            LORE_KEY,
+            `[World Lore — ${worldName}]\n${lore}`,
+            1,
+            settings.injectionDepth + 1,
+            false,
+            0,
+        );
+        console.log(`[TheEndless] Injected lore fallback for "${worldName}" (~${lore.length} chars)`);
+    }
 }
 
 /**
- * Clear the transition flag from the prompt.
+ * Clear the transition flag.
  */
 function clearTransitionPrompt(worldId) {
     const session = getSessionState();
@@ -97,10 +99,10 @@ function clearTransitionPrompt(worldId) {
 }
 
 /**
- * Register a no-op generate interceptor (manifest still references it).
+ * No-op generate interceptor (manifest still references it).
  */
 function createGenerateInterceptor() {
     globalThis.theEndlessGenerateInterceptor = async function () {};
 }
 
-export { updateWorldPrompt, updateWorldLore, clearTransitionPrompt, createGenerateInterceptor };
+export { updateWorldPrompt, activateWorldLore, clearTransitionPrompt, createGenerateInterceptor };

@@ -9,7 +9,7 @@
 import { initSettings, getSettings, saveSettings, saveChatWorldState, getChatWorldState, getSessionState } from './state.js';
 import { selectRandomWorld, getWorldName, getWorlds, findWorldIdByName } from './world-manager.js';
 import { detectDoorEvent } from './door-detector.js';
-import { updateWorldPrompt, updateWorldLore, clearTransitionPrompt, createGenerateInterceptor } from './interceptor.js';
+import { updateWorldPrompt, activateWorldLore, clearTransitionPrompt, createGenerateInterceptor } from './interceptor.js';
 import { initUI, updateWorldDisplay } from './ui.js';
 
 const DEBOUNCE_PLAYER_MS = 5000;
@@ -33,7 +33,7 @@ async function transitionToWorld(worldId) {
         };
 
         // Inject world lore directly into prompt (bypasses World Info toggle)
-        await updateWorldLore(worldId);
+        await activateWorldLore(worldId);
 
         // Update persistent state
         settings.previousWorldId = settings.currentWorldId;
@@ -140,7 +140,7 @@ async function onChatChanged() {
     saveSettings();
 
     // Inject the correct world lore
-    await updateWorldLore(chatWorldId);
+    await activateWorldLore(chatWorldId);
 
     // Update prompt and UI
     updateWorldPrompt(chatWorldId);
@@ -247,7 +247,7 @@ async function init() {
 
     // Inject world lore for current world if any
     const settings = getSettings();
-    await updateWorldLore(settings.currentWorldId);
+    await activateWorldLore(settings.currentWorldId);
 
     // Set initial world prompt
     updateWorldPrompt(settings.currentWorldId);
