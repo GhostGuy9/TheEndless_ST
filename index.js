@@ -7,13 +7,12 @@
  */
 
 import { initSettings, getSettings, saveSettings, saveChatWorldState, getChatWorldState, getSessionState } from './state.js';
-import { selectRandomWorld, getWorldName, getWorlds, findWorldIdByName } from './world-manager.js';
+import { selectRandomWorld, getWorldName, getWorlds, findWorldIdByName, disableAllWorldBooks } from './world-manager.js';
 import { detectDoorEvent } from './door-detector.js';
 import { updateWorldPrompt, activateWorldLore, clearTransitionPrompt, createGenerateInterceptor } from './interceptor.js';
 import { initUI, updateWorldDisplay } from './ui.js';
 
 const DEBOUNCE_PLAYER_MS = 5000;
-const DEBOUNCE_MODEL_MS = 10000;
 const PENDING_CLEAR_MS = 30000;
 
 // ─── Transition Logic ───────────────────────────────────────────────
@@ -61,6 +60,8 @@ async function transitionToWorld(worldId) {
         }
 
         console.log(`[TheEndless] Transitioned to: ${getWorldName(worldId)}`);
+    } catch (e) {
+        console.error('[TheEndless] Transition failed:', e);
     } finally {
         session.isProcessing = false;
         // Clear transition prompt after one generation cycle
@@ -114,43 +115,46 @@ function onPlayerMessage(messageIndex) {
 }
 
 // Model messages no longer trigger world transitions.
-// Only player input can initiate door events. This prevents the model's
-// narration about doors from constantly re-rolling the destination.
 function onModelMessage(_messageIndex) {
     // Intentionally empty — model output does not trigger transitions
 }
 
 async function onChatChanged() {
-    const context = SillyTavern.getContext();
-    const settings = getSettings();
-    const chatWorldId = getChatWorldState();
+    try {
+        const context = SillyTavern.getContext();
+        const settings = getSettings();
+        const chatWorldId = getChatWorldState();
 
-    // Detect if this is a new/fresh chat (no messages yet, or no saved world state)
-    const isNewChat = !chatWorldId && (!context.chat || context.chat.length <= 1);
+        // New/fresh chat: no saved world state → reset to Manifold
+        if (!chatWorldId) {
+            console.log('[TheEndless] Chat changed — no saved world state, resetting to Manifold');
+            settings.currentWorldId = null;
+            settings.previousWorldId = null;
+            saveSettings();
 
-    if (isNewChat) {
-        // New chat: reset everything to Manifold — disable all world lorebook entries
-        console.log('[TheEndless] New chat detected — resetting all world lore to clean state');
-        settings.currentWorldId = null;
-        settings.previousWorldId = null;
+            // Disable all world lorebook entries (clean slate)
+            await disableAllWorldBooks();
+
+            // Clear any injected lore
+            context.setExtensionPrompt('theEndless_worldLore', '', 1, settings.injectionDepth + 1, false, 0);
+
+            updateWorldPrompt(null);
+            updateWorldDisplay(null);
+            return;
+        }
+
+        // Existing chat with saved world: restore it
+        settings.currentWorldId = chatWorldId;
         saveSettings();
-        saveChatWorldState(null);
 
-        await activateWorldLore(null);
-        updateWorldPrompt(null);
-        updateWorldDisplay(null);
-        return;
+        await activateWorldLore(chatWorldId);
+        updateWorldPrompt(chatWorldId);
+        updateWorldDisplay(chatWorldId);
+
+        console.log(`[TheEndless] Chat changed — restored world: ${getWorldName(chatWorldId)}`);
+    } catch (e) {
+        console.error('[TheEndless] onChatChanged failed:', e);
     }
-
-    // Existing chat: restore world state from chat metadata
-    settings.currentWorldId = chatWorldId;
-    saveSettings();
-
-    await activateWorldLore(chatWorldId);
-    updateWorldPrompt(chatWorldId);
-    updateWorldDisplay(chatWorldId);
-
-    console.log(`[TheEndless] Chat changed — restored world: ${getWorldName(chatWorldId)}`);
 }
 
 // ─── Slash Commands ─────────────────────────────────────────────────
@@ -249,15 +253,9 @@ async function init() {
     await initUI();
     registerSlashCommands();
 
-    // On startup, always reset to clean Manifold state (all world entries disabled)
-    // The correct world will be restored when CHAT_CHANGED fires
-    const settings = getSettings();
-    settings.currentWorldId = null;
-    saveSettings();
-    await activateWorldLore(null);
+    // Set Manifold prompt (no API calls during init — CHAT_CHANGED handles the rest)
     updateWorldPrompt(null);
     updateWorldDisplay(null);
-    console.log('[TheEndless] Startup: reset to Manifold (clean slate)');
 
     // Wire up event handlers
     context.eventSource.on(context.event_types.MESSAGE_SENT, onPlayerMessage);
@@ -272,7 +270,7 @@ async function init() {
         }
     });
 
-    console.log('[TheEndless] Door Manager extension activated');
+    console.log('[TheEndless] Door Manager extension activated — waiting for CHAT_CHANGED to initialize world state');
 }
 
 // Hook for manifest.json hooks.activate

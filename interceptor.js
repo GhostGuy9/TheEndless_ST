@@ -2,7 +2,7 @@
  * Prompt injection and world lore activation for The Endless.
  *
  * Three-layer strategy for world lore:
- * 1. Toggle World Info entries via API (native ST keyword scanning) — now with proper auth
+ * 1. Toggle World Info entries via API (native ST keyword scanning)
  * 2. Attach lorebook to chat via chat_metadata (native ST)
  * 3. Direct injection via setExtensionPrompt (fallback, always works)
  *
@@ -50,24 +50,31 @@ async function activateWorldLore(worldId) {
     const settings = getSettings();
     const bookName = worldId ? getBookName(worldId) : null;
 
-    // Step 1: Chat metadata changes FIRST (no ST refresh yet — prevents
-    // updateWorldInfoList from overwriting API toggle changes)
-    await detachAllWorldsFromChat({ refresh: false });
-    if (bookName) {
-        await attachWorldToChat(bookName, { refresh: false });
-        console.log(`[TheEndless] Layer 2: Chat metadata updated for "${bookName}"`);
+    // Layer 1: Toggle World Info entries via API
+    // Metadata changes first, then API toggles, then one final refresh
+    try {
+        await detachAllWorldsFromChat();
+        if (bookName) {
+            await attachWorldToChat(bookName);
+            console.log(`[TheEndless] Layer 2: Chat metadata updated for "${bookName}"`);
+        }
+    } catch (e) {
+        console.warn('[TheEndless] Layer 2 (metadata) failed:', e.message);
     }
 
-    // Step 2: Toggle World Info entries via API (disk writes)
-    const toggled = await activateWorld(worldId);
-    if (toggled) {
-        console.log(`[TheEndless] Layer 1 success: World Info entries toggled for "${getWorldName(worldId)}"`);
+    try {
+        const toggled = await activateWorld(worldId);
+        if (toggled) {
+            console.log(`[TheEndless] Layer 1 success: entries toggled for "${getWorldName(worldId)}"`);
+        }
+    } catch (e) {
+        console.warn('[TheEndless] Layer 1 (API toggle) failed:', e.message);
     }
 
-    // Step 3: NOW refresh ST's in-memory state (reads our changes from disk)
+    // Refresh ST state once after all changes
     await refreshWorldInfoState();
 
-    // Step 4: Direct injection fallback
+    // Layer 3: Direct injection
     if (!worldId) {
         context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
         console.log('[TheEndless] Cleared world lore (Manifold)');
@@ -75,23 +82,24 @@ async function activateWorldLore(worldId) {
     }
 
     if (settings.useFallbackInjection) {
-        const lore = await readWorldLore(bookName);
-        if (lore) {
-            const worldName = getWorldName(worldId);
-            context.setExtensionPrompt(
-                LORE_KEY,
-                `[World Lore — ${worldName}]\n${lore}`,
-                1,
-                settings.injectionDepth + 1,
-                false,
-                0,
-            );
-            console.log(`[TheEndless] Layer 3: Direct injection for "${worldName}" (~${lore.length} chars)`);
-        } else if (!toggled) {
-            console.warn(`[TheEndless] All layers failed for "${getWorldName(worldId)}" — no lore available`);
+        try {
+            const lore = await readWorldLore(bookName);
+            if (lore) {
+                const worldName = getWorldName(worldId);
+                context.setExtensionPrompt(
+                    LORE_KEY,
+                    `[World Lore — ${worldName}]\n${lore}`,
+                    1,
+                    settings.injectionDepth + 1,
+                    false,
+                    0,
+                );
+                console.log(`[TheEndless] Layer 3: Direct injection for "${worldName}" (~${lore.length} chars)`);
+            }
+        } catch (e) {
+            console.warn('[TheEndless] Layer 3 (injection) failed:', e.message);
         }
     } else {
-        // Fallback disabled — clear any stale injection
         context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
     }
 }

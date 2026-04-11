@@ -153,9 +153,8 @@ function getUnregisteredBooks() {
 
 /**
  * Attach a world lorebook to the current chat via chat_metadata.
- * Tries multiple known field names for compatibility.
  */
-async function attachWorldToChat(bookName, { refresh = true } = {}) {
+async function attachWorldToChat(bookName) {
     const context = SillyTavern.getContext();
     if (!context.chatMetadata) {
         console.warn('[TheEndless] No chat metadata available');
@@ -164,7 +163,6 @@ async function attachWorldToChat(bookName, { refresh = true } = {}) {
 
     const meta = context.chatMetadata;
 
-    // Ensure we have an array of extra books
     if (!Array.isArray(meta.world_info_extra_books)) {
         meta.world_info_extra_books = [];
     }
@@ -180,63 +178,49 @@ async function attachWorldToChat(bookName, { refresh = true } = {}) {
         meta.world_info_extra_books.push(bookName);
     }
 
-    // Also try the 'world_info' field directly
     meta.world_info = bookName || '';
 
-    // Persist metadata
     context.saveMetadata();
     console.log(`[TheEndless] Attached "${bookName}" to chat metadata`);
-
-    // Only refresh ST state if requested (skip during multi-step operations)
-    if (refresh) {
-        await refreshWorldInfoState();
-    }
-
     return true;
 }
 
 /**
  * Detach all world lorebooks from the current chat.
  */
-async function detachAllWorldsFromChat({ refresh = true } = {}) {
+async function detachAllWorldsFromChat() {
     const context = SillyTavern.getContext();
     if (!context.chatMetadata) return;
 
     const meta = context.chatMetadata;
     const registeredBooks = new Set(getWorlds().map(w => w.bookName));
 
-    // Clean world_info_extra_books
     if (Array.isArray(meta.world_info_extra_books)) {
         meta.world_info_extra_books = meta.world_info_extra_books.filter(
             name => !registeredBooks.has(name),
         );
     }
 
-    // Clear world_info if it's one of our worlds
     if (meta.world_info && registeredBooks.has(meta.world_info)) {
         meta.world_info = '';
     }
 
     context.saveMetadata();
     console.log('[TheEndless] Detached all world lorebooks from chat metadata');
-
-    // Only refresh ST state if requested (skip during multi-step operations)
-    if (refresh) {
-        await refreshWorldInfoState();
-    }
 }
 
 /**
- * Refresh ST's World Info state after all changes are complete.
- * Call this ONCE at the end of a multi-step operation, not between steps.
+ * Refresh ST's World Info state. Wrapped in try/catch because these
+ * ST functions can fail when no chat is loaded or during init.
  */
 async function refreshWorldInfoState() {
-    const context = SillyTavern.getContext();
-    if (typeof context.updateWorldInfoList === 'function') {
-        await context.updateWorldInfoList();
-    }
-    if (typeof context.reloadWorldInfoEditor === 'function') {
-        await context.reloadWorldInfoEditor();
+    try {
+        const context = SillyTavern.getContext();
+        if (typeof context.updateWorldInfoList === 'function') {
+            await context.updateWorldInfoList();
+        }
+    } catch (e) {
+        console.warn('[TheEndless] refreshWorldInfoState failed (non-fatal):', e.message);
     }
 }
 
@@ -255,11 +239,14 @@ async function toggleWorldBook(bookName, disable) {
             body: JSON.stringify({ name: bookName }),
         });
         if (!response.ok) {
-            console.warn(`[TheEndless] API returned ${response.status} for "${bookName}"`);
+            console.warn(`[TheEndless] GET API returned ${response.status} for "${bookName}"`);
             return false;
         }
         const data = await response.json();
-        if (!data?.entries) return false;
+        if (!data?.entries) {
+            console.warn(`[TheEndless] No entries found in "${bookName}"`);
+            return false;
+        }
 
         let changed = 0;
         const total = Object.keys(data.entries).length;
@@ -277,31 +264,34 @@ async function toggleWorldBook(bookName, disable) {
                 body: JSON.stringify({ name: bookName, data }),
             });
             if (!editResponse.ok) {
-                console.error(`[TheEndless] Edit API returned ${editResponse.status} for "${bookName}"`);
+                console.error(`[TheEndless] EDIT API returned ${editResponse.status} for "${bookName}"`);
                 return false;
             }
             console.log(`[TheEndless] ${disable ? 'Disabled' : 'Enabled'} ${changed}/${total} entries in "${bookName}"`);
         } else {
-            console.log(`[TheEndless] No changes needed for "${bookName}" (all entries already ${disable ? 'disabled' : 'enabled'})`);
+            console.log(`[TheEndless] No changes needed for "${bookName}" (${total} entries already ${disable ? 'disabled' : 'enabled'})`);
         }
         return true;
     } catch (e) {
-        console.warn(`[TheEndless] Error toggling "${bookName}":`, e);
+        console.error(`[TheEndless] Error toggling "${bookName}":`, e);
         return false;
     }
 }
 
 /**
- * Activate a world's lorebook entries, disabling all others.
+ * Disable all world lorebook entries, then enable only the selected world.
  * Pass null to disable all (return to Manifold).
  */
 async function activateWorld(worldId) {
     const worlds = getWorlds();
+    console.log(`[TheEndless] activateWorld(${worldId}) — ${worlds.length} worlds registered`);
 
-    // Disable ALL world lorebooks
-    await Promise.all(worlds.map(w =>
-        w.bookName ? toggleWorldBook(w.bookName, true) : Promise.resolve(),
-    ));
+    // Disable ALL world lorebooks (sequentially to avoid hammering the API)
+    for (const w of worlds) {
+        if (w.bookName) {
+            await toggleWorldBook(w.bookName, true);
+        }
+    }
 
     // Enable the selected world
     if (worldId) {
@@ -319,15 +309,32 @@ async function activateWorld(worldId) {
 
 /**
  * Enable all entries in ALL registered world lorebooks.
- * For testing and resetting.
  */
 async function enableAllWorldBooks() {
     const worlds = getWorlds();
-    console.log(`[TheEndless] Enabling all world lorebook entries (${worlds.length} worlds)...`);
-    await Promise.all(worlds.map(w =>
-        w.bookName ? toggleWorldBook(w.bookName, false) : Promise.resolve(),
-    ));
+    console.log(`[TheEndless] Enabling all entries in ${worlds.length} world lorebooks...`);
+    for (const w of worlds) {
+        if (w.bookName) {
+            await toggleWorldBook(w.bookName, false);
+        }
+    }
+    await refreshWorldInfoState();
     console.log('[TheEndless] All world lorebook entries enabled');
+}
+
+/**
+ * Disable all entries in ALL registered world lorebooks.
+ */
+async function disableAllWorldBooks() {
+    const worlds = getWorlds();
+    console.log(`[TheEndless] Disabling all entries in ${worlds.length} world lorebooks...`);
+    for (const w of worlds) {
+        if (w.bookName) {
+            await toggleWorldBook(w.bookName, true);
+        }
+    }
+    await refreshWorldInfoState();
+    console.log('[TheEndless] All world lorebook entries disabled');
 }
 
 // ─── Fallback: Direct Lore Injection ────────────────────────────────
@@ -394,6 +401,6 @@ export {
     generateWorldId, addWorld, removeWorld, updateWorldNote,
     getAvailableWorldInfoBooks, getAllBooksWithStatus, getUnregisteredBooks,
     attachWorldToChat, detachAllWorldsFromChat, refreshWorldInfoState,
-    activateWorld, toggleWorldBook, enableAllWorldBooks,
+    activateWorld, toggleWorldBook, enableAllWorldBooks, disableAllWorldBooks,
     readWorldLore, clearLoreCache,
 };

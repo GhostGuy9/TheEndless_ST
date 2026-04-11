@@ -6,7 +6,7 @@
  */
 
 import { getSettings, saveSettings } from './state.js';
-import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld, enableAllWorldBooks } from './world-manager.js';
+import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld, enableAllWorldBooks, disableAllWorldBooks } from './world-manager.js';
 import { updateWorldPrompt, activateWorldLore } from './interceptor.js';
 
 /**
@@ -21,7 +21,7 @@ async function initUI() {
         $('#extensions_settings2').append(html);
         console.log('[TheEndless] Settings panel HTML loaded');
     } catch (e) {
-        console.warn('[TheEndless] Could not render settings template:', e);
+        console.error('[TheEndless] Could not render settings template:', e);
         return;
     }
 
@@ -47,7 +47,6 @@ function populateWorldSelect() {
 
 /**
  * Populate the "Add World" dropdown with all available World Info books.
- * Already-registered books are shown but marked as such.
  */
 function populateAddBookSelect() {
     const $select = $('#theendless_add_book_select');
@@ -61,7 +60,6 @@ function populateAddBookSelect() {
         $select.append(`<option value="${book.name}" ${book.registered ? 'disabled' : ''}>${label}</option>`);
     }
 
-    // Restore selection if still valid
     if (currentVal) $select.val(currentVal);
 }
 
@@ -98,18 +96,12 @@ function renderWorldList() {
     }
 }
 
-/**
- * Refresh all dynamic UI elements.
- */
 function refreshUI() {
     populateWorldSelect();
     populateAddBookSelect();
     renderWorldList();
 }
 
-/**
- * Sync UI controls to current settings state.
- */
 function syncUIToState() {
     const settings = getSettings();
 
@@ -128,7 +120,6 @@ function syncUIToState() {
 let eventsBound = false;
 
 function bindUIEvents() {
-    // Only bind once — delegated events persist across DOM re-renders
     if (eventsBound) return;
     eventsBound = true;
 
@@ -166,45 +157,75 @@ function bindUIEvents() {
     // Manual world switch
     $(document).on('click', '#theendless_go_world', async function () {
         console.log('[TheEndless] Go button clicked');
-        const worldId = $('#theendless_world_select').val();
-        if (!worldId) {
-            toastr.warning('Select a world first', 'The Endless');
-            return;
+        try {
+            const worldId = $('#theendless_world_select').val();
+            if (!worldId) {
+                toastr.warning('Select a world first', 'The Endless');
+                return;
+            }
+            await doTransition(worldId);
+        } catch (e) {
+            console.error('[TheEndless] Go button error:', e);
+            toastr.error(`Error: ${e.message}`, 'The Endless');
         }
-        await doTransition(worldId);
     });
 
     // Random door
     $(document).on('click', '#theendless_random_door', async function () {
         console.log('[TheEndless] Random Door clicked');
-        const settings = getSettings();
-        const excludeId = settings.preventRepeatWorld ? settings.currentWorldId : null;
-        const worldId = selectRandomWorld(excludeId);
-        if (!worldId) {
-            toastr.warning('No worlds registered', 'The Endless');
-            return;
+        try {
+            const settings = getSettings();
+            const excludeId = settings.preventRepeatWorld ? settings.currentWorldId : null;
+            const worldId = selectRandomWorld(excludeId);
+            if (!worldId) {
+                toastr.warning('No worlds registered', 'The Endless');
+                return;
+            }
+            await doTransition(worldId);
+        } catch (e) {
+            console.error('[TheEndless] Random Door error:', e);
+            toastr.error(`Error: ${e.message}`, 'The Endless');
         }
-        await doTransition(worldId);
     });
 
     // Return to Manifold
     $(document).on('click', '#theendless_go_manifold', async function () {
         console.log('[TheEndless] Return to Manifold clicked');
-        await doTransition(null);
+        try {
+            await doTransition(null);
+        } catch (e) {
+            console.error('[TheEndless] Manifold button error:', e);
+            toastr.error(`Error: ${e.message}`, 'The Endless');
+        }
     });
 
     // Enable all world lore (for testing)
     $(document).on('click', '#theendless_enable_all', async function () {
         console.log('[TheEndless] Enable All Lore clicked');
-        await enableAllWorldBooks();
-        toastr.info('All world lorebook entries enabled', 'The Endless', { timeOut: 3000 });
+        try {
+            await enableAllWorldBooks();
+            toastr.info('All world lorebook entries enabled', 'The Endless', { timeOut: 3000 });
+        } catch (e) {
+            console.error('[TheEndless] Enable All error:', e);
+            toastr.error(`Error: ${e.message}`, 'The Endless');
+        }
     });
 
-    // Disable all world lore (clean slate — return to Manifold)
+    // Disable all world lore (clean slate)
     $(document).on('click', '#theendless_disable_all', async function () {
         console.log('[TheEndless] Disable All Lore clicked');
-        await doTransition(null);
-        toastr.info('World lore cleared — back to Manifold', 'The Endless', { timeOut: 3000 });
+        try {
+            await disableAllWorldBooks();
+            const settings = getSettings();
+            settings.currentWorldId = null;
+            saveSettings();
+            updateWorldPrompt(null);
+            updateWorldDisplay(null);
+            toastr.info('All world lore disabled — Manifold', 'The Endless', { timeOut: 3000 });
+        } catch (e) {
+            console.error('[TheEndless] Disable All error:', e);
+            toastr.error(`Error: ${e.message}`, 'The Endless');
+        }
     });
 
     // Refresh the "Add World" dropdown every time it's opened
@@ -240,7 +261,6 @@ function bindUIEvents() {
 
         removeWorld(worldId);
 
-        // If we're currently in this world, return to Manifold
         if (getSettings().currentWorldId === worldId) {
             doTransition(null);
         }
@@ -282,9 +302,6 @@ async function doTransition(worldId) {
     console.log(`[TheEndless] Manual transition to: ${name}`);
 }
 
-/**
- * Update the world display in the settings panel.
- */
 function updateWorldDisplay(worldId) {
     const name = getWorldName(worldId);
     $('#theendless_world_display').text(name);
