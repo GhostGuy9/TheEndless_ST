@@ -155,16 +155,13 @@ function getUnregisteredBooks() {
  * Attach a world lorebook to the current chat via chat_metadata.
  * Tries multiple known field names for compatibility.
  */
-async function attachWorldToChat(bookName) {
+async function attachWorldToChat(bookName, { refresh = true } = {}) {
     const context = SillyTavern.getContext();
     if (!context.chatMetadata) {
         console.warn('[TheEndless] No chat metadata available');
         return false;
     }
 
-    // ST uses 'world_info' in chat metadata for chat-attached lorebooks
-    // Try setting it as the selected world info for this chat
-    // The field may be a string (single book) or array (multiple books)
     const meta = context.chatMetadata;
 
     // Ensure we have an array of extra books
@@ -184,19 +181,15 @@ async function attachWorldToChat(bookName) {
     }
 
     // Also try the 'world_info' field directly
-    // Some ST versions use this for the primary chat-attached lorebook
     meta.world_info = bookName || '';
 
-    // Persist and refresh
+    // Persist metadata
     context.saveMetadata();
+    console.log(`[TheEndless] Attached "${bookName}" to chat metadata`);
 
-    // Try to refresh ST's World Info state
-    if (typeof context.updateWorldInfoList === 'function') {
-        await context.updateWorldInfoList();
-        console.log(`[TheEndless] Attached "${bookName}" to chat via metadata + updateWorldInfoList`);
-    }
-    if (typeof context.reloadWorldInfoEditor === 'function') {
-        await context.reloadWorldInfoEditor();
+    // Only refresh ST state if requested (skip during multi-step operations)
+    if (refresh) {
+        await refreshWorldInfoState();
     }
 
     return true;
@@ -205,7 +198,7 @@ async function attachWorldToChat(bookName) {
 /**
  * Detach all world lorebooks from the current chat.
  */
-async function detachAllWorldsFromChat() {
+async function detachAllWorldsFromChat({ refresh = true } = {}) {
     const context = SillyTavern.getContext();
     if (!context.chatMetadata) return;
 
@@ -225,12 +218,26 @@ async function detachAllWorldsFromChat() {
     }
 
     context.saveMetadata();
+    console.log('[TheEndless] Detached all world lorebooks from chat metadata');
 
+    // Only refresh ST state if requested (skip during multi-step operations)
+    if (refresh) {
+        await refreshWorldInfoState();
+    }
+}
+
+/**
+ * Refresh ST's World Info state after all changes are complete.
+ * Call this ONCE at the end of a multi-step operation, not between steps.
+ */
+async function refreshWorldInfoState() {
+    const context = SillyTavern.getContext();
     if (typeof context.updateWorldInfoList === 'function') {
         await context.updateWorldInfoList();
     }
-
-    console.log('[TheEndless] Detached all world lorebooks from chat');
+    if (typeof context.reloadWorldInfoEditor === 'function') {
+        await context.reloadWorldInfoEditor();
+    }
 }
 
 // ─── World Info Entry Toggle (now with proper auth) ─────────────────
@@ -264,12 +271,18 @@ async function toggleWorldBook(bookName, disable) {
         }
 
         if (changed > 0) {
-            await fetch('/api/worldinfo/edit', {
+            const editResponse = await fetch('/api/worldinfo/edit', {
                 method: 'POST',
                 headers: getHeaders(),
                 body: JSON.stringify({ name: bookName, data }),
             });
+            if (!editResponse.ok) {
+                console.error(`[TheEndless] Edit API returned ${editResponse.status} for "${bookName}"`);
+                return false;
+            }
             console.log(`[TheEndless] ${disable ? 'Disabled' : 'Enabled'} ${changed}/${total} entries in "${bookName}"`);
+        } else {
+            console.log(`[TheEndless] No changes needed for "${bookName}" (all entries already ${disable ? 'disabled' : 'enabled'})`);
         }
         return true;
     } catch (e) {
@@ -380,7 +393,7 @@ export {
     findWorldIdByName, selectRandomWorld,
     generateWorldId, addWorld, removeWorld, updateWorldNote,
     getAvailableWorldInfoBooks, getAllBooksWithStatus, getUnregisteredBooks,
-    attachWorldToChat, detachAllWorldsFromChat,
+    attachWorldToChat, detachAllWorldsFromChat, refreshWorldInfoState,
     activateWorld, toggleWorldBook, enableAllWorldBooks,
     readWorldLore, clearLoreCache,
 };

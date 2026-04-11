@@ -10,7 +10,7 @@
  */
 
 import { getSettings, getSessionState } from './state.js';
-import { getWorldName, getBookName, activateWorld, attachWorldToChat, detachAllWorldsFromChat, readWorldLore } from './world-manager.js';
+import { getWorldName, getBookName, activateWorld, attachWorldToChat, detachAllWorldsFromChat, refreshWorldInfoState, readWorldLore } from './world-manager.js';
 
 const PROMPT_KEY = 'theEndless_worldContext';
 const LORE_KEY = 'theEndless_worldLore';
@@ -50,27 +50,30 @@ async function activateWorldLore(worldId) {
     const settings = getSettings();
     const bookName = worldId ? getBookName(worldId) : null;
 
-    // Layer 1: Toggle World Info entries via API (proper auth headers now)
+    // Step 1: Chat metadata changes FIRST (no ST refresh yet — prevents
+    // updateWorldInfoList from overwriting API toggle changes)
+    await detachAllWorldsFromChat({ refresh: false });
+    if (bookName) {
+        await attachWorldToChat(bookName, { refresh: false });
+        console.log(`[TheEndless] Layer 2: Chat metadata updated for "${bookName}"`);
+    }
+
+    // Step 2: Toggle World Info entries via API (disk writes)
     const toggled = await activateWorld(worldId);
     if (toggled) {
         console.log(`[TheEndless] Layer 1 success: World Info entries toggled for "${getWorldName(worldId)}"`);
     }
 
-    // Layer 2: Attach/detach via chat metadata
-    await detachAllWorldsFromChat();
-    if (bookName) {
-        await attachWorldToChat(bookName);
-        console.log(`[TheEndless] Layer 2: Chat attachment attempted for "${bookName}"`);
-    }
+    // Step 3: NOW refresh ST's in-memory state (reads our changes from disk)
+    await refreshWorldInfoState();
 
-    // Layer 3: Direct injection fallback (always works)
+    // Step 4: Direct injection fallback
     if (!worldId) {
         context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
         console.log('[TheEndless] Cleared world lore (Manifold)');
         return;
     }
 
-    // Layer 3: Direct injection fallback (only if enabled in settings)
     if (settings.useFallbackInjection) {
         const lore = await readWorldLore(bookName);
         if (lore) {
