@@ -66,11 +66,12 @@ function getWorld(worldId) {
 }
 
 function getWorldName(worldId) {
-    if (!worldId) return 'The Manifold';
+    if (!worldId || worldId === 'manifold') return 'The Manifold';
     return getWorld(worldId)?.name ?? 'Unknown World';
 }
 
 function getBookName(worldId) {
+    if (!worldId || worldId === 'manifold') return 'The Manifold';
     return getWorld(worldId)?.bookName ?? null;
 }
 
@@ -88,8 +89,9 @@ function findWorldIdByName(searchName) {
 
 function selectRandomWorld(excludeWorldId = null) {
     const worlds = getWorlds();
-    const available = worlds.filter(w => w.id !== excludeWorldId);
-    if (available.length === 0) return worlds[0]?.id ?? null;
+    // Exclude The Manifold from random destinations — you return there via crescent moon
+    const available = worlds.filter(w => w.id !== excludeWorldId && w.id !== 'manifold');
+    if (available.length === 0) return worlds.find(w => w.id !== 'manifold')?.id ?? null;
     return available[Math.floor(Math.random() * available.length)].id;
 }
 

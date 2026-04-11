@@ -7,6 +7,7 @@ const EXTENSION_NAME = 'theEndless';
 
 // Default worlds shipped with the extension
 const DEFAULT_WORLDS = [
+    { id: 'manifold',          name: 'The Manifold',         bookName: 'The Manifold',               note: 'The living hub world between all doors' },
     { id: 'night-city',        name: 'Night City',          bookName: 'Night City', note: 'Cyberpunk dystopia' },
     { id: 'stardust-valley',   name: 'Stardust Valley',     bookName: 'Stardust Valley',            note: 'Cozy supernatural valley' },
     { id: 'ashlands',          name: 'The Ashlands',         bookName: 'The Ashlands',               note: 'Dark Souls-adjacent dying kingdom' },

@@ -23,15 +23,16 @@ function updateWorldPrompt(worldId) {
     const session = getSessionState();
     const worldName = getWorldName(worldId);
 
+    const isManifold = !worldId || worldId === 'manifold';
     let promptText;
     if (session.pendingTransition) {
-        if (!worldId) {
+        if (isManifold) {
             promptText = '[The Endless: The marble door bears a crescent moon etching. The player is transitioning back to The Manifold — the living brutalist hub world between all doors. Narrate their arrival in The Manifold.]';
         } else {
             promptText = `[The Endless: The marble door leads to ${worldName}. The player is transitioning into this world. Narrate their arrival in ${worldName}.]`;
         }
     } else {
-        if (!worldId) {
+        if (isManifold) {
             promptText = '[The Endless: Current location is The Manifold — the living hub world between all doors.]';
         } else {
             promptText = `[The Endless: Current location is ${worldName}.]`;
@@ -98,27 +99,23 @@ function updateChatAttachments(activeBookName) {
 async function activateWorldLore(worldId) {
     const context = SillyTavern.getContext();
     const settings = getSettings();
-    const bookName = worldId ? getBookName(worldId) : null;
+    // Treat null as Manifold
+    const effectiveId = worldId || 'manifold';
+    const bookName = getBookName(effectiveId);
 
     // Step 1: Update chat attachments — remove old world, attach new one
     updateChatAttachments(bookName);
 
-    // Step 2: Inject lore via setExtensionPrompt
-    if (!worldId) {
-        context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
-        console.log('[TheEndless] Cleared world lore (Manifold)');
-        return;
-    }
-
     if (!bookName) {
-        console.warn(`[TheEndless] No book name for world "${worldId}"`);
+        console.warn(`[TheEndless] No book name for world "${effectiveId}"`);
+        context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
         return;
     }
 
     try {
         const lore = await readWorldLore(bookName);
         if (lore) {
-            const worldName = getWorldName(worldId);
+            const worldName = getWorldName(effectiveId);
             context.setExtensionPrompt(
                 LORE_KEY,
                 `[World Lore — ${worldName}]\n${lore}`,

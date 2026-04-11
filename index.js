@@ -70,7 +70,7 @@ async function transitionToRandomWorld() {
 }
 
 async function transitionToManifold() {
-    await transitionToWorld(null);
+    await transitionToWorld('manifold');
 }
 
 // ─── Event Handlers ─────────────────────────────────────────────────
@@ -89,7 +89,7 @@ function onPlayerMessage(messageIndex) {
     const detection = detectDoorEvent(message.mes, 'player');
     if (!detection.detected) return;
 
-    if (settings.currentWorldId && !detection.isManifoldReturn) {
+    if (settings.currentWorldId && settings.currentWorldId !== 'manifold' && !detection.isManifoldReturn) {
         console.log('[TheEndless] Already in a world, ignoring door event (return to Manifold first)');
         return;
     }
@@ -116,15 +116,15 @@ async function onChatChanged() {
         clearLoreCache();
 
         if (!chatWorldId) {
-            // New chat or no saved world → Manifold (zero API calls)
-            console.log('[TheEndless] Chat changed → Manifold (no saved world)');
-            settings.currentWorldId = null;
+            // New chat or no saved world → start in The Manifold
+            console.log('[TheEndless] Chat changed → The Manifold (new chat)');
+            settings.currentWorldId = 'manifold';
             settings.previousWorldId = null;
             saveSettings();
 
-            await activateWorldLore(null);
-            updateWorldPrompt(null);
-            updateWorldDisplay(null);
+            await activateWorldLore('manifold');
+            updateWorldPrompt('manifold');
+            updateWorldDisplay('manifold');
             return;
         }
 

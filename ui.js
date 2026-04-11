@@ -162,7 +162,7 @@ function bindUIEvents() {
     $(document).on('click', '#theendless_go_manifold', async function () {
         try {
             console.log('[TheEndless] Return to Manifold clicked');
-            await doTransition(null);
+            await doTransition('manifold');
         } catch (e) {
             console.error('[TheEndless] Manifold error:', e);
             toastr.error(`Error: ${e.message}`, 'The Endless');
@@ -191,7 +191,7 @@ function bindUIEvents() {
         try {
             console.log('[TheEndless] Disable All → Manifold');
             clearLoreCache();
-            await doTransition(null);
+            await doTransition('manifold');
             toastr.info('All world lore cleared — Manifold', 'The Endless', { timeOut: 3000 });
         } catch (e) {
             console.error('[TheEndless] Disable All error:', e);
@@ -225,7 +225,7 @@ function bindUIEvents() {
         if (!confirm(`Remove "${world.name}" from the world registry?`)) return;
         removeWorld(worldId);
         if (getSettings().currentWorldId === worldId) {
-            doTransition(null);
+            doTransition('manifold');
         }
         refreshUI();
         toastr.info(`Removed: ${world.name}`, 'The Endless', { timeOut: 3000 });
