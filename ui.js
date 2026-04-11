@@ -3,7 +3,7 @@
  */
 
 import { getSettings, saveSettings } from './state.js';
-import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld } from './world-manager.js';
+import { getWorlds, getWorldName, addWorld, removeWorld, updateWorldNote, getAllBooksWithStatus, selectRandomWorld, enableAllWorldBooks } from './world-manager.js';
 import { updateWorldPrompt, activateWorldLore } from './interceptor.js';
 
 /**
@@ -175,7 +175,13 @@ function bindUIEvents() {
         await doTransition(null);
     });
 
-    // Clear all world lore (clean slate — return to Manifold)
+    // Enable all world lore (for testing)
+    $('#theendless_enable_all').on('click', async function () {
+        await enableAllWorldBooks();
+        toastr.info('All world lorebook entries enabled', 'The Endless', { timeOut: 3000 });
+    });
+
+    // Disable all world lore (clean slate — return to Manifold)
     $('#theendless_disable_all').on('click', async function () {
         await doTransition(null);
         toastr.info('World lore cleared — back to Manifold', 'The Endless', { timeOut: 3000 });

@@ -255,6 +255,19 @@ async function activateWorld(worldId) {
     return false;
 }
 
+/**
+ * Enable all entries in ALL registered world lorebooks.
+ * For testing and resetting.
+ */
+async function enableAllWorldBooks() {
+    const worlds = getWorlds();
+    console.log(`[TheEndless] Enabling all world lorebook entries (${worlds.length} worlds)...`);
+    await Promise.all(worlds.map(w =>
+        w.bookName ? toggleWorldBook(w.bookName, false) : Promise.resolve(),
+    ));
+    console.log('[TheEndless] All world lorebook entries enabled');
+}
+
 // ─── Fallback: Direct Lore Injection ────────────────────────────────
 
 const loreCache = new Map();
@@ -318,6 +331,6 @@ export {
     generateWorldId, addWorld, removeWorld, updateWorldNote,
     getAvailableWorldInfoBooks, getAllBooksWithStatus, getUnregisteredBooks,
     attachWorldToChat, detachAllWorldsFromChat,
-    activateWorld, toggleWorldBook,
+    activateWorld, toggleWorldBook, enableAllWorldBooks,
     readWorldLore, clearLoreCache,
 };
