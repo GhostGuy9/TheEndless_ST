@@ -9,7 +9,7 @@
  */
 
 import { getSettings, getSessionState } from './state.js';
-import { getWorldName, getBookName, readWorldLore } from './world-manager.js';
+import { getWorldName, getBookName, getWorlds, readWorldLore } from './world-manager.js';
 
 const PROMPT_KEY = 'theEndless_worldContext';
 const LORE_KEY = 'theEndless_worldLore';
@@ -42,22 +42,74 @@ function updateWorldPrompt(worldId) {
 }
 
 /**
- * Activate world lore — read from API and inject via setExtensionPrompt.
- * One GET call for activation, zero calls for Manifold.
+ * Detach all world lorebooks from chat metadata, then attach only the
+ * active one. This prevents ST's keyword scanner from picking up entries
+ * from a previous world's lorebook.
+ */
+function updateChatAttachments(activeBookName) {
+    try {
+        const context = SillyTavern.getContext();
+        if (!context.chatMetadata) return;
+
+        const meta = context.chatMetadata;
+        const registeredBooks = new Set(getWorlds().map(w => w.bookName));
+
+        // Ensure array exists
+        if (!Array.isArray(meta.world_info_extra_books)) {
+            meta.world_info_extra_books = [];
+        }
+
+        // ── DIAGNOSTIC: log what's currently in the array so we can see
+        //    what format ST actually uses (names? indices? file paths?)
+        console.log('[TheEndless] BEFORE — world_info_extra_books:', JSON.stringify(meta.world_info_extra_books));
+        console.log('[TheEndless] BEFORE — world_info:', JSON.stringify(meta.world_info));
+        console.log('[TheEndless] Our registered bookNames:', JSON.stringify([...registeredBooks]));
+
+        // Remove all our world lorebooks
+        meta.world_info_extra_books = meta.world_info_extra_books.filter(
+            name => !registeredBooks.has(name),
+        );
+
+        // Attach the active world's lorebook (if any)
+        if (activeBookName) {
+            meta.world_info_extra_books.push(activeBookName);
+        }
+
+        // Also manage the world_info field
+        if (meta.world_info && registeredBooks.has(meta.world_info)) {
+            meta.world_info = activeBookName || '';
+        }
+
+        console.log('[TheEndless] AFTER — world_info_extra_books:', JSON.stringify(meta.world_info_extra_books));
+        console.log('[TheEndless] AFTER — world_info:', JSON.stringify(meta.world_info));
+
+        context.saveMetadata();
+        console.log(`[TheEndless] Chat attachments updated → ${activeBookName || '(Manifold)'}`);
+    } catch (e) {
+        console.warn('[TheEndless] Failed to update chat attachments:', e.message);
+    }
+}
+
+/**
+ * Activate world lore:
+ * 1. Update chat metadata attachments (detach old, attach new)
+ * 2. Read lore from API and inject via setExtensionPrompt
  */
 async function activateWorldLore(worldId) {
     const context = SillyTavern.getContext();
     const settings = getSettings();
+    const bookName = worldId ? getBookName(worldId) : null;
 
+    // Step 1: Update chat attachments — remove old world, attach new one
+    updateChatAttachments(bookName);
+
+    // Step 2: Inject lore via setExtensionPrompt
     if (!worldId) {
-        // Returning to Manifold — just clear the lore injection
         context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
         console.log('[TheEndless] Cleared world lore (Manifold)');
         return;
     }
 
-    // Read world lore and inject it
-    const bookName = getBookName(worldId);
     if (!bookName) {
         console.warn(`[TheEndless] No book name for world "${worldId}"`);
         return;
