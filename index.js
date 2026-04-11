@@ -1,13 +1,14 @@
 /**
  * The Endless - Door Manager Extension for SillyTavern
  *
- * Dynamically manages world lorebook activation based on narrative door events.
- * Detects when players walk through marble doors, randomly selects a destination
- * world, activates only that world's lorebook, and injects context for the model.
+ * Manages world lore injection based on narrative door events.
+ * Uses setExtensionPrompt for direct lore injection (one API call
+ * per transition). The old approach of toggling entry.disable via
+ * the API was removed because ST caches entries in memory.
  */
 
 import { initSettings, getSettings, saveSettings, saveChatWorldState, getChatWorldState, getSessionState } from './state.js';
-import { selectRandomWorld, getWorldName, getWorlds, findWorldIdByName, disableAllWorldBooks } from './world-manager.js';
+import { selectRandomWorld, getWorldName, getWorlds, findWorldIdByName, clearLoreCache } from './world-manager.js';
 import { detectDoorEvent } from './door-detector.js';
 import { updateWorldPrompt, activateWorldLore, clearTransitionPrompt, createGenerateInterceptor } from './interceptor.js';
 import { initUI, updateWorldDisplay } from './ui.js';
@@ -25,35 +26,26 @@ async function transitionToWorld(worldId) {
     try {
         const settings = getSettings();
 
-        // Set pending transition so the generate interceptor can inject
         session.pendingTransition = {
             worldId,
             timestamp: Date.now(),
         };
 
-        // Inject world lore directly into prompt (bypasses World Info toggle)
         await activateWorldLore(worldId);
 
-        // Update persistent state
         settings.previousWorldId = settings.currentWorldId;
         settings.currentWorldId = worldId;
         settings.visitHistory.push({ worldId, timestamp: Date.now() });
 
-        // Keep history manageable
         if (settings.visitHistory.length > 100) {
             settings.visitHistory = settings.visitHistory.slice(-50);
         }
 
         saveSettings();
         saveChatWorldState(worldId);
-
-        // Update context note
         updateWorldPrompt(worldId);
-
-        // Update UI
         updateWorldDisplay(worldId);
 
-        // Notification
         if (settings.showTransitionNotification) {
             const name = getWorldName(worldId);
             toastr.info(`Door leads to: ${name}`, 'The Endless', { timeOut: 4000 });
@@ -64,7 +56,6 @@ async function transitionToWorld(worldId) {
         console.error('[TheEndless] Transition failed:', e);
     } finally {
         session.isProcessing = false;
-        // Clear transition prompt after one generation cycle
         setTimeout(() => {
             clearTransitionPrompt(worldId);
         }, PENDING_CLEAR_MS);
@@ -98,8 +89,6 @@ function onPlayerMessage(messageIndex) {
     const detection = detectDoorEvent(message.mes, 'player');
     if (!detection.detected) return;
 
-    // Don't re-trigger if already in a world (player must return to Manifold first)
-    // Exception: manifold return always works
     if (settings.currentWorldId && !detection.isManifoldReturn) {
         console.log('[TheEndless] Already in a world, ignoring door event (return to Manifold first)');
         return;
@@ -114,44 +103,39 @@ function onPlayerMessage(messageIndex) {
     }
 }
 
-// Model messages no longer trigger world transitions.
 function onModelMessage(_messageIndex) {
     // Intentionally empty — model output does not trigger transitions
 }
 
 async function onChatChanged() {
     try {
-        const context = SillyTavern.getContext();
         const settings = getSettings();
         const chatWorldId = getChatWorldState();
 
-        // New/fresh chat: no saved world state → reset to Manifold
+        // Clear lore cache on chat switch so we read fresh data
+        clearLoreCache();
+
         if (!chatWorldId) {
-            console.log('[TheEndless] Chat changed — no saved world state, resetting to Manifold');
+            // New chat or no saved world → Manifold (zero API calls)
+            console.log('[TheEndless] Chat changed → Manifold (no saved world)');
             settings.currentWorldId = null;
             settings.previousWorldId = null;
             saveSettings();
 
-            // Disable all world lorebook entries (clean slate)
-            await disableAllWorldBooks();
-
-            // Clear any injected lore
-            context.setExtensionPrompt('theEndless_worldLore', '', 1, settings.injectionDepth + 1, false, 0);
-
+            await activateWorldLore(null);
             updateWorldPrompt(null);
             updateWorldDisplay(null);
             return;
         }
 
-        // Existing chat with saved world: restore it
+        // Existing chat with saved world → restore it (one API call)
+        console.log(`[TheEndless] Chat changed → restoring ${getWorldName(chatWorldId)}`);
         settings.currentWorldId = chatWorldId;
         saveSettings();
 
         await activateWorldLore(chatWorldId);
         updateWorldPrompt(chatWorldId);
         updateWorldDisplay(chatWorldId);
-
-        console.log(`[TheEndless] Chat changed — restored world: ${getWorldName(chatWorldId)}`);
     } catch (e) {
         console.error('[TheEndless] onChatChanged failed:', e);
     }
@@ -164,11 +148,10 @@ function registerSlashCommands() {
     const { SlashCommandParser, SlashCommand, SlashCommandArgument, ARGUMENT_TYPE } = context;
 
     if (!SlashCommandParser) {
-        console.warn('[TheEndless] SlashCommandParser not available, skipping slash command registration');
+        console.warn('[TheEndless] SlashCommandParser not available');
         return;
     }
 
-    // /endless-world [name]
     SlashCommandParser.addCommandObject(SlashCommand.fromProps({
         name: 'endless-world',
         aliases: ['ew'],
@@ -185,7 +168,7 @@ function registerSlashCommands() {
             await transitionToWorld(worldId);
             return `Switched to ${getWorldName(worldId)}`;
         },
-        helpString: '<div>Show current world or switch to a specific world. Usage: <code>/endless-world [name]</code></div>',
+        helpString: '<div>Show current world or switch to a specific world.</div>',
         unnamedArgumentList: [
             SlashCommandArgument.fromProps({
                 description: 'World name to switch to (leave empty to show current)',
@@ -195,7 +178,6 @@ function registerSlashCommands() {
         ],
     }));
 
-    // /endless-door
     SlashCommandParser.addCommandObject(SlashCommand.fromProps({
         name: 'endless-door',
         aliases: ['ed'],
@@ -207,7 +189,6 @@ function registerSlashCommands() {
         helpString: '<div>Trigger a random door event.</div>',
     }));
 
-    // /endless-manifold
     SlashCommandParser.addCommandObject(SlashCommand.fromProps({
         name: 'endless-manifold',
         aliases: ['em'],
@@ -215,10 +196,9 @@ function registerSlashCommands() {
             await transitionToManifold();
             return 'Returned to The Manifold';
         },
-        helpString: '<div>Return to The Manifold (deactivate all world lorebooks).</div>',
+        helpString: '<div>Return to The Manifold.</div>',
     }));
 
-    // /endless-history
     SlashCommandParser.addCommandObject(SlashCommand.fromProps({
         name: 'endless-history',
         aliases: ['eh'],
@@ -229,7 +209,7 @@ function registerSlashCommands() {
                 `${getWorldName(h.worldId)} (${new Date(h.timestamp).toLocaleString()})`,
             ).join('\n');
         },
-        helpString: '<div>Show world visit history (last 20 entries).</div>',
+        helpString: '<div>Show world visit history.</div>',
     }));
 }
 
@@ -241,19 +221,16 @@ async function init() {
     if (initialized) return;
     initialized = true;
 
-    console.log('[TheEndless] Initializing Door Manager extension...');
+    console.log('[TheEndless] Initializing...');
 
     const context = SillyTavern.getContext();
 
-    // Initialize settings and generate interceptor
     initSettings();
     createGenerateInterceptor();
-
-    // Initialize UI and slash commands
     await initUI();
     registerSlashCommands();
 
-    // Set Manifold prompt (no API calls during init — CHAT_CHANGED handles the rest)
+    // No API calls during init — just set Manifold prompt
     updateWorldPrompt(null);
     updateWorldDisplay(null);
 
@@ -262,7 +239,6 @@ async function init() {
     context.eventSource.on(context.event_types.MESSAGE_RECEIVED, onModelMessage);
     context.eventSource.on(context.event_types.CHAT_CHANGED, onChatChanged);
 
-    // Clear transition prompt after generation completes
     context.eventSource.on(context.event_types.GENERATION_ENDED, () => {
         const session = getSessionState();
         if (session.pendingTransition) {
@@ -270,15 +246,13 @@ async function init() {
         }
     });
 
-    console.log('[TheEndless] Door Manager extension activated — waiting for CHAT_CHANGED to initialize world state');
+    console.log('[TheEndless] Ready — CHAT_CHANGED will initialize world state');
 }
 
-// Hook for manifest.json hooks.activate
 export async function onActivate() {
     await init();
 }
 
-// jQuery ready fallback — ensures init runs even if hooks don't fire
 jQuery(async () => {
     await init();
 });

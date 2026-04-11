@@ -32,7 +32,6 @@ const DEFAULT_SETTINGS = {
     visitHistory: [],
     preventRepeatWorld: true,
     showTransitionNotification: true,
-    useFallbackInjection: false,
     injectionDepth: 4,
     worlds: structuredClone(DEFAULT_WORLDS),
 };
