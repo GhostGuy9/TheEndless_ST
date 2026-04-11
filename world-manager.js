@@ -6,8 +6,56 @@
  * 2. Fallback: Read lorebook and inject via setExtensionPrompt
  */
 
-import { getRequestHeaders } from '../../../../script.js';
 import { getSettings, saveSettings } from './state.js';
+
+/**
+ * Get ST's request headers for authenticated API calls.
+ * Tries multiple import paths since the depth varies by ST install.
+ */
+let _getRequestHeaders = null;
+
+async function ensureRequestHeaders() {
+    if (_getRequestHeaders) return;
+
+    // Try importing from various relative paths
+    const paths = [
+        '../../../../script.js',
+        '../../../../../script.js',
+        '../../../../../../script.js',
+        '../../../script.js',
+    ];
+
+    for (const path of paths) {
+        try {
+            const mod = await import(path);
+            if (typeof mod.getRequestHeaders === 'function') {
+                _getRequestHeaders = mod.getRequestHeaders;
+                console.log(`[TheEndless] Found getRequestHeaders at ${path}`);
+                return;
+            }
+        } catch (e) {
+            // Try next path
+        }
+    }
+
+    // Fallback: check global scope
+    if (typeof globalThis.getRequestHeaders === 'function') {
+        _getRequestHeaders = globalThis.getRequestHeaders;
+        console.log('[TheEndless] Found getRequestHeaders on globalThis');
+        return;
+    }
+
+    console.error('[TheEndless] Could not find getRequestHeaders — API calls will fail');
+    _getRequestHeaders = () => ({ 'Content-Type': 'application/json' });
+}
+
+function getHeaders() {
+    if (!_getRequestHeaders) {
+        console.warn('[TheEndless] getRequestHeaders not loaded yet, using fallback');
+        return { 'Content-Type': 'application/json' };
+    }
+    return _getRequestHeaders();
+}
 
 // ─── World Registry ─────────────────────────────────────────────────
 
@@ -191,11 +239,12 @@ async function detachAllWorldsFromChat() {
  * Toggle all entries in a world lorebook to enabled or disabled.
  */
 async function toggleWorldBook(bookName, disable) {
+    await ensureRequestHeaders();
     console.log(`[TheEndless] toggleWorldBook("${bookName}", disable=${disable})`);
     try {
         const response = await fetch('/api/worldinfo/get', {
             method: 'POST',
-            headers: getRequestHeaders(),
+            headers: getHeaders(),
             body: JSON.stringify({ name: bookName }),
         });
         if (!response.ok) {
@@ -217,7 +266,7 @@ async function toggleWorldBook(bookName, disable) {
         if (changed > 0) {
             await fetch('/api/worldinfo/edit', {
                 method: 'POST',
-                headers: getRequestHeaders(),
+                headers: getHeaders(),
                 body: JSON.stringify({ name: bookName, data }),
             });
             console.log(`[TheEndless] ${disable ? 'Disabled' : 'Enabled'} ${changed}/${total} entries in "${bookName}"`);
@@ -276,12 +325,13 @@ const loreCache = new Map();
  * Read world lorebook content for direct injection fallback.
  */
 async function readWorldLore(bookName) {
+    await ensureRequestHeaders();
     if (loreCache.has(bookName)) return loreCache.get(bookName);
 
     try {
         const response = await fetch('/api/worldinfo/get', {
             method: 'POST',
-            headers: getRequestHeaders(),
+            headers: getHeaders(),
             body: JSON.stringify({ name: bookName }),
         });
         if (!response.ok) return null;

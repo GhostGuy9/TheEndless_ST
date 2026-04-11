@@ -114,6 +114,7 @@ function syncUIToState() {
     $('#theendless_enabled').prop('checked', settings.enabled);
     $('#theendless_prevent_repeat').prop('checked', settings.preventRepeatWorld);
     $('#theendless_notifications').prop('checked', settings.showTransitionNotification);
+    $('#theendless_fallback_injection').prop('checked', settings.useFallbackInjection);
     $('#theendless_depth').val(settings.injectionDepth);
 
     updateWorldDisplay(settings.currentWorldId);
@@ -136,6 +137,11 @@ function bindUIEvents() {
 
     $('#theendless_notifications').on('change', function () {
         getSettings().showTransitionNotification = $(this).is(':checked');
+        saveSettings();
+    });
+
+    $('#theendless_fallback_injection').on('change', function () {
+        getSettings().useFallbackInjection = $(this).is(':checked');
         saveSettings();
     });
 

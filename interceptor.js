@@ -70,22 +70,25 @@ async function activateWorldLore(worldId) {
         return;
     }
 
-    const lore = await readWorldLore(bookName);
-    if (lore) {
-        const worldName = getWorldName(worldId);
-        context.setExtensionPrompt(
-            LORE_KEY,
-            `[World Lore — ${worldName}]\n${lore}`,
-            1,
-            settings.injectionDepth + 1,
-            false,
-            0,
-        );
-        console.log(`[TheEndless] Layer 3: Direct injection for "${worldName}" (~${lore.length} chars)`);
-    } else if (!toggled) {
-        console.warn(`[TheEndless] All layers failed for "${getWorldName(worldId)}" — no lore available`);
+    // Layer 3: Direct injection fallback (only if enabled in settings)
+    if (settings.useFallbackInjection) {
+        const lore = await readWorldLore(bookName);
+        if (lore) {
+            const worldName = getWorldName(worldId);
+            context.setExtensionPrompt(
+                LORE_KEY,
+                `[World Lore — ${worldName}]\n${lore}`,
+                1,
+                settings.injectionDepth + 1,
+                false,
+                0,
+            );
+            console.log(`[TheEndless] Layer 3: Direct injection for "${worldName}" (~${lore.length} chars)`);
+        } else if (!toggled) {
+            console.warn(`[TheEndless] All layers failed for "${getWorldName(worldId)}" — no lore available`);
+        }
     } else {
-        // Layer 1 worked, clear any stale direct injection
+        // Fallback disabled — clear any stale injection
         context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
     }
 }
