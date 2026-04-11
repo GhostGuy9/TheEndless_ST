@@ -121,17 +121,32 @@ function onModelMessage(_messageIndex) {
 }
 
 async function onChatChanged() {
-    const chatWorldId = getChatWorldState();
+    const context = SillyTavern.getContext();
     const settings = getSettings();
+    const chatWorldId = getChatWorldState();
 
-    // Restore world state from chat metadata
+    // Detect if this is a new/fresh chat (no messages yet, or no saved world state)
+    const isNewChat = !chatWorldId && (!context.chat || context.chat.length <= 1);
+
+    if (isNewChat) {
+        // New chat: reset everything to Manifold — disable all world lorebook entries
+        console.log('[TheEndless] New chat detected — resetting all world lore to clean state');
+        settings.currentWorldId = null;
+        settings.previousWorldId = null;
+        saveSettings();
+        saveChatWorldState(null);
+
+        await activateWorldLore(null);
+        updateWorldPrompt(null);
+        updateWorldDisplay(null);
+        return;
+    }
+
+    // Existing chat: restore world state from chat metadata
     settings.currentWorldId = chatWorldId;
     saveSettings();
 
-    // Inject the correct world lore
     await activateWorldLore(chatWorldId);
-
-    // Update prompt and UI
     updateWorldPrompt(chatWorldId);
     updateWorldDisplay(chatWorldId);
 
@@ -234,13 +249,15 @@ async function init() {
     await initUI();
     registerSlashCommands();
 
-    // Inject world lore for current world if any
+    // On startup, always reset to clean Manifold state (all world entries disabled)
+    // The correct world will be restored when CHAT_CHANGED fires
     const settings = getSettings();
-    await activateWorldLore(settings.currentWorldId);
-
-    // Set initial world prompt
-    updateWorldPrompt(settings.currentWorldId);
-    updateWorldDisplay(settings.currentWorldId);
+    settings.currentWorldId = null;
+    saveSettings();
+    await activateWorldLore(null);
+    updateWorldPrompt(null);
+    updateWorldDisplay(null);
+    console.log('[TheEndless] Startup: reset to Manifold (clean slate)');
 
     // Wire up event handlers
     context.eventSource.on(context.event_types.MESSAGE_SENT, onPlayerMessage);
