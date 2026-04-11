@@ -152,8 +152,8 @@ function getUnregisteredBooks() {
 const loreCache = new Map();
 
 /**
- * Read ALL enabled entries from a world lorebook for direct injection.
- * Returns formatted text ready for setExtensionPrompt.
+ * Read ALL entries from a world lorebook for direct injection.
+ * Ignores the disable flag — reads everything for setExtensionPrompt.
  */
 async function readWorldLore(bookName) {
     await ensureRequestHeaders();
@@ -176,12 +176,13 @@ async function readWorldLore(bookName) {
             return null;
         }
 
-        // Collect entries by category, respecting the disable flag in the file
+        // Collect ALL entries by category — ignore the disable flag because
+        // our old API toggle code set disable:true on disk but we're reading
+        // for direct injection, not for ST's WI system
         const entries = Object.values(data.entries);
         const overviews = [], npcs = [], naming = [], locations = [], other = [];
 
         for (const entry of entries) {
-            if (entry.disable) continue; // Skip disabled entries
             const comment = (entry.comment || '').toLowerCase();
             const content = entry.content || '';
             if (!content.trim()) continue;
