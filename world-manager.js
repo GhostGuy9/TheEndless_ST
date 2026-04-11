@@ -6,6 +6,7 @@
  * 2. Fallback: Read lorebook and inject via setExtensionPrompt
  */
 
+import { getRequestHeaders } from '../../../../script.js';
 import { getSettings, saveSettings } from './state.js';
 
 // ─── World Registry ─────────────────────────────────────────────────
@@ -184,6 +185,75 @@ async function detachAllWorldsFromChat() {
     console.log('[TheEndless] Detached all world lorebooks from chat');
 }
 
+// ─── World Info Entry Toggle (now with proper auth) ─────────────────
+
+/**
+ * Toggle all entries in a world lorebook to enabled or disabled.
+ */
+async function toggleWorldBook(bookName, disable) {
+    try {
+        const response = await fetch('/api/worldinfo/get', {
+            method: 'POST',
+            headers: getRequestHeaders(),
+            body: JSON.stringify({ name: bookName }),
+        });
+        if (!response.ok) {
+            console.warn(`[TheEndless] Could not load "${bookName}": ${response.status}`);
+            return false;
+        }
+        const data = await response.json();
+        if (!data?.entries) return false;
+
+        let changed = 0;
+        const total = Object.keys(data.entries).length;
+        for (const entry of Object.values(data.entries)) {
+            if (entry.disable !== disable) {
+                entry.disable = disable;
+                changed++;
+            }
+        }
+
+        if (changed > 0) {
+            await fetch('/api/worldinfo/edit', {
+                method: 'POST',
+                headers: getRequestHeaders(),
+                body: JSON.stringify({ name: bookName, data }),
+            });
+            console.log(`[TheEndless] ${disable ? 'Disabled' : 'Enabled'} ${changed}/${total} entries in "${bookName}"`);
+        }
+        return true;
+    } catch (e) {
+        console.warn(`[TheEndless] Error toggling "${bookName}":`, e);
+        return false;
+    }
+}
+
+/**
+ * Activate a world's lorebook entries, disabling all others.
+ * Pass null to disable all (return to Manifold).
+ */
+async function activateWorld(worldId) {
+    const worlds = getWorlds();
+
+    // Disable ALL world lorebooks
+    await Promise.all(worlds.map(w =>
+        w.bookName ? toggleWorldBook(w.bookName, true) : Promise.resolve(),
+    ));
+
+    // Enable the selected world
+    if (worldId) {
+        const bookName = getBookName(worldId);
+        if (bookName) {
+            const success = await toggleWorldBook(bookName, false);
+            if (success) {
+                console.log(`[TheEndless] Activated world: ${getWorldName(worldId)}`);
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 // ─── Fallback: Direct Lore Injection ────────────────────────────────
 
 const loreCache = new Map();
@@ -197,7 +267,7 @@ async function readWorldLore(bookName) {
     try {
         const response = await fetch('/api/worldinfo/get', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: getRequestHeaders(),
             body: JSON.stringify({ name: bookName }),
         });
         if (!response.ok) return null;
@@ -247,5 +317,6 @@ export {
     generateWorldId, addWorld, removeWorld, updateWorldNote,
     getAvailableWorldInfoBooks, getAllBooksWithStatus, getUnregisteredBooks,
     attachWorldToChat, detachAllWorldsFromChat,
+    activateWorld, toggleWorldBook,
     readWorldLore, clearLoreCache,
 };

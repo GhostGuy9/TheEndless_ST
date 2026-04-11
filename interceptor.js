@@ -1,15 +1,16 @@
 /**
- * Prompt injection for The Endless.
+ * Prompt injection and world lore activation for The Endless.
  *
- * Strategy:
- * 1. Always inject a location/transition note via setExtensionPrompt (PROMPT_KEY)
- * 2. Try to attach world lorebook to chat via chat_metadata (native ST keyword scanning)
- * 3. If attachment works, ST handles lore injection natively — no LORE_KEY needed
- * 4. If attachment fails, fall back to direct lore injection via setExtensionPrompt (LORE_KEY)
+ * Three-layer strategy for world lore:
+ * 1. Toggle World Info entries via API (native ST keyword scanning) — now with proper auth
+ * 2. Attach lorebook to chat via chat_metadata (native ST)
+ * 3. Direct injection via setExtensionPrompt (fallback, always works)
+ *
+ * Plus: always inject a location/transition note via setExtensionPrompt.
  */
 
 import { getSettings, getSessionState } from './state.js';
-import { getWorldName, getBookName, attachWorldToChat, detachAllWorldsFromChat, readWorldLore } from './world-manager.js';
+import { getWorldName, getBookName, activateWorld, attachWorldToChat, detachAllWorldsFromChat, readWorldLore } from './world-manager.js';
 
 const PROMPT_KEY = 'theEndless_worldContext';
 const LORE_KEY = 'theEndless_worldLore';
@@ -42,38 +43,33 @@ function updateWorldPrompt(worldId) {
 }
 
 /**
- * Activate world lore — tries native chat attachment first, falls back to direct injection.
+ * Activate world lore using all available methods.
  */
 async function activateWorldLore(worldId) {
     const context = SillyTavern.getContext();
     const settings = getSettings();
+    const bookName = worldId ? getBookName(worldId) : null;
 
-    // Always detach previous worlds first
+    // Layer 1: Toggle World Info entries via API (proper auth headers now)
+    const toggled = await activateWorld(worldId);
+    if (toggled) {
+        console.log(`[TheEndless] Layer 1 success: World Info entries toggled for "${getWorldName(worldId)}"`);
+    }
+
+    // Layer 2: Attach/detach via chat metadata
     await detachAllWorldsFromChat();
+    if (bookName) {
+        await attachWorldToChat(bookName);
+        console.log(`[TheEndless] Layer 2: Chat attachment attempted for "${bookName}"`);
+    }
 
+    // Layer 3: Direct injection fallback (always works)
     if (!worldId) {
-        // Returning to Manifold — clear any direct injection
         context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
         console.log('[TheEndless] Cleared world lore (Manifold)');
         return;
     }
 
-    const bookName = getBookName(worldId);
-    if (!bookName) {
-        console.warn(`[TheEndless] No book name for world "${worldId}"`);
-        return;
-    }
-
-    // Try 1: Attach to chat via metadata (native ST)
-    const attached = await attachWorldToChat(bookName);
-    if (attached) {
-        // Clear any leftover direct injection since native should handle it
-        context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
-        console.log(`[TheEndless] Attached "${bookName}" to chat (native mode)`);
-    }
-
-    // Try 2: Also do direct injection as fallback/supplement
-    // This ensures lore is available even if chat attachment doesn't work
     const lore = await readWorldLore(bookName);
     if (lore) {
         const worldName = getWorldName(worldId);
@@ -85,7 +81,12 @@ async function activateWorldLore(worldId) {
             false,
             0,
         );
-        console.log(`[TheEndless] Injected lore fallback for "${worldName}" (~${lore.length} chars)`);
+        console.log(`[TheEndless] Layer 3: Direct injection for "${worldName}" (~${lore.length} chars)`);
+    } else if (!toggled) {
+        console.warn(`[TheEndless] All layers failed for "${getWorldName(worldId)}" — no lore available`);
+    } else {
+        // Layer 1 worked, clear any stale direct injection
+        context.setExtensionPrompt(LORE_KEY, '', 1, settings.injectionDepth + 1, false, 0);
     }
 }
 
