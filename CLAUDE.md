@@ -1,10 +1,10 @@
-# The Endless — SillyTavern Lore Project
+# The Endless — Lore Project
 
 ## What This Is
 
-This repository contains all SillyTavern lorebook JSON files and character card JSON files for **The Endless** — an original multi-world lore system designed as a Global Active World in SillyTavern. It connects multiple fictional worlds (original and existing) through a shared phenomenon of ancient marble doors that appear and disappear without warning.
+This repository contains all lorebook and character card JSON files for **The Endless** — an original multi-world lore system. It connects multiple fictional worlds (original and existing) through a shared phenomenon of ancient marble doors that appear and disappear without warning.
 
-All files are importable directly into SillyTavern. Lorebooks go through World Info → Import. Character cards go through Characters → Import.
+All files are in **Marinara Engine** native format. Marinara imports them directly; SillyTavern users need to unwrap the outer envelope first (see README.md).
 
 ---
 
@@ -21,61 +21,88 @@ TheEndless_ST/
 ├── CLAUDE.md               ← You are here
 ├── README.md
 ├── core/
-│   ├── TheEndless_Lorebook.json    ← Global Active lorebook, always loaded
-│   └── TheEndless_GM.json          ← GM/narrator character card
-└── worlds/
-    ├── World_Ashlands.json         ← (planned)
-    ├── World_Aldenmoor.json        ← (planned)
-    ├── World_PaleFog.json          ← (planned)
-    ├── World_FalloutWastes.json    ← (planned)
-    ├── World_EvergreenVale.json    ← (planned)
-    ├── World_EndlessLibrary.json   ← (planned)
-    ├── World_IronwaterStation.json ← (planned)
-    ├── World_Frontier.json         ← (planned)
-    ├── World_DunwaterCoast.json    ← (planned)
-    └── World_NightCity.json        ← (planned, CP2077-adjacent)
+│   ├── The Endless.json        ← Core lorebook (door mechanics, Manifold rules, Explorer NPCs)
+│   ├── TheEndless_GM.json      ← GM/narrator character card
+│   └── TheEndless - Profile Photo.png
+├── characters/
+│   ├── Threshold.json          ← Experienced Explorer NPC card
+│   ├── Cairn.json              ← Younger Explorer NPC card
+│   └── GenericExplorer.json    ← Template for unnamed Explorers
+└── worlds/                 ← 17 world lorebooks
+    ├── Aldenmoor.json
+    ├── Dunwater Coast.json
+    ├── Evergreen Vale.json
+    ├── Ironwater Station.json
+    ├── Night City.json
+    ├── Pale Fog.json
+    ├── Stardust Valley.json
+    ├── The Ashlands.json
+    ├── The Endless Library.json
+    ├── The Fallout Wastes.json
+    ├── The Frontier.json
+    ├── The Lighthouse World.json     ← Glimpse
+    ├── The Manifold.json
+    ├── The Red Planet.json           ← Glimpse
+    ├── The Slow Thing.json           ← Glimpse
+    ├── The Stopped City.json         ← Glimpse
+    └── The White Forest.json         ← Glimpse
 ```
+
+Directory name is historical (`TheEndless_ST`) — project is no longer ST-specific.
 
 ---
 
-## SillyTavern File Format Rules
+## Marinara Engine File Format Rules
 
-These are critical. Getting these wrong silently breaks things on import.
+Getting these wrong silently breaks things on import.
 
 ### Lorebooks
-- `entries` MUST be a JSON object keyed by uid strings (`"1"`, `"2"`) — NEVER an array
-- Using an array corrupts the `comment` field on every entry during import
-- `comment` field is the label shown in ST's UI — use bracket prefix convention: `[Overview]`, `[Location]`, `[Mechanics]`, `[Character]`, `[Meta]`, etc.
+- Top-level envelope: `{ "type": "marinara_lorebook", "version": 1, "exportedAt": "...", "data": { "lorebook": {...}, "entries": [...] } }`
+- `data.entries` is a JSON **array** (not an object keyed by uid as SillyTavern uses)
+- Each entry has its own `id`, `lorebookId`, `createdAt`, `updatedAt` — use nanoid-style strings
+- `name` on entry (equivalent to ST's `comment`) — still use bracket prefix convention: `[Overview]`, `[Location]`, `[Mechanics]`, `[Character]`, `[Meta]`, etc.
+- `tag` on entry accepts a single string — we derive this from the bracket prefix (e.g., `[Location]` → `tag: "location"`)
+- `keys` = primary keywords array; `secondaryKeys` = secondary keywords
 - `content` must be self-contained — keywords and titles are NOT injected, only content
 - `constant: true` entries always fire regardless of keywords — use sparingly (max 2-3 per lorebook)
-- `position: "before_char"` for world/setting lore, `"after_char"` for immediate scene context
-- Higher `insertion_order` = injected closer to end of prompt = stronger model influence
+- `position` is an **integer**: `0` = before character definitions (world/setting lore), `1` = after character definitions (immediate scene context), `2`/`3` = around author's note, `4` = at chat depth
+- `order` (equivalent to ST's `insertion_order`) — higher = injected closer to end of prompt = stronger model influence
+- `role` is a string: `"system"`, `"user"`, or `"assistant"`
+- `selectiveLogic` is a string: `"and"` or `"or"`
+- Lorebook-level `category`: use `"world"` for world lorebooks and the core Endless lorebook
 
 ### Character Cards
-- Spec: `chara_card_v2`, spec_version `"2.0"`
+- Top-level envelope: `{ "type": "marinara_character", "version": 1, "exportedAt": "...", "data": { "spec": "chara_card_v2", "spec_version": "2.0", "data": {...}, "metadata": {...} } }`
+- Inner `data.data` is the standard chara_card_v2 spec (name, description, personality, scenario, first_mes, etc.)
 - Use `{{char}}` and `{{user}}` macros instead of real names
 - `first_mes` length calibrates AI response length — write it the length you want responses to be
 - `mes_example` exchanges MUST each start with `<START>` on its own line
-- `system_prompt` left as `""` uses user's global ST settings
+- `system_prompt` left as `""` uses the user's global Marinara settings
+- M.E.-specific extensions bag fields:
+  - `nameColor` / `dialogueColor` / `boxColor`: hex or CSS gradient (e.g., `linear-gradient(...)`). Threshold uses `#E88D67`, GM card uses `#C4A882`
+  - `backstory` / `appearance`: optional prose fields (alternative to embedding everything in `description`)
+  - `talkativeness`: 0.0–1.0 (affects how often the model volunteers dialogue)
+  - `conversationStatus`: `"online"` default
+- `character_book`: set to `null` unless the card embeds its own private lorebook
 
 ---
 
-## How SillyTavern Loads This
+## How Marinara Engine Loads This
 
 ### Loading Order (Context Priority)
 ```
 System Prompt → Character Card → Lorebooks → Chat History
 ```
 
-### Recommended ST Setup
+### Recommended Setup
 | What | How |
 |---|---|
-| `TheEndless_Lorebook.json` | World Info → Import → set Global, Always Active |
-| `TheEndless_GM.json` | Characters → Import → load as primary card |
-| Individual world lorebook | Activate ONLY when player is in that world, deactivate on exit |
-| RPG Companion card | Load alongside GM card for mechanical stat/inventory tracking |
+| `core/TheEndless_GM.json` | Import as character, use as primary chat partner |
+| `core/The Endless.json` | Import as lorebook. Bind to GM card OR set as global/always-active |
+| A world lorebook | Activate for the chat ONLY while the player is in that world |
+| Explorer character cards | Optional — import for group chats where Explorers appear |
 
-**Do NOT load all world lorebooks globally.** The GM card carries thumbnail descriptions of all worlds. Full world lorebooks only activate when the player is inside that world. This is a deliberate token budget decision.
+**Do NOT activate all world lorebooks at once.** The GM card carries thumbnail descriptions of all worlds. Full world lorebooks only activate when the player is inside that world. This is a deliberate token budget decision.
 
 ### Token Budget Reality
 At 8GB VRAM Danny runs local models (currently testing ~7-9B uncensored GGUF models). Token budget is tight. Every active element costs:
@@ -85,6 +112,15 @@ At 8GB VRAM Danny runs local models (currently testing ~7-9B uncensored GGUF mod
 - World lorebook entries: fire only when active
 
 Keep world lorebook entries lean. 100-250 tokens per entry target.
+
+### Marinara-Native Features Available
+These are exposed by the file format but require activation in the Marinara UI:
+- **Agents** (25+ built-in): world tracking, quests, combat, expression detection — particularly relevant for Night City (combat), Ironwater Station (status tracking), Pale Fog (sanity)
+- **Game mode**: party systems, NPC dialogue tracking — natural fit for The Frontier, Aldenmoor, Dunwater Coast
+- **Dynamic weather / sprite switching**: not currently wired into any card, but `extensions.dialogueColor` preset on Threshold and the GM
+- **Local Gemma model**: can be assigned to tracker agents or game scene analysis — useful for keeping VRAM headroom on the main model
+
+Danny decides what to wire up per-playthrough rather than baking feature assumptions into the data.
 
 ---
 
@@ -147,36 +183,31 @@ Keep world lorebook entries lean. 100-250 tokens per entry target.
 
 ## Known Worlds
 
-### Already Built (in core/ lorebook)
-These have full thumbnail entries in the GM card and entries in TheEndless_Lorebook.json.
+All 17 worlds are built and live in `worlds/`. Full-tier worlds have rich lore (NPCs, locations, factions). Glimpse Worlds are intentionally lore-light.
 
-**The Manifold** — The hub. Living brutalist spatial entity between all worlds.
-
-**Glimpse Worlds** (lore-light, no individual lorebooks planned):
-- The Red Planet — rust terrain, circle of white featureless buildings, no life
-- The White Forest — identical pale trees in perfect grid, no animals, silence
-- The Lighthouse World — endless ocean, one rock, one lighthouse, logbook inside
-- The Stopped City — city frozen mid-morning, no people, nothing decaying
-- The Slow Thing — black sand, two suns, something enormous on the horizon that never arrives
-
-### Planned (individual lorebooks to be built)
-Each gets its own lorebook file in `worlds/`. Two-tier system:
-- **Tier 1**: Thumbnail entry in TheEndless_Lorebook.json (already written in GM card, needs lorebook entry added)
-- **Tier 2**: Full individual world lorebook, activated only when player is in that world
-
+### Full Worlds
 | World | Tone | File |
 |---|---|---|
-| Night City | Cyberpunk dystopia (CP2077-adjacent) | World_NightCity.json |
-| Stardust Valley | Cozy VTuber world (VchiBan) | World_StardustValley.json |
-| The Ashlands | Dark Souls-adjacent dying kingdom | World_Ashlands.json |
-| Pale Fog | Silent Hill-adjacent psychological horror | World_PaleFog.json |
-| The Fallout Wastes | Post-apocalyptic wasteland | World_FalloutWastes.json |
-| Evergreen Vale | Studio Ghibli-esque cozy village | World_EvergreenVale.json |
-| The Endless Library | Liminal infinite library | World_EndlessLibrary.json |
-| Ironwater Station | Abandoned deep space station | World_IronwaterStation.json |
-| The Frontier | Wild west | World_Frontier.json |
-| Dunwater Coast | Pirate island chains | World_DunwaterCoast.json |
-| Aldenmoor | High fantasy continent | World_Aldenmoor.json |
+| The Manifold | Hub, living brutalist spatial entity | `worlds/The Manifold.json` |
+| Night City | Cyberpunk Red 2045 (CP2077-adjacent) | `worlds/Night City.json` |
+| Stardust Valley | Cozy VTuber-ish world (VchiBan-inspired) | `worlds/Stardust Valley.json` |
+| The Ashlands | Dark Souls-adjacent dying kingdom | `worlds/The Ashlands.json` |
+| Pale Fog | Silent Hill-adjacent psychological horror | `worlds/Pale Fog.json` |
+| The Fallout Wastes | Post-apocalyptic wasteland | `worlds/The Fallout Wastes.json` |
+| Evergreen Vale | Studio Ghibli-esque cozy village | `worlds/Evergreen Vale.json` |
+| The Endless Library | Liminal infinite library | `worlds/The Endless Library.json` |
+| Ironwater Station | Abandoned deep space station | `worlds/Ironwater Station.json` |
+| The Frontier | Wild west | `worlds/The Frontier.json` |
+| Dunwater Coast | Pirate island chains | `worlds/Dunwater Coast.json` |
+| Aldenmoor | High fantasy continent | `worlds/Aldenmoor.json` |
+
+### Glimpse Worlds
+Rarely visited, intentionally under-explained.
+- **The Red Planet** — rust terrain, circle of white featureless buildings, no life
+- **The White Forest** — identical pale trees in perfect grid, no animals, silence
+- **The Lighthouse World** — endless ocean, one rock, one lighthouse, logbook inside
+- **The Stopped City** — city frozen mid-morning, no people, nothing decaying
+- **The Slow Thing** — black sand, two suns, something enormous on the horizon that never arrives
 
 ---
 
@@ -203,20 +234,11 @@ Used by the GM card to generate contextually appropriate NPC names.
 
 ## GM Card Notes
 
-- **Version**: 1.1
-- **Voice**: GM character with narrative voice. Uses `{{char}}` framing. Asterisk action beats. NOT a pure text adventure narrator (Danny uses Text Adventure preset in ST which handles formatting — the card itself keeps its character voice).
-- **No separate NPC cards needed** — GM generates Explorer NPCs organically
-- **RPG Companion** handles mechanical tracking (perception filter level, stats, inventory). GM card handles narration only.
-- The Taboo enforcement, No-Death Rule description, and Glimpse World descriptions are all handled by this card
-
----
-
-## What's Left To Build
-
-In priority order:
-1. Add thumbnail entries to `TheEndless_Lorebook.json` for all 11 planned worlds (Tier 1)
-2. Build each individual world lorebook one at a time (Tier 2), starting with whichever world Danny wants to play in first
-3. Stardust Valley and Night City lorebooks may already exist separately — confirm with Danny before rebuilding
+- **Version**: 2.1 (inner `character_version` field)
+- **Voice**: GM character with narrative voice. Uses `{{char}}` framing. Asterisk action beats. NOT a pure text adventure narrator.
+- **Dialogue color**: `#C4A882` (preset in `extensions.dialogueColor`)
+- **No separate NPC cards needed for worlds** — GM generates NPCs organically using the naming conventions above. Standalone NPC cards (Threshold, Cairn, GenericExplorer) exist for group chats if desired.
+- The Taboo enforcement, No-Death Rule description, and Glimpse World descriptions are all handled by the GM card
 
 ---
 

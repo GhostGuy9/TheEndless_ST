@@ -1,75 +1,55 @@
-# The Endless — SillyTavern Extension & Lore Project
+# The Endless — Lore Project
 
-A multi-world door phenomenon for SillyTavern. Ancient marble doors appear without warning, connecting worlds through a living hub called **The Manifold**. This repo is both a SillyTavern extension and a complete lorebook/character card collection.
+A multi-world door phenomenon. Ancient marble doors appear without warning, connecting worlds through a living hub called **The Manifold**.
+
+This repo is a data-only lore collection: lorebooks, character cards, and world files in **Marinara Engine** native format. All files are also compatible with SillyTavern via its import flow.
 
 ## What's Included
 
-### Extension — Door Manager
-Automatically manages world lorebook activation based on narrative events. When your character walks through a marble door, the extension:
-- Detects the door event from player input or model output
-- Randomly selects a destination world
-- Activates only that world's lorebook (deactivates all others)
-- Injects a system note so the model knows where to narrate
-
-Install via SillyTavern's extension installer using this repo URL.
-
-### Lorebooks
+### Core
 
 | File | Description |
 |---|---|
-| `core/The Endless.json` | Global Active lorebook — door mechanics, Manifold rules, Explorer NPCs |
-| `core/TheEndless_GM.json` | GM/narrator character card (v2.0) |
-| `worlds/*.json` | 16 world lorebooks — activate per-world via the extension |
+| `core/The Endless.json` | Core lorebook — door mechanics, Manifold rules, Explorer NPCs |
+| `core/TheEndless_GM.json` | GM/narrator character card |
 
-**Worlds:** Night City, Stardust Valley, The Ashlands, Pale Fog, The Fallout Wastes, Evergreen Vale, The Endless Library, Ironwater Station, The Frontier, Dunwater Coast, Aldenmoor, plus 5 Glimpse Worlds (The Red Planet, The White Forest, The Lighthouse World, The Stopped City, The Slow Thing).
+### Worlds
 
-### Character Cards
+17 world lorebooks in `worlds/` — each a self-contained setting that activates when your character is inside it.
+
+**Full worlds:** Night City, Stardust Valley, The Ashlands, Pale Fog, The Fallout Wastes, Evergreen Vale, The Endless Library, Ironwater Station, The Frontier, Dunwater Coast, Aldenmoor, The Manifold.
+
+**Glimpse Worlds** (lore-light, rarely visited): The Red Planet, The White Forest, The Lighthouse World, The Stopped City, The Slow Thing.
+
+### Characters
 
 | File | Description |
 |---|---|
 | `characters/Threshold.json` | Experienced Manifold Explorer — casual, knows everything |
 | `characters/Cairn.json` | Younger Explorer — practical, blunt, tactical |
-| `characters/GenericExplorer.json` | Template for generating unique unnamed Explorers |
+| `characters/GenericExplorer.json` | Template for generating unnamed Explorer NPCs |
 
-## Setup
+## Setup — Marinara Engine
 
-1. **Install the extension** — In SillyTavern, go to Extensions > Install from URL and paste this repo's URL
-2. **Import the GM card** — Characters > Import > `core/TheEndless_GM.json`
-3. **Import the core lorebook** — World Info > Import > `core/The Endless.json` > Set as Global, Always Active
-4. **Import world lorebooks** — World Info > Import each file from `worlds/`. Leave all entries disabled — the extension manages activation
-5. **(Optional)** Import character cards from `characters/` for group chat use
+1. Import `core/TheEndless_GM.json` as a character
+2. Import `core/The Endless.json` as a lorebook and bind it to the GM card (or leave it global)
+3. Import the world lorebook for whichever setting you want to play in — activate it for the chat
+4. Optional: import any of the Explorer character cards for group chats
 
-## How It Works
+Marinara Engine's native features (tags, categories, per-entry color, relationships, game mode hooks) are wired into the JSON where it made sense. Dialogue colors for Threshold (`#E88D67`) and the GM narrator (`#C4A882`) are preset.
 
-The GM card handles narration and tone. The core lorebook provides door mechanics, Manifold rules, and Explorer NPCs (keyword-triggered). World lorebooks provide world-specific lore and NPCs — only one is active at a time.
+## Setup — SillyTavern
 
-The extension sits between everything: it detects when you walk through a door, picks a destination, activates the right lorebook, and tells the model where to narrate. When you return to The Manifold (crescent moon door), all world lorebooks deactivate.
+Marinara's lorebook and character envelopes are thin wrappers around SillyTavern's v2 spec, but ST's importer doesn't unwrap them. To use these files in SillyTavern:
 
-### Extension Commands
+1. Strip the outer envelope — for lorebooks, use `.data.lorebook` + `.data.entries`; for characters, use `.data`
+2. Or export a file from SillyTavern in the old format and hand-port entries
 
-| Command | Alias | Action |
-|---|---|---|
-| `/endless-world [name]` | `/ew` | Show current world or switch to a specific world |
-| `/endless-door` | `/ed` | Trigger a random door event |
-| `/endless-manifold` | `/em` | Return to The Manifold |
-| `/endless-history` | `/eh` | Show world visit history |
+If you want to keep ST-native copies alongside these, check out the pre-conversion commit (`15cddb7` and earlier) and grab them from git history.
 
-## Token Budget
+## Lore Overview
 
-Designed for local models on 8GB VRAM (7-9B parameter models):
-- GM card: ~800 tokens (v2.0, slimmed from ~1700)
-- Core lorebook constants: ~300 tokens
-- Explorer NPCs: ~150 tokens each, only when mentioned
-- World lorebook entries: ~150-300 each, only when triggered
-- World NPC entries: ~150 each, only when mentioned
-
-A typical scene uses ~1,200 tokens of system content, leaving room for chat history and BunnyMo trackers.
-
-## Compatible Extensions
-
-- **Doom's Enhancement Suite** — Chat bubbles, NPC profiles, font color dialog
-- **CarrotKernel** — Character detection, BunnyMo tag injection
-- **BunnyMo** — Behavioral trackers (health, chemistry, etc.)
+See `CLAUDE.md` for the full lore reference — door mechanics, the Manifold's rules, the Taboo, the perception filter, and the worlds.
 
 ## Credits
 
