@@ -97,8 +97,8 @@ System Prompt → Character Card → Lorebooks → Chat History
 ### Recommended Setup
 | What | How |
 |---|---|
-| `core/TheEndless_GM.json` | Import as character, use as primary chat partner |
-| `core/The Endless.json` | Import as lorebook. Bind to GM card OR set as global/always-active |
+| `core/TheEndless_GM.json` | Import as character, use as primary chat partner. Core lore is embedded — no separate lorebook bind needed |
+| `core/The Endless.json` | Standalone copy of the core lorebook. Optional import for SillyTavern users or anyone who wants it as a separate lorebook |
 | A world lorebook | Activate for the chat ONLY while the player is in that world |
 | Explorer character cards | Optional — import for group chats where Explorers appear |
 
@@ -239,6 +239,7 @@ Used by the GM card to generate contextually appropriate NPC names.
 - **Dialogue color**: `#C4A882` (preset in `extensions.dialogueColor`)
 - **No separate NPC cards needed for worlds** — GM generates NPCs organically using the naming conventions above. Standalone NPC cards (Threshold, Cairn, GenericExplorer) exist for group chats if desired.
 - The Taboo enforcement, No-Death Rule description, and Glimpse World descriptions are all handled by the GM card
+- **Core lorebook is embedded** in the GM card's `character_book` field — door mechanics, Manifold rules, and Endless overview ship with the card. `core/The Endless.json` exists as a standalone copy too. **If you edit one, update both** (the embedded copy is plain chara_card_v2 spec format, the standalone is M.E. format)
 
 ---
 

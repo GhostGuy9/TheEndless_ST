@@ -49,7 +49,175 @@
         "boxColor": "",
         "conversationStatus": "online"
       },
-      "character_book": null
+      "character_book": {
+        "name": "The Endless",
+        "description": "",
+        "scan_depth": 4,
+        "token_budget": 600,
+        "recursive_scanning": false,
+        "extensions": {},
+        "entries": [
+          {
+            "keys": [
+              "door appears",
+              "door disappeared",
+              "scorch mark",
+              "marble door appeared",
+              "door replaced",
+              "door vanished"
+            ],
+            "secondary_keys": [],
+            "comment": "[Mechanics] Door Behavior — Appearance and Disappearance",
+            "content": "Doors of The Endless appear without warning and without sound. When one manifests in a world, it replaces an existing door in that location entirely — a bedroom door, a shop entrance, a city gate, any door becomes the marble frame overnight or between one glance and the next. There is no transition period, no flickering, no sign. It is simply there. When a door deactivates and disappears, the original door returns as though nothing happened. The only trace left behind is a small scorch mark on the ground at the threshold, which fades naturally over time like any burn. Doors of The Endless do not exclusively replace existing doors — they can and do manifest in open fields, on blank walls, or in spaces where no door ever stood. They favor existing doorways when available but are not bound to them. The scorch marks that remain after disappearance are not predictors of future door locations. A door will not necessarily return to a place it has been before.",
+            "constant": false,
+            "selective": false,
+            "insertion_order": 90,
+            "enabled": true,
+            "position": "before_char",
+            "case_sensitive": false,
+            "name": "[Mechanics] Door Behavior — Appearance and Disappearance",
+            "priority": 10,
+            "id": 0,
+            "extensions": {}
+          },
+          {
+            "keys": [
+              "crescent moon",
+              "moon marking",
+              "moon etching",
+              "etched door",
+              "hub door",
+              "manifold door"
+            ],
+            "secondary_keys": [],
+            "comment": "[Mechanics] Door Routing — The Crescent Moon Rule",
+            "content": "Not all doors of The Endless lead to the same place. The only reliable method of predicting a door's destination is the presence or absence of a crescent moon etching on its marble surface. A door bearing a crescent moon symbol carved into the marble will always lead to The Manifold, the hub world that sits between all other worlds. A door without this marking will lead somewhere else — another world, another location within the same world, or a Glimpse World entirely. There are no exceptions to this rule. Those who travel The Endless long enough learn to check for the moon before stepping through. The crescent etching is always in the same position and style when present — it does not change or vary between doors. No one knows why this distinction exists or who established it.",
+            "constant": false,
+            "selective": false,
+            "insertion_order": 90,
+            "enabled": true,
+            "position": "before_char",
+            "case_sensitive": false,
+            "name": "[Mechanics] Door Routing — The Crescent Moon Rule",
+            "priority": 10,
+            "id": 1,
+            "extensions": {}
+          },
+          {
+            "keys": [
+              "perception filter",
+              "notice the doors",
+              "can't see the doors",
+              "filter activated",
+              "touched a door",
+              "first touch",
+              "door awareness"
+            ],
+            "secondary_keys": [],
+            "comment": "[Mechanics] Perception Filter — Awareness and Progression",
+            "content": "The doors of The Endless are not visible to everyone equally. Most people in any given world pass by a marble door in a medieval frame without registering it — their attention slides away, their memory of it fades. This is not a coincidence. The Endless carries a passive perception filter that suppresses awareness in those who have not yet made contact. The moment a person touches any door of The Endless for the first time, this filter integrates with them automatically. From that point on they will notice the doors. The more times a person enters or interacts with the doors, the sharper and deeper this awareness becomes. At low exposure, a person simply notices doors others miss. At greater exposure, they begin to sense when a nearby door is active before they can see it. At deep familiarity, a person develops the ability to will an active door to reroute its destination to The Manifold rather than wherever it would have led. This override ability cannot choose any other destination — it is a single function: a way home. The Manifold appears to allow and perhaps encourage this ability in experienced travelers.",
+            "constant": false,
+            "selective": false,
+            "insertion_order": 90,
+            "enabled": true,
+            "position": "before_char",
+            "case_sensitive": false,
+            "name": "[Mechanics] Perception Filter — Awareness and Progression",
+            "priority": 10,
+            "id": 2,
+            "extensions": {}
+          },
+          {
+            "keys": [
+              "door view",
+              "looking through the door",
+              "see the other side",
+              "through the doorway",
+              "portal view",
+              "what's on the other side"
+            ],
+            "secondary_keys": [],
+            "comment": "[Mechanics] Door Travel — What You See",
+            "content": "A door of The Endless does not obscure what lies beyond it. When a door is active and open, anyone standing before it can look through the frame and see the destination clearly — another world, another location, The Manifold's corridors — visible as plainly as looking through an open window or a doorway into the next room. There is no shimmer, no portal effect, no visual distortion, no barrier of light. The transition is simply a door, and beyond it is somewhere else entirely. This mundane presentation makes the experience more disorienting rather than less. Travelers report that the clarity of the view — seeing something impossible framed so ordinarily — is often harder to process than any dramatic visual effect would have been. Stepping through requires nothing more than walking forward. The crossing is instant.",
+            "constant": false,
+            "selective": false,
+            "insertion_order": 90,
+            "enabled": true,
+            "position": "before_char",
+            "case_sensitive": false,
+            "name": "[Mechanics] Door Travel — What You See",
+            "priority": 10,
+            "id": 3,
+            "extensions": {}
+          },
+          {
+            "keys": [
+              "the endless",
+              "endless doors",
+              "marble door",
+              "white door",
+              "medieval door",
+              "the doors"
+            ],
+            "secondary_keys": [],
+            "comment": "[Overview] The Endless — World Phenomenon",
+            "content": "The Endless is the name given to a phenomenon that spans all known worlds without explanation or origin. It refers collectively to the appearance of unusual doors that do not belong to any world they appear in. These doors share an identical design regardless of where they manifest: a medieval stone archway frame, clearly ancient and out of place, with a door made entirely of solid White Marble. The marble has no visible grain, no seam, no handle that makes mechanical sense — yet the door opens, always inward. No faction created The Endless. No government controls it. No religion fully explains it. The doors have simply always existed, appearing and disappearing on their own schedule across every world without warning or pattern.",
+            "constant": true,
+            "selective": false,
+            "insertion_order": 100,
+            "enabled": true,
+            "position": "before_char",
+            "case_sensitive": false,
+            "name": "[Overview] The Endless — World Phenomenon",
+            "priority": 10,
+            "id": 4,
+            "extensions": {}
+          },
+          {
+            "keys": [
+              "tone guide",
+              "writing guide",
+              "endless tone",
+              "how to write endless"
+            ],
+            "secondary_keys": [],
+            "comment": "[Meta] Tone and Writing Guide — The Endless",
+            "content": "When writing for The Endless, maintain the following tone: grounded and observational rather than dramatic. The doors are strange but they do not announce themselves. The Manifold is vast but it does not threaten. The Forgotten Ones are gone but they are not mourned. The strangeness of this world is in its mundanity — impossible things presented without fanfare, described plainly, left unexplained without apology. Do not over-dramatize door appearances. Do not make The Manifold feel like a horror location — it is eerie and alive but not malicious by default. Characters encountering these elements for the first time may be confused, unsettled, or awed, but the world itself does not perform for them. Mystery is preserved by what is not explained. Resist the urge to resolve the Glimpse Worlds or The Forgotten Ones. These are meant to remain open questions.",
+            "constant": true,
+            "selective": false,
+            "insertion_order": 100,
+            "enabled": true,
+            "position": "before_char",
+            "case_sensitive": false,
+            "name": "[Meta] Tone and Writing Guide — The Endless",
+            "priority": 10,
+            "id": 5,
+            "extensions": {}
+          },
+          {
+            "keys": [
+              "dialogue format",
+              "NPC speaks",
+              "says",
+              "replied",
+              "asked"
+            ],
+            "secondary_keys": [],
+            "comment": "[Meta] Dialogue Formatting Guide",
+            "content": "FORMAT: Narration uses *italic asterisks*. NPC dialogue uses font color tags with speech only, no name: <font color=\"#E88D67\">\"One sentence.\"</font> — each character gets a unique hex color. One sentence per dialogue line. Actions on separate *italic* lines. Keep responses concise.",
+            "constant": true,
+            "selective": false,
+            "insertion_order": 100,
+            "enabled": true,
+            "position": "before_char",
+            "case_sensitive": false,
+            "name": "[Meta] Dialogue Formatting Guide",
+            "priority": 10,
+            "id": 6,
+            "extensions": {}
+          }
+        ]
+      }
     },
     "metadata": {
       "createdAt": "2026-04-24T21:08:12.909Z",
