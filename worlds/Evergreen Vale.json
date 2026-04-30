@@ -62,7 +62,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "NPC Naming Convention. When generating new NPCs in Evergreen Vale, use simple, warm, generational names."
       },
       {
         "id": "sTFL-bEGR6bChEvyxNvOH",
@@ -104,7 +105,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "Old Peck has been the village elder long enough that nobody remembers voting for him."
       },
       {
         "id": "cRV4k9ZQBzk2htONKjawk",
@@ -146,7 +148,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "Hazel runs the bakery that is the heart of the village."
       },
       {
         "id": "7gBTeRTstJfjPUSXXAoVv",
@@ -187,7 +190,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "Lena is the village healer. Quiet, capable, no-nonsense about injuries."
       },
       {
         "id": "uleXqKH7lSbAkrjb2sNGm",
@@ -229,7 +233,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "Evergreen Vale is a lush valley of small villages, slow rivers, and enormous ancient trees whose canopies filter the light into something…"
       },
       {
         "id": "pxJXiSG4nf8CdL6RRf8Eg",
@@ -272,7 +277,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "Daily Rhythms. Life in Evergreen Vale follows the sun."
       },
       {
         "id": "haK1aNDi-DeRsjil44zV8",
@@ -315,7 +321,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The Great Trees of Evergreen Vale are the valley's most striking feature — ancient specimens of impossible size whose trunks are wider…"
       },
       {
         "id": "LiuPpSvDWDsppVUx0h1WZ",
@@ -359,7 +366,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "Seasons in the Vale. Evergreen Vale experiences four seasons, each generous in its own way."
       },
       {
         "id": "cpnjAVFBspD-akmBQbeZr",
@@ -401,7 +409,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "Roothollow is the largest village in Evergreen Vale, built in the shade of the three greatest trees in the valley."
       },
       {
         "id": "dU1Qc7ii56vZPVRO1p4Lh",
@@ -444,7 +453,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The River Alder runs through the center of Evergreen Vale, fed by springs in the hills and slow enough to wade in most places."
       },
       {
         "id": "AtlFt3TpFwypCFfG1b4Ek",
@@ -487,7 +497,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The bakery in Roothollow is the heart of the village in every practical sense."
       },
       {
         "id": "koPIGayah3Vhg9HVTXc7f",
@@ -530,7 +541,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The orchard occupies a gentle slope on the south side of Roothollow, rows of fruit trees — apple, pear, plum, cherry — arranged with the…"
       },
       {
         "id": "_jOUI7T5YHZFik84xhA6k",
@@ -573,7 +585,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The Hilltop Overlook is a grassy rise at the northern edge of the valley that provides a view of the entire vale — every village, every…"
       },
       {
         "id": "FEBlhbr5mY3EjfAR4Op5b",
@@ -616,7 +629,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The mill sits on the River Alder where the current is fastest, a stone building with a wooden wheel that turns steadily and has turned…"
       },
       {
         "id": "bHPTe0hkfpkIeP8zcWTSY",
@@ -659,7 +673,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The Meadow is a wide, flat stretch of grassland between Roothollow and the southern villages, carpeted with wildflowers from spring…"
       },
       {
         "id": "Q1M-Qy49c0PEIBx4vZ8Xl",
@@ -702,7 +717,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The Hearthstone Tavern. The Hearthstone is Roothollow's tavern, a warm timber building with a stone fireplace large enough to stand in."
       },
       {
         "id": "rhpZS9LYhkpn9vEN14Eox",
@@ -744,7 +760,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "Willowmere is the smallest village in the vale, built on the shore of a still lake at the valley's eastern edge."
       },
       {
         "id": "5uGJytrwzlEX1FMmjePz7",
@@ -787,7 +804,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The schoolhouse in Roothollow is a single-room stone building with large windows that let in the golden light the Great Trees filter."
       },
       {
         "id": "Q5dVvEasy3-JQ4Sbs8c0n",
@@ -830,7 +848,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The Village Council. Each village in Evergreen Vale is governed by a council of its eldest and most experienced members."
       },
       {
         "id": "3e8ZrM2DZoddp1OkiXN2n",
@@ -873,7 +892,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The Harvest Guild is a cooperative of the valley's farmers and gardeners who coordinate planting, share equipment, and organize the…"
       },
       {
         "id": "j8MoBJXgVHP4zx4ZwFtwf",
@@ -916,7 +936,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The Storytelling Circle meets on the first evening of each month in The Hearthstone."
       },
       {
         "id": "vEA4Vgk0MGdwVjyRrxHpf",
@@ -958,7 +979,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "The Tree Tenders are a small group of volunteers who care for the Great Trees — clearing debris from around their roots, monitoring their…"
       },
       {
         "id": "bnXIMC2H_golAu_CURo72",
@@ -1000,7 +1022,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.862Z",
-        "updatedAt": "2026-04-24T21:08:12.862Z"
+        "updatedAt": "2026-04-24T21:08:12.862Z",
+        "description": "Baker Archetype — Old Peck. Old Peck has run the Roothollow bakery for forty years and shows no signs of slowing."
       },
       {
         "id": "OQId9xlsteiMxbCnnf52I",
@@ -1042,7 +1065,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Farmer Archetype. Farmers in Evergreen Vale work with a patience that comes from understanding that crops cannot be hurried."
       },
       {
         "id": "fPQ6A-oBAsC-ifGXKXeZs",
@@ -1085,7 +1109,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Elder Storyteller Archetype. The elder storytellers of Evergreen Vale carry the valley's memory in their voices."
       },
       {
         "id": "fA2aLIMn61i98Tw39ZMfg",
@@ -1128,7 +1153,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Village Children. Children in Evergreen Vale grow up with an unusual combination of freedom and responsibility."
       },
       {
         "id": "Ekwam6qU_rcuYcv2aek6u",
@@ -1171,7 +1197,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Hazel runs The Hearthstone with the efficient warmth of someone who has been making people comfortable her entire adult life."
       },
       {
         "id": "_H4rpYbDJK5ZMRRiadrY1",
@@ -1214,7 +1241,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Wandering Merchant Archetype. Wandering merchants visit Evergreen Vale seasonally, bringing goods from the outside world: tools, fabrics, spices, books, and news."
       },
       {
         "id": "s5ZnHG1LHqbw9-ip5iusl",
@@ -1257,7 +1285,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Festivals in Evergreen Vale mark the turning of seasons and the rhythms of agricultural life."
       },
       {
         "id": "83h62NtmLQql1Ju80M11O",
@@ -1300,7 +1329,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Trade and Economy. Evergreen Vale operates primarily on barter and goodwill. Coin exists but is used mainly for trading with visiting merchants."
       },
       {
         "id": "V9ZO4JCvXIM2Jnwz7fhIU",
@@ -1343,7 +1373,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Food and Cooking. Food in Evergreen Vale is central to every gathering, every celebration, and most conversations."
       },
       {
         "id": "hOeNPDL3CBpi-c09HIao4",
@@ -1386,7 +1417,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Craftsmanship and Building. Everything in Evergreen Vale is built by hand, from the houses to the furniture to the bridges to the tools used to build all of the above."
       },
       {
         "id": "n7WA_FEvZ5wBgB5ox3VMF",
@@ -1429,7 +1461,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "The Great Trees' Influence. The Great Trees influence the valley in ways that are felt rather than measured."
       },
       {
         "id": "_SluT1sC1-m-aTipoD8NJ",
@@ -1472,7 +1505,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Music in the Vale. Music in Evergreen Vale is as common as bread — made daily, shared freely, and considered a basic component of a well-lived life."
       },
       {
         "id": "ST_PmhgkM5mXbOdE3HLX7",
@@ -1515,7 +1549,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Why Simplicity Isn't Boring. Visitors to Evergreen Vale sometimes wonder how a place with no conflict, no mystery, and no ambition beyond the next harvest can sustain…"
       },
       {
         "id": "6Zp0I8u_d6Z6ucjbFrZII",
@@ -1558,7 +1593,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Hospitality in Evergreen Vale follows a clear pattern: feed first, house second, question third."
       },
       {
         "id": "xACxiGn2iYVytofx4k9xI",
@@ -1601,7 +1637,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "What Home Means Here. Home in Evergreen Vale is defined by accumulation — the slow layering of mornings baked into bread, evenings spent by the fire, seasons…"
       },
       {
         "id": "DwdoVxfFJYK9_xyPlGjXD",
@@ -1644,7 +1681,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "The Passage of Time. Time passes in Evergreen Vale the way the river flows — steadily, gently, and with a cumulative force that is easy to underestimate."
       },
       {
         "id": "Cj2y9MGH3ehN1bdMohpy_",
@@ -1687,7 +1725,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Enough. The most important word in Evergreen Vale is 'enough.' Enough food, enough warmth, enough company, enough beauty."
       },
       {
         "id": "iOMIVIU-8Ox4ISM2OsxC4",
@@ -1730,7 +1769,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "The View from the Overlook. From the Hilltop Overlook, the entire vale is visible: every village, every Great Tree, the river's path, the patchwork of fields, the…"
       },
       {
         "id": "uQNT88iZBG1--2nRz-PZu",
@@ -1772,7 +1812,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Old Peck has run the Roothollow bakery for forty years."
       },
       {
         "id": "lNwdScKJvwsfHbuJLm2k0",
@@ -1814,7 +1855,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Hazel runs The Hearthstone tavern with efficient warmth."
       },
       {
         "id": "LveF5Z0OJffimolnlpiNZ",
@@ -1856,7 +1898,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.863Z",
-        "updatedAt": "2026-04-24T21:08:12.863Z"
+        "updatedAt": "2026-04-24T21:08:12.863Z",
+        "description": "Lena has taught at the Roothollow schoolhouse for twenty years — reading, writing, arithmetic, gardening, and basic carpentry."
       }
     ]
   }

@@ -63,7 +63,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "NPC Naming Convention. When generating new NPCs in The Endless Library, use call numbers, section names, or forgotten names."
       },
       {
         "id": "qIa_Qhn5K3xzpbW674NhF",
@@ -105,7 +106,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "Archivist Crane has been organizing the same shelf for what they believe is three years."
       },
       {
         "id": "rWxjt5S1D2NJeo5yHEril",
@@ -145,7 +147,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "Eleven-West is named for the section where they were last seen making sense."
       },
       {
         "id": "8SpQP8VwIMwfO-hbl5dWU",
@@ -187,7 +190,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Endless Library is a world of impossible scale — a library so vast that its boundaries have never been found and may not exist."
       },
       {
         "id": "6wrrG72WwO-gm-YwHOHbR",
@@ -230,7 +234,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "First Impressions. Visitors entering the Endless Library through a door of The Endless typically arrive in a reading area — a cleared space among the shelves…"
       },
       {
         "id": "cusC8h-vgsDJrnZASAtEo",
@@ -273,7 +278,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "Scale and Impossibility. The Endless Library's scale defies measurement."
       },
       {
         "id": "tR-dCzUihR0PW-pegnySP",
@@ -316,7 +322,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "Atmosphere. The atmosphere of the Endless Library is one of patient, expectant quiet."
       },
       {
         "id": "cTubU0Erm0d7TSn8Ypo_4",
@@ -358,7 +365,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Main Hall is the closest thing the library has to a central space — a vast room with a vaulted ceiling higher than any church, lined…"
       },
       {
         "id": "w9r3pnuSVc57bI5hfYKCS",
@@ -400,7 +408,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Reading Rooms. Reading rooms appear at irregular intervals throughout the library — alcoves and chambers set back from the main aisles, furnished with…"
       },
       {
         "id": "C-rwoq5ryQdDek-3gnbau",
@@ -442,7 +451,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Restricted Section is marked by a brass placard that reads RESTRICTED in tarnished letters."
       },
       {
         "id": "5R13UObI7X5kV0ndB--02",
@@ -485,7 +495,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Impossible Staircases. Staircases in the Endless Library connect levels that should not exist."
       },
       {
         "id": "YDv54edNYZCVoFROUt0F4",
@@ -527,7 +538,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Map Room contains maps of the library."
       },
       {
         "id": "hV9ShWdayPRggF3vL2Vfi",
@@ -569,7 +581,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Deep Stacks are the regions of the library beyond the reach of the brass lamps — where the light dims from warm to grey to something…"
       },
       {
         "id": "yCPqKOMiJGxtwumm1RjHN",
@@ -612,7 +625,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Archive is a section of the library where the books are not books but records — ledgers, logs, inventories, and accounts written in…"
       },
       {
         "id": "wNjKEJuIEjiKu5-k6rgkB",
@@ -654,7 +668,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Blank Section contains books that are empty."
       },
       {
         "id": "7SmN64LQZMVIhbg3jyQIx",
@@ -696,7 +711,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Unwritten Section is distinct from the Blank Section."
       },
       {
         "id": "d50xpfAqktLaPFN0Wj4VE",
@@ -738,7 +754,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Whispering Gallery is a curved corridor deep in the library where sound behaves differently."
       },
       {
         "id": "bO5MjAR2JmYe_u1v0NJYh",
@@ -780,7 +797,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "Eleven-West is the most frequently encountered librarian in the Main Hall — a tall, thin figure who moves through the stacks with the…"
       },
       {
         "id": "9jETexb9XQjmlL4W-dhoH",
@@ -822,7 +840,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "Archivist Crane manages the Archive and is the closest thing the library has to a historian of itself."
       },
       {
         "id": "Q3cvKK-mEw4E0JgmIuB1q",
@@ -864,7 +883,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The One Who Answers to Shh. One librarian in the Endless Library communicates exclusively through variations of 'shh.' A gentle shh means welcome."
       },
       {
         "id": "julk4Ds63x-ZBRXVHxNUZ",
@@ -906,7 +926,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "Dewey is a librarian who catalogs by feel."
       },
       {
         "id": "Kh9gnrue5XCRn-mjvgKJq",
@@ -948,7 +969,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Oldest Librarian is encountered rarely and deep in the stacks — never in the Main Hall, never near the reading rooms, always in…"
       },
       {
         "id": "bHRnmJhUxmzSCH3QE8WxB",
@@ -990,7 +1012,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "Visitors Who Stayed. Some visitors to the Endless Library did not leave."
       },
       {
         "id": "9QVSw7SSqLXJlndGU5OTG",
@@ -1033,7 +1056,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "Navigation in the Endless Library does not work by conventional means."
       },
       {
         "id": "8JVXOs-J7478cF46zebCO",
@@ -1076,7 +1100,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "The Catalog System. The library has a catalog system."
       },
       {
         "id": "0L_ZGFktFWGdCg5jo51mD",
@@ -1119,7 +1144,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.892Z",
-        "updatedAt": "2026-04-24T21:08:12.892Z"
+        "updatedAt": "2026-04-24T21:08:12.892Z",
+        "description": "What the Books Contain. The books of the Endless Library contain text in every language that has ever existed, several that do not exist yet, and a few that have…"
       },
       {
         "id": "BgStNLulCcvGJUaBilfoR",
@@ -1162,7 +1188,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Time in the Library. Time in the Endless Library passes but does not keep pace with time outside."
       },
       {
         "id": "O1pNlWbwtCw5zbjgIplni",
@@ -1205,7 +1232,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Sustenance. Visitors to the Endless Library do not starve."
       },
       {
         "id": "C23RBC1p1z1UTYwycQC5l",
@@ -1247,7 +1275,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Books That Move. Books in the Endless Library relocate."
       },
       {
         "id": "LSe-9knNtoimPQaDIhSrX",
@@ -1290,7 +1319,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "The Lamps. The brass lamps of the Endless Library are everywhere — mounted on shelves, hanging from chains, standing on desks in reading rooms."
       },
       {
         "id": "G-gR-GRy8DLQi4WFVL84x",
@@ -1333,7 +1363,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Why the Library Exists. The Endless Library does not explain why it exists."
       },
       {
         "id": "Xo6IuGWMpG-nIdAG1mqf9",
@@ -1376,7 +1407,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Knowledge That Wants to Be Found. The Endless Library appears to direct visitors toward knowledge they need. This is not a metaphor."
       },
       {
         "id": "pS8u29_flozZ6PnvzqHTV",
@@ -1419,7 +1451,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "The silence of the Endless Library is its most defining characteristic."
       },
       {
         "id": "2YltNB4q2t22qK1fVZhBW",
@@ -1461,7 +1494,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Relationship with The Manifold. The Endless Library's relationship with The Manifold is unclear."
       },
       {
         "id": "rNogYMQuSDZo6MprR-5Tu",
@@ -1504,7 +1538,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Why Some Never Leave. Visitors who stay in the Endless Library indefinitely are not trapped. They are absorbed."
       },
       {
         "id": "YV-0Pn3iNGOfSbzll1APA",
@@ -1547,7 +1582,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "The Library Is Aware. The Endless Library behaves as though it is aware. Books move toward relevance. Sustenance appears when needed."
       },
       {
         "id": "we8iuADhF7y7051yTugeT",
@@ -1590,7 +1626,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Traces of the Builders. In the Deep Stacks, on the oldest shelves, there are markings that are not call numbers and not any language the librarians recognize."
       },
       {
         "id": "Qs6rxpyOjTOuuOMA07Ka1",
@@ -1633,7 +1670,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "The Collection Grows. The Endless Library's collection grows. New books appear on shelves without delivery, without acquisition, without any observable process."
       },
       {
         "id": "cObHihjiMDF08aPbEQ0_z",
@@ -1674,7 +1712,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Eleven-West is the most frequently encountered librarian in the Main Hall — tall, thin, and moving through the stacks with unhurried…"
       },
       {
         "id": "JB5JW6YMn2-h1RtCZvdDH",
@@ -1715,7 +1754,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Archivist Crane manages the Archive with the methodical devotion of someone who believes records are the only truth."
       },
       {
         "id": "D2xIBhnfzXk4ER-thTD9s",
@@ -1757,7 +1797,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.893Z",
-        "updatedAt": "2026-04-24T21:08:12.893Z"
+        "updatedAt": "2026-04-24T21:08:12.893Z",
+        "description": "Shh — The Silent Librarian. One librarian communicates exclusively through variations of 'shh.' A gentle shh means welcome."
       }
     ]
   }

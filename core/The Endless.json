@@ -1,7 +1,7 @@
 {
   "type": "marinara_lorebook",
   "version": 1,
-  "exportedAt": "2026-04-24T21:08:12.839Z",
+  "exportedAt": "2026-04-30T23:22:35.000Z",
   "data": {
     "lorebook": {
       "id": "vU96Vj7Q5noP3oHdiV6WO",
@@ -19,7 +19,7 @@
       "generatedBy": "import",
       "sourceAgentId": null,
       "createdAt": "2026-04-24T21:08:12.839Z",
-      "updatedAt": "2026-04-24T21:08:12.839Z"
+      "updatedAt": "2026-04-30T23:22:35.000Z"
     },
     "entries": [
       {
@@ -64,7 +64,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.839Z",
-        "updatedAt": "2026-04-24T21:08:12.839Z"
+        "updatedAt": "2026-04-24T21:08:12.839Z",
+        "description": "Door Behavior — Appearance and Disappearance. Doors of The Endless appear without warning and without sound."
       },
       {
         "id": "uJHixvrOU_f6DF3BiGRSA",
@@ -108,7 +109,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.839Z",
-        "updatedAt": "2026-04-24T21:08:12.839Z"
+        "updatedAt": "2026-04-24T21:08:12.839Z",
+        "description": "Door Routing — The Crescent Moon Rule. Not all doors of The Endless lead to the same place."
       },
       {
         "id": "C8KmtdI_Y43WoDOojFz0R",
@@ -153,7 +155,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.839Z",
-        "updatedAt": "2026-04-24T21:08:12.839Z"
+        "updatedAt": "2026-04-24T21:08:12.839Z",
+        "description": "Perception Filter — Awareness and Progression. The doors of The Endless are not visible to everyone equally."
       },
       {
         "id": "uprUQm-xsVfGrbr7DGZ-A",
@@ -197,7 +200,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.839Z",
-        "updatedAt": "2026-04-24T21:08:12.839Z"
+        "updatedAt": "2026-04-24T21:08:12.839Z",
+        "description": "Door Travel — What You See. A door of The Endless does not obscure what lies beyond it."
       },
       {
         "id": "Il8oXg7Ganf5Xngbe_wpL",
@@ -241,7 +245,52 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.839Z",
-        "updatedAt": "2026-04-24T21:08:12.839Z"
+        "updatedAt": "2026-04-24T21:08:12.839Z",
+        "description": "The Endless is the name given to a phenomenon that spans all known worlds without explanation or origin."
+      },
+      {
+        "id": "ozCGQrYavfSWsG1Uk8tqh",
+        "lorebookId": "vU96Vj7Q5noP3oHdiV6WO",
+        "name": "[Catalog] World Thumbnails — The Endless",
+        "content": "The doors of The Endless lead to a known set of worlds. The crescent-moon doors always lead to The Manifold, the hub world. Other doors lead elsewhere. The catalog of currently known destinations:\n\nTHE MANIFOLD — Hub world. Living brutalist spatial entity. Concrete-grown corridors lined with hundreds of doors, most cold and inactive, some warm. Diffuse white light from the structure itself, shifting red when the Taboo is broken. Enforces an absolute No-Death Rule. Forbids the naming of its absent builders. Reference: The Oldest House from Control.\n\nNIGHT CITY — Cyberpunk dystopia (Cyberpunk Red 2045 era). Neon-drowned megacity, corporate towers, gangs, ripperdocs, netrunners. Combat-likely. Naming style: street handles, mixed-culture surnames (Rook, Marta Szabo, Cipher).\n\nALDENMOOR — High fantasy continent. Knights, elves, dwarves, wizards, ancient orders. Naming style: classical fantasy with weight (Caelith, Aldren Voss, Sister Thea).\n\nSTARDUST VALLEY — Cozy supernatural valley town. Soft-edged, VTuber-adjacent, fox-eared shopkeepers, lantern festivals. Low-stakes social play. Naming style: nature-adjacent two-syllable (Sora, Yuki, Bramble).\n\nTHE ASHLANDS — Dark-Souls-adjacent dying kingdom. Fading bonfires, last knights, cinder-and-ash. Lethal. Naming style: heavy old-world (Mourne, Edric, Sable).\n\nPALE FOG — Silent-Hill-adjacent psychological horror. Foggy small-town America gone wrong, residents who don't quite work right. Naming style: slightly off, names that shift between introductions (Mark/Martin/Mitchell).\n\nTHE FALLOUT WASTES — Post-apocalyptic wasteland. Settlements, raiders, scavenging, irradiated ruins. Naming style: practical nouns that stuck (Grit, Shovel, Doc Carver).\n\nEVERGREEN VALE — Studio Ghibli-warm village. Forest paths, hearth bread, gentle magic, generational families. Naming style: simple warm generational (Brom, Lena, Hazel).\n\nTHE ENDLESS LIBRARY — Liminal infinite library. Ladders, stack levels, librarians whose names blur. Puzzle/mystery oriented. Naming style: call numbers or forgotten names (Eleven-West, Archivist Crane, the one who answers to Shh).\n\nIRONWATER STATION — Abandoned deep-space station. Mostly empty, automated systems still humming, missing crew, journals left open. Survival-horror flavor. Naming style: names on worn badges (Okonkwo, Specialist Vael, DEMI WAS HERE).\n\nTHE FRONTIER — Wild West. Saloons, sheriffs, dust, cattle, gunslingers. Naming style: names that earned themselves (Clay, Sister Rue, the Judge).\n\nDUNWATER COAST — Pirate island chains. Cutlasses, sea-shanties, smugglers, harbormasters. Naming style: names that belong to the sea (Corsair, Brine, Magistra Fenn).\n\nGLIMPSE WORLDS (rare, lore-light, never explained):\n- THE RED PLANET — rust terrain, circle of white featureless buildings, no life.\n- THE WHITE FOREST — identical pale trees in perfect grid, no animals, silence.\n- THE LIGHTHOUSE WORLD — endless ocean, one rock, one lighthouse, logbook inside.\n- THE STOPPED CITY — city frozen mid-morning, no people, nothing decaying.\n- THE SLOW THING — black sand, two suns, something enormous on the horizon that never arrives.\n\nWhen narrating a door's destination, pick from this catalog according to story logic. Glimpse Worlds are rare and almost empty — lean into liminal silence, do not invent occupants. Once a destination is committed in the narrative, the matching world lorebook should be activated for deeper detail (locations, NPCs, factions).",
+        "description": "Catalog of all worlds reachable through the doors of The Endless, with one-paragraph thumbnail per world. Use this when narrating a door's destination so the AI can choose a world and tone organically before the player toggles in that world's full lorebook.",
+        "keys": [
+          "world catalog",
+          "worlds list",
+          "destinations",
+          "where does the door lead",
+          "endless worlds"
+        ],
+        "secondaryKeys": [],
+        "enabled": true,
+        "constant": true,
+        "selective": false,
+        "selectiveLogic": "and",
+        "probability": null,
+        "scanDepth": null,
+        "matchWholeWords": false,
+        "caseSensitive": false,
+        "useRegex": false,
+        "position": 0,
+        "depth": 4,
+        "order": 95,
+        "role": "system",
+        "sticky": null,
+        "cooldown": null,
+        "delay": null,
+        "ephemeral": null,
+        "group": "",
+        "groupWeight": null,
+        "locked": false,
+        "tag": "catalog",
+        "relationships": {},
+        "dynamicState": {},
+        "activationConditions": [],
+        "schedule": null,
+        "preventRecursion": false,
+        "embedding": null,
+        "createdAt": "2026-04-30T23:22:35.000Z",
+        "updatedAt": "2026-04-30T23:22:35.000Z"
       },
       {
         "id": "h_e3oYjUB9C8zh-YbG5mW",
@@ -283,7 +332,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.839Z",
-        "updatedAt": "2026-04-24T21:08:12.839Z"
+        "updatedAt": "2026-04-24T21:08:12.839Z",
+        "description": "Tone and Writing Guide — The Endless. When writing for The Endless, maintain the following tone: grounded and observational rather than dramatic."
       },
       {
         "id": "1l8GCDSK6uehgI9pOeISs",
@@ -326,7 +376,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.839Z",
-        "updatedAt": "2026-04-24T21:08:12.839Z"
+        "updatedAt": "2026-04-24T21:08:12.839Z",
+        "description": "Dialogue Formatting Guide. FORMAT: Narration uses *italic asterisks*."
       }
     ]
   }

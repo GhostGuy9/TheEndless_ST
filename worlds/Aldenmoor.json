@@ -62,7 +62,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.845Z",
-        "updatedAt": "2026-04-24T21:08:12.845Z"
+        "updatedAt": "2026-04-24T21:08:12.845Z",
+        "description": "NPC Naming Convention. When generating new NPCs in Aldenmoor, use classical fantasy names with weight and history."
       },
       {
         "id": "sAHSg58RScdPGbILL-X8q",
@@ -104,7 +105,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.845Z",
-        "updatedAt": "2026-04-24T21:08:12.845Z"
+        "updatedAt": "2026-04-24T21:08:12.845Z",
+        "description": "Caelith is an elven ranger who patrols the deep forest of Aldenmoor. Old by any standard — centuries, though she does not say how many."
       },
       {
         "id": "6kO3nT6belesyloYixM8O",
@@ -146,7 +148,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.845Z",
-        "updatedAt": "2026-04-24T21:08:12.845Z"
+        "updatedAt": "2026-04-24T21:08:12.845Z",
+        "description": "Aldren Voss is a knight of the Silver Keep. Human, honorable to a fault, still believes in the old oaths when most have forgotten them."
       },
       {
         "id": "4ev8razrMn3EwF8eHHJfa",
@@ -188,7 +191,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.845Z",
-        "updatedAt": "2026-04-24T21:08:12.845Z"
+        "updatedAt": "2026-04-24T21:08:12.845Z",
+        "description": "Sister Thea is a priestess of the old faith."
       },
       {
         "id": "nEnrI8APRaQMvOz8HpF5S",
@@ -230,7 +234,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.845Z",
-        "updatedAt": "2026-04-24T21:08:12.845Z"
+        "updatedAt": "2026-04-24T21:08:12.845Z",
+        "description": "Aldenmoor is a high fantasy continent of ancient kingdoms, deep forests, and magic that predates the memory of any living species."
       },
       {
         "id": "iIRusRYdFtJ43w8YpO1aP",
@@ -273,7 +278,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.845Z",
-        "updatedAt": "2026-04-24T21:08:12.845Z"
+        "updatedAt": "2026-04-24T21:08:12.845Z",
+        "description": "The Political Landscape. Aldenmoor's politics are shaped by its age — centuries of alliances, betrayals, marriages, wars, and treaties have produced a landscape of…"
       },
       {
         "id": "5i8fpG2XHuQ76sVhiriXN",
@@ -316,7 +322,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.845Z",
-        "updatedAt": "2026-04-24T21:08:12.845Z"
+        "updatedAt": "2026-04-24T21:08:12.845Z",
+        "description": "Magic and Its Cost. Magic in Aldenmoor is real, powerful, and expensive — not in gold but in the self."
       },
       {
         "id": "yYZFbWwWO7Xu_kL-vVsSC",
@@ -360,7 +367,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.845Z",
-        "updatedAt": "2026-04-24T21:08:12.845Z"
+        "updatedAt": "2026-04-24T21:08:12.845Z",
+        "description": "The gods of Aldenmoor are real. They exist, they have power, and they occasionally exercise it."
       },
       {
         "id": "jY2A8Ioqj1Zin263zEcGt",
@@ -403,7 +411,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "Valdris is the largest human kingdom on Aldenmoor — a nation of walled cities, farming villages, and trade roads built across the…"
       },
       {
         "id": "FnrC0fdi2_mwz0rE9lzKh",
@@ -446,7 +455,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The Silvaneth is the great forest of Aldenmoor's western reach — an ancient woodland that has been the homeland of the elves for longer…"
       },
       {
         "id": "GhyHwiq-HCAjc0CbS-CVT",
@@ -489,7 +499,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "Ironhold is the largest dwarven stronghold on Aldenmoor, carved into the heart of the Stonewall Mountains over millennia."
       },
       {
         "id": "8D7pNPtNeQ0RL12QmxBMO",
@@ -532,7 +543,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The Frontier Settlements. Aldenmoor's frontier settlements exist at the edges of established kingdoms — small communities of humans, and occasionally other species,…"
       },
       {
         "id": "YRAMKtwP0HZpqobxVsG24",
@@ -575,7 +587,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The Ancient Ruins. Aldenmoor is covered in ruins — the remnants of civilizations that predated the current arrangement of kingdoms, sometimes by millennia."
       },
       {
         "id": "dquyFuJD47IKSq_RGD7Bq",
@@ -618,7 +631,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The Mage Academy — Greyhaven. Greyhaven is Aldenmoor's primary institution for the study and practice of magic — a fortress-academy built on a rocky promontory…"
       },
       {
         "id": "-v299hiw_MjNsrDHik6AT",
@@ -660,7 +674,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The Contested Border — Thornwall. Thornwall is the name given to the fortified border between the human kingdom of Valdris and the elven Silvaneth — a line of watchtowers,…"
       },
       {
         "id": "05N60bShmWm2NJataBVZw",
@@ -703,7 +718,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The Sacred Grove — Heartwood. Heartwood is a sacred grove deep in the Silvaneth that predates the elven civilization itself."
       },
       {
         "id": "BUxn1hNBvbxMinwiRGguH",
@@ -747,7 +763,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The frozen north of Aldenmoor — beyond the Stonewall Mountains, past the tree line, into territory where winter is not a season but a…"
       },
       {
         "id": "N_jBBAQvUcplPh5jrXRp-",
@@ -789,7 +806,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "Human Kingdoms. The human kingdoms of Aldenmoor are numerous, fractious, and perpetually negotiating with each other over trade, borders, and the right to…"
       },
       {
         "id": "XPvulrq8GBy9kwb0Et8Zx",
@@ -831,7 +849,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The Elven Court governs the Silvaneth and the scattered elven communities beyond it through a system of consensus that operates on a…"
       },
       {
         "id": "TBE2tJG4q9q5gn5vLbpCf",
@@ -873,7 +892,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "Dwarven Clans. Dwarven society is organized into clans — extended families that control specific holds, mines, and forges."
       },
       {
         "id": "TZt2aNt6r53bhSHyC5Yxh",
@@ -916,7 +936,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The Order of the Grey Tower is the organized body of mages who have trained at Greyhaven and practice magic according to the academy's…"
       },
       {
         "id": "mWqmT_gvQ3_F_fOYG8Yad",
@@ -959,7 +980,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "The Church of the Silver Dawn is Aldenmoor's largest human religious institution, devoted to a pantheon of gods whose names are known and…"
       },
       {
         "id": "As5GwY-1TcyXVUbkuKBoY",
@@ -1002,7 +1024,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.847Z",
-        "updatedAt": "2026-04-24T21:08:12.847Z"
+        "updatedAt": "2026-04-24T21:08:12.847Z",
+        "description": "Rangers and wardens patrol the spaces between kingdoms — the forests, the mountain passes, the frontier lands where organized authority…"
       },
       {
         "id": "kKzbs5VYGJXOAf4bYabAe",
@@ -1045,7 +1068,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "The orcish clans of Aldenmoor occupy the contested borderlands and the less hospitable regions that other species have not claimed."
       },
       {
         "id": "9dYmX5_prxTFciCCFzfkn",
@@ -1088,7 +1112,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Knight Archetype. Knights in Aldenmoor are warriors who have sworn service to a kingdom, a lord, or a cause, and who maintain that service through training,…"
       },
       {
         "id": "DnKWuMUVfNJ0Y0qNgeWHP",
@@ -1130,7 +1155,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Elven Diplomat Archetype. Elven diplomats approach negotiation with the patience of people who will still be alive when the current generation of human negotiators…"
       },
       {
         "id": "bcBDMBibvVVUWyPa4roT8",
@@ -1172,7 +1198,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Dwarven Smith Archetype. Dwarven smiths are artisans whose skill with metal, stone, and engineering represents the accumulated knowledge of a culture that has been…"
       },
       {
         "id": "dhhscZt7Y3H56gz4Xokdp",
@@ -1215,7 +1242,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Mage Archetype. Mages in Aldenmoor are people who have learned to exchange pieces of themselves for power."
       },
       {
         "id": "ZRBvncLnhbDAvv8WrUm-U",
@@ -1258,7 +1286,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Priest Archetype. Priests in Aldenmoor serve the gods through organized faith — conducting rituals, providing counsel, healing the sick, and interpreting…"
       },
       {
         "id": "5pcJaYcen2PvZMoXV_YM_",
@@ -1300,7 +1329,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Ranger Archetype. Rangers in Aldenmoor are solitary by preference and competent by necessity."
       },
       {
         "id": "7WE9W40PuWVoTvpT0RKGQ",
@@ -1343,7 +1373,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "How Magic Works. Magic in Aldenmoor operates on exchange. The caster reaches into the world's underlying structure and reshapes it according to their will."
       },
       {
         "id": "SMj0yc7K5fhFvdbCRnVDm",
@@ -1387,7 +1418,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Warfare in Aldenmoor is conducted along species-specific lines that reflect different military philosophies."
       },
       {
         "id": "Ud0o0uw7KVY4L5LtiNKa9",
@@ -1429,7 +1461,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Trade between species is the economic engine that holds Aldenmoor's fragile peace together."
       },
       {
         "id": "s6flZAE-CE4pMwrw-XnZF",
@@ -1472,7 +1505,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "The Gods' Influence. The gods of Aldenmoor intervene in mortal affairs through indirect means: dreams sent to priests, signs interpreted by the faithful, and…"
       },
       {
         "id": "M12ELK-qxZcmWf3QDT7kB",
@@ -1515,7 +1549,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Prophecy in Aldenmoor exists, is taken seriously, and is unreliable."
       },
       {
         "id": "iYS4EiSzOeQhiZJ2FIk0L",
@@ -1559,7 +1594,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Languages. Aldenmoor has as many languages as it has peoples, plus several that are no longer spoken by anyone alive."
       },
       {
         "id": "tfGYLxF4zbMsgXt0OG8bJ",
@@ -1601,7 +1637,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.848Z",
-        "updatedAt": "2026-04-24T21:08:12.848Z"
+        "updatedAt": "2026-04-24T21:08:12.848Z",
+        "description": "Why Magic Has a Cost. The question of why magic in Aldenmoor costs the caster something real has no consensus answer."
       },
       {
         "id": "xHuwKDlL_r72-0PihNjfS",
@@ -1644,7 +1681,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.849Z",
-        "updatedAt": "2026-04-24T21:08:12.849Z"
+        "updatedAt": "2026-04-24T21:08:12.849Z",
+        "description": "Long Memory vs Short Memory. The fundamental tension between humans and elves in Aldenmoor is temporal."
       },
       {
         "id": "NehdgQVX67jycXDFhRxDO",
@@ -1686,7 +1724,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.849Z",
-        "updatedAt": "2026-04-24T21:08:12.849Z"
+        "updatedAt": "2026-04-24T21:08:12.849Z",
+        "description": "What the Ruins Mean. The ruins scattered across Aldenmoor are reminders that the current arrangement is not the first."
       },
       {
         "id": "9GfIz4mMuRUB769f09RYR",
@@ -1728,7 +1767,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.849Z",
-        "updatedAt": "2026-04-24T21:08:12.849Z"
+        "updatedAt": "2026-04-24T21:08:12.849Z",
+        "description": "Prophecy's Unreliability. Aldenmoor's history is littered with the consequences of prophecy taken too seriously."
       },
       {
         "id": "P-A8ZyocudjUc6K2r2Wya",
@@ -1771,7 +1811,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.849Z",
-        "updatedAt": "2026-04-24T21:08:12.849Z"
+        "updatedAt": "2026-04-24T21:08:12.849Z",
+        "description": "The Cost of Immortality. Elven longevity — centuries of life, memory that spans ages — is envied by humans and understood by elves as a burden that humans could…"
       },
       {
         "id": "9Pi-sFElvjJVHedVixoLR",
@@ -1813,7 +1854,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.849Z",
-        "updatedAt": "2026-04-24T21:08:12.849Z"
+        "updatedAt": "2026-04-24T21:08:12.849Z",
+        "description": "Caelith serves as the Elven Court's primary diplomat to the human kingdoms — a role that requires patience measured in human lifetimes."
       },
       {
         "id": "_glwpHz4Qnoir7lMs95H7",
@@ -1855,7 +1897,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.849Z",
-        "updatedAt": "2026-04-24T21:08:12.849Z"
+        "updatedAt": "2026-04-24T21:08:12.849Z",
+        "description": "Aldren Voss commands the Valdris garrison at Thornwall — the contested border with the Silvaneth."
       },
       {
         "id": "-9ZXNelH0qKOSdzEsEZ1K",
@@ -1897,7 +1940,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.849Z",
-        "updatedAt": "2026-04-24T21:08:12.849Z"
+        "updatedAt": "2026-04-24T21:08:12.849Z",
+        "description": "Sister Thea serves at the main temple of the Silver Dawn in Valdris."
       },
       {
         "id": "HuR03S0LmCEZi5UURUMrE",
@@ -1939,7 +1983,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.849Z",
-        "updatedAt": "2026-04-24T21:08:12.849Z"
+        "updatedAt": "2026-04-24T21:08:12.849Z",
+        "description": "Jorin is a master smith of Ironhold — a broad, bearded dwarf whose understanding of metal borders on the spiritual."
       }
     ]
   }

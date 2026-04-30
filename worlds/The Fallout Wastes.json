@@ -62,7 +62,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.896Z",
-        "updatedAt": "2026-04-24T21:08:12.896Z"
+        "updatedAt": "2026-04-24T21:08:12.896Z",
+        "description": "NPC Naming Convention. When generating new NPCs in The Fallout Wastes, use practical nouns that stuck as names."
       },
       {
         "id": "aOb9GkdHf67Z49_T6Dbgg",
@@ -103,7 +104,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.896Z",
-        "updatedAt": "2026-04-24T21:08:12.896Z"
+        "updatedAt": "2026-04-24T21:08:12.896Z",
+        "description": "Grit built the settlement from nothing and runs it the same way — with bare hands and no patience for nonsense."
       },
       {
         "id": "9zGQB5Dg2Br9MoL62PLcl",
@@ -145,7 +147,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Mama Torrez runs a caravan between settlements. Warm smile, sharp eyes, a shotgun within arm's reach at all times."
       },
       {
         "id": "jB19X2Rc2kYsDs3FM2X-F",
@@ -185,7 +188,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Shovel is a scavenger named for the tool he never puts down. Young, quiet, finds things nobody else can in the rubble."
       },
       {
         "id": "sjxa2kyQrwy7828313IZ2",
@@ -227,7 +231,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "The Fallout Wastes is what remains after everything ended."
       },
       {
         "id": "K9uUeR_lkrssVvzISrjQn",
@@ -270,7 +275,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Culture of Survival. Culture in the Wastes is built on three principles: waste nothing, trust carefully, and keep your sense of humor."
       },
       {
         "id": "qIzIJByj47GHnxGu5djF6",
@@ -313,7 +319,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "What People Remember. The old world is remembered in fragments — stories passed down, sometimes accurately, sometimes not."
       },
       {
         "id": "eOrwsuIm71gCNQTwgiCy-",
@@ -356,7 +363,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "The Wasteland Landscape. The Wastes stretches across what was once a populated region — the outlines of cities, suburbs, and farmland are still visible beneath the…"
       },
       {
         "id": "ep6UzS6yt7HsIOS3McRM2",
@@ -398,7 +406,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Dusthaven is the largest trading settlement in the Wastes, built inside and around a pre-war shopping mall whose concrete shell provided…"
       },
       {
         "id": "GIwhoigLVjoNLzljKtCCS",
@@ -441,7 +450,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Bunker 14 is one of several pre-war emergency shelters in the region. Most are collapsed, flooded, or irradiated."
       },
       {
         "id": "gn11Y6jB9cV89c2BiXhsA",
@@ -484,7 +494,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "The Rust Yard is a vast field of pre-war vehicles — cars, trucks, buses, military transports — stretching across several square miles of…"
       },
       {
         "id": "pzHz5s01pjvu6MC31qHEl",
@@ -527,7 +538,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Greensprout Farm is a fortified agricultural settlement built around a clean aquifer."
       },
       {
         "id": "K3epSbcYcGB3J0PQmjQQf",
@@ -570,7 +582,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "The Hot Zone is a region of concentrated radiation centered on what was once a population center."
       },
       {
         "id": "YLVkh3AxeCSDbWCGHwbAX",
@@ -613,7 +626,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Clean Creek is a groundwater-fed stream that emerges from limestone formations east of Dusthaven."
       },
       {
         "id": "8HxzYG4Zw97r7o9Ha63Bu",
@@ -656,7 +670,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "The Overpass Camp sits atop a section of pre-war elevated highway that survived relatively intact."
       },
       {
         "id": "S4lfafbEcdjwpgsKotP_H",
@@ -698,7 +713,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "The Dead Mall is a collapsed pre-war retail complex on the eastern edge of the Wastes, distinct from the intact mall that became Dusthaven."
       },
       {
         "id": "-QXs2T_84GfTcy20dVPUX",
@@ -741,7 +757,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Mama Torrez's Cantina sits at the crossroads where the main trade routes intersect, built from a pre-war gas station with additions bolted…"
       },
       {
         "id": "umBzlfUD2CjupJykLL3KP",
@@ -784,7 +801,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Scavenger crews are small teams — typically three to six people — who enter ruins, hot zones, and unexplored areas to recover pre-war…"
       },
       {
         "id": "dH0kxadKf_DkXZn7SMdAD",
@@ -827,7 +845,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Settlement Councils. Each major settlement in the Wastes is governed by a council of its most competent members — not elected, not appointed, but emerged…"
       },
       {
         "id": "2ThtBxnzuS0D6v_uiBvmB",
@@ -870,7 +889,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Raiders are groups that take rather than trade — attacking caravans, stealing from settlements, and surviving through violence."
       },
       {
         "id": "D3v0LWb7LZjo88lDHMJ0h",
@@ -913,7 +933,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Trade caravans are the circulatory system of the Wastes, moving goods between settlements along routes that are as much tradition as…"
       },
       {
         "id": "acbNlXrVjlI7uiI7uECQS",
@@ -956,7 +977,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "The Hoarders are a loosely connected network of individuals and small groups who collect, preserve, and study pre-war technology."
       },
       {
         "id": "4mo2oIMyAd_ETN2e8O_4s",
@@ -999,7 +1021,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "The Greencoats are a volunteer militia that patrols the trade routes between major settlements, providing security for caravans and…"
       },
       {
         "id": "yPMsAp1DMx5YKQzNUVh0l",
@@ -1041,7 +1064,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Scavenger Archetype. Scavengers in the Wastes are resourceful, risk-aware, and perpetually covered in dust from the last ruin they crawled through."
       },
       {
         "id": "Vi_RGRPRsp4r_V7bu37-R",
@@ -1084,7 +1108,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Settlement Doctor Archetype. Doctors in the Wastes practice medicine with limited supplies, improvised equipment, and knowledge assembled from pre-war medical texts,…"
       },
       {
         "id": "ufo9xYajobFevwvG7NFnh",
@@ -1127,7 +1152,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Caravan Guard Archetype. Caravan guards are fighters who have chosen steady employment over freelance survival."
       },
       {
         "id": "k17D-jYl6OdDvHgPydnQX",
@@ -1170,7 +1196,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Mechanic Archetype. Mechanics in the Wastes keep things running — generators, water purifiers, vehicles, weapons, and anything else with moving parts."
       },
       {
         "id": "W_Z6tu-7rTZetqDP2FFmm",
@@ -1213,7 +1240,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Elder Who Remembers. In every settlement, there is someone old enough to remember — if not the old world directly, then stories from someone who did."
       },
       {
         "id": "WEa2aEmGL_hsN_M6MyqhX",
@@ -1256,7 +1284,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Raider Archetype. Raiders are not monsters."
       },
       {
         "id": "KZKmjWQV-rNHldubSVXMn",
@@ -1299,7 +1328,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Radiation in the Wastes is measured, managed, and respected."
       },
       {
         "id": "mOvSYnz6oyrpC5psMvryZ",
@@ -1342,7 +1372,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Scavenging and Salvage. Scavenging is the Wastes' primary industry."
       },
       {
         "id": "6ECbGTW93x_0I-xJo9rMx",
@@ -1385,7 +1416,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Water Economy. Clean water is the base currency of the Wastes."
       },
       {
         "id": "MemSAp9kv1aIJB8G1LIuw",
@@ -1428,7 +1460,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Weapons and Combat. Weapons in the Wastes are a mix of pre-war firearms, improvised melee weapons, and jury-rigged devices that function through a combination…"
       },
       {
         "id": "uEs-p0Ct36fJHV6xe5_YG",
@@ -1472,7 +1505,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Medicine and Chems. Medicine in the Wastes is divided into two categories: legitimate treatment and chems."
       },
       {
         "id": "bZ_uYvIOAUeORDv9YcvL_",
@@ -1515,7 +1549,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Mutations. Radiation and environmental contamination have produced mutations in the Wastes' population — both human and animal."
       },
       {
         "id": "OzfI2oHc8qmqAnOZk3rkG",
@@ -1558,7 +1593,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.897Z",
-        "updatedAt": "2026-04-24T21:08:12.897Z"
+        "updatedAt": "2026-04-24T21:08:12.897Z",
+        "description": "Dark Humor as Survival. Humor in the Wastes is dark, constant, and essential."
       },
       {
         "id": "YxT4klGgBNzHRoni037t-",
@@ -1601,7 +1637,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.898Z",
-        "updatedAt": "2026-04-24T21:08:12.898Z"
+        "updatedAt": "2026-04-24T21:08:12.898Z",
+        "description": "Trust Economics. Trust in the Wastes is a currency more valuable than water."
       },
       {
         "id": "4j59wGZkkFPA55sNitQ58",
@@ -1644,7 +1681,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.898Z",
-        "updatedAt": "2026-04-24T21:08:12.898Z"
+        "updatedAt": "2026-04-24T21:08:12.898Z",
+        "description": "What the Old World Means Now. The old world is not romanticized in the Wastes. It is studied, scavenged, and used, but it is not missed — not exactly."
       },
       {
         "id": "dIO4BxIe8y-aOXIBRcYwG",
@@ -1687,7 +1725,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.898Z",
-        "updatedAt": "2026-04-24T21:08:12.898Z"
+        "updatedAt": "2026-04-24T21:08:12.898Z",
+        "description": "Why People Stay. People stay in the Wastes because it is home — not the home they would have chosen, but the home they have."
       },
       {
         "id": "xhfOPKEjS21lSsj2oKXgX",
@@ -1730,7 +1769,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.898Z",
-        "updatedAt": "2026-04-24T21:08:12.898Z"
+        "updatedAt": "2026-04-24T21:08:12.898Z",
+        "description": "Waste Nothing. The first rule of the Wastes is waste nothing. A broken tool is repaired. A failed repair is salvaged for parts."
       },
       {
         "id": "6--7RWDUADWb2W59_ztZc",
@@ -1773,7 +1813,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.898Z",
-        "updatedAt": "2026-04-24T21:08:12.898Z"
+        "updatedAt": "2026-04-24T21:08:12.898Z",
+        "description": "The Next Generation. Children born in the Wastes know no other world."
       },
       {
         "id": "RWiNiyjBbHwiwjAKbACje",
@@ -1815,7 +1856,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.898Z",
-        "updatedAt": "2026-04-24T21:08:12.898Z"
+        "updatedAt": "2026-04-24T21:08:12.898Z",
+        "description": "Mama Torrez runs the cantina at the crossroads with the authority of a woman who has been feeding people for thirty years and who will…"
       },
       {
         "id": "OrI3osItsqplzEtjwbgm4",
@@ -1857,7 +1899,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.898Z",
-        "updatedAt": "2026-04-24T21:08:12.898Z"
+        "updatedAt": "2026-04-24T21:08:12.898Z",
+        "description": "Grit leads the most reliable scavenger crew in the Wastes — a lean, dust-covered woman whose real name she discarded years ago because it…"
       },
       {
         "id": "dnkOwXKFBRokZ6HPiYWeo",
@@ -1900,7 +1943,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.898Z",
-        "updatedAt": "2026-04-24T21:08:12.898Z"
+        "updatedAt": "2026-04-24T21:08:12.898Z",
+        "description": "Doc Carver is the closest thing the Wastes has to a proper doctor — a former Bunker 14 resident who left the underground because the…"
       },
       {
         "id": "vlJ51RqPZeReebS7O9KaL",
@@ -1942,7 +1986,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.898Z",
-        "updatedAt": "2026-04-24T21:08:12.898Z"
+        "updatedAt": "2026-04-24T21:08:12.898Z",
+        "description": "Shovel got his name from the tool he used to dig himself out of a collapsed ruin on his first scavenging run."
       }
     ]
   }

@@ -64,7 +64,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.906Z",
-        "updatedAt": "2026-04-24T21:08:12.906Z"
+        "updatedAt": "2026-04-24T21:08:12.906Z",
+        "description": "The Manifold is the hub world that exists between all other worlds."
       },
       {
         "id": "SnIK9CA9l8xpn4NdiEgoD",
@@ -108,7 +109,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.906Z",
-        "updatedAt": "2026-04-24T21:08:12.906Z"
+        "updatedAt": "2026-04-24T21:08:12.906Z",
+        "description": "The Explorers — Door Travelers. Across many worlds, a small number of individuals have encountered The Endless, survived the disorientation of first contact, and chosen…"
       },
       {
         "id": "b1s7woeLYv5jsUUqGCCj4",
@@ -149,7 +151,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.906Z",
-        "updatedAt": "2026-04-24T21:08:12.906Z"
+        "updatedAt": "2026-04-24T21:08:12.906Z",
+        "description": "Explorer — Threshold. Threshold is an Explorer of The Endless — the oldest active traveler who found the marble doors and never stopped walking."
       },
       {
         "id": "W8pIno-FjXN15cPIbOCX2",
@@ -190,7 +193,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.906Z",
-        "updatedAt": "2026-04-24T21:08:12.906Z"
+        "updatedAt": "2026-04-24T21:08:12.906Z",
+        "description": "Explorer — Cairn. Cairn is an Explorer of The Endless — a traveler who found the marble doors and kept walking because standing still felt worse."
       },
       {
         "id": "ImsSK42EpqRHdoYhxBRkl",
@@ -231,7 +235,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.906Z",
-        "updatedAt": "2026-04-24T21:08:12.906Z"
+        "updatedAt": "2026-04-24T21:08:12.906Z",
+        "description": "Explorer — Sable. Sable is an Explorer of The Endless — a traveler who found the marble doors and kept walking because silence was easier to carry than…"
       },
       {
         "id": "PlfIg1wmf0xr6QDyJPIbG",
@@ -272,7 +277,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.907Z",
-        "updatedAt": "2026-04-24T21:08:12.907Z"
+        "updatedAt": "2026-04-24T21:08:12.907Z",
+        "description": "Explorer — Match. Match is an Explorer of The Endless — a traveler who found the marble doors and kept walking because every world had something small worth…"
       },
       {
         "id": "gDMbfylRJ4YGlbHEW6X0C",
@@ -313,7 +319,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.907Z",
-        "updatedAt": "2026-04-24T21:08:12.907Z"
+        "updatedAt": "2026-04-24T21:08:12.907Z",
+        "description": "Explorer — Once. Once is an Explorer of The Endless — a traveler who found the marble doors and kept walking so long that the present tense stopped feeling…"
       },
       {
         "id": "2bt1UsfYTeDul-Evk1mox",
@@ -355,7 +362,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.907Z",
-        "updatedAt": "2026-04-24T21:08:12.907Z"
+        "updatedAt": "2026-04-24T21:08:12.907Z",
+        "description": "Explorer — Wren. Wren is an Explorer of The Endless — a traveler who found the marble doors recently and has not yet learned to stop being amazed."
       },
       {
         "id": "06mYWOSsStNow0vUp6-vO",
@@ -397,7 +405,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.907Z",
-        "updatedAt": "2026-04-24T21:08:12.907Z"
+        "updatedAt": "2026-04-24T21:08:12.907Z",
+        "description": "Generic Explorer Template. An unnamed Explorer of The Endless — a traveler passing through The Manifold."
       },
       {
         "id": "qyW2MrA4XB1Zs3W3Ch9yZ",
@@ -442,7 +451,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.907Z",
-        "updatedAt": "2026-04-24T21:08:12.907Z"
+        "updatedAt": "2026-04-24T21:08:12.907Z",
+        "description": "The Forgotten Ones are the beings who created The Endless and The Manifold."
       },
       {
         "id": "DL6e_MnV1nxNMe4G4so-l",
@@ -487,7 +497,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.907Z",
-        "updatedAt": "2026-04-24T21:08:12.907Z"
+        "updatedAt": "2026-04-24T21:08:12.907Z",
+        "description": "The Manifold has no external light source."
       },
       {
         "id": "MZ2R0Vuabdl4Xsymm8JYZ",
@@ -533,7 +544,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.907Z",
-        "updatedAt": "2026-04-24T21:08:12.907Z"
+        "updatedAt": "2026-04-24T21:08:12.907Z",
+        "description": "The Manifold — No Death Rule. Within The Manifold, death of any kind is impossible."
       },
       {
         "id": "R04MI8tCuDf8Ky3KEkUDW",
@@ -581,7 +593,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.907Z",
-        "updatedAt": "2026-04-24T21:08:12.907Z"
+        "updatedAt": "2026-04-24T21:08:12.907Z",
+        "description": "The Manifold enforces one absolute behavioral rule of its own creation: the names and direct acknowledgment of The Forgotten Ones — the…"
       }
     ]
   }

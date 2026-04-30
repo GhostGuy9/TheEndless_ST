@@ -63,7 +63,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "NPC Naming Convention. When generating new NPCs on the Dunwater Coast, use names that belong to the sea — earned at sea, given by storms, taken from the trade."
       },
       {
         "id": "4dYt-VziRmJuNHwEQjhsB",
@@ -104,7 +105,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Corsair captains the Blacktide — a ship that has been repaired so many times nothing original remains."
       },
       {
         "id": "8yqASPoyIl3oQUILYWeNA",
@@ -145,7 +147,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Magistra Fenn controls who docks at the main port and who doesn't. Bureaucratic, incorruptible, feared by captains who owe fees."
       },
       {
         "id": "8JgfyUT1tBxhYDPfsg1OF",
@@ -185,7 +188,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Sirocco navigates by the sky — stars, clouds, wind patterns, things others can't see."
       },
       {
         "id": "EJwT0E_I3bhzYDtHHDBSI",
@@ -227,7 +231,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Dunwater Coast is a world of island chains, open ocean, and port towns built on the understanding that everyone here is running from…"
       },
       {
         "id": "NBABXXm18vfJqcSCxVkU6",
@@ -270,7 +275,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Seafaring Culture. Life on the Dunwater Coast is life on the water. Children learn to swim before they walk and to sail before they can read."
       },
       {
         "id": "FcCRvVvjLyqNd6Wou08iS",
@@ -313,7 +319,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "The Economy of Salt. The Dunwater Coast's economy is trade, and trade here means moving goods between islands by ship."
       },
       {
         "id": "olUmEVIRf0RYtbl8g48nf",
@@ -356,7 +363,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Why Everyone Is Running. The Dunwater Coast attracts people who need to be somewhere else — somewhere that the past cannot reach, where the name you give is the…"
       },
       {
         "id": "i3UvMJ1sUzneq5iH0WSQH",
@@ -399,7 +407,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Saltmere is the largest port on the Dunwater Coast — a sprawling harbor town built on a natural deepwater bay on the largest island in the…"
       },
       {
         "id": "vzCXSMNJne7x5zasc-Y9I",
@@ -442,7 +451,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "The Pirate Haven — Blackpool. Blackpool is Dunwater Coast's open secret — a port town on a volcanic island where no magistrate has ever successfully maintained authority."
       },
       {
         "id": "AJPjhqwv881o-ZgzQoYnp",
@@ -484,7 +494,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "The Trading Post — Tidebreak. Tidebreak is a neutral trading island positioned at the intersection of the coast's major shipping routes."
       },
       {
         "id": "GmQaqe-omftQgOcZ2Da-T",
@@ -527,7 +538,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "The open sea between the Dunwater Coast's islands is the world's defining feature — vast, deep, and commanding respect from everyone who…"
       },
       {
         "id": "QED-KFb-chcS8a1kgGGv-",
@@ -570,7 +582,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "The Volcanic Island — Cindermark. Cindermark is the Dunwater Coast's youngest island — a volcanic peak that is still active, venting steam and occasionally producing flows…"
       },
       {
         "id": "dq-AF3GmKkpu83ZVvcVc6",
@@ -613,7 +626,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "The Shipwreck Graveyard is a stretch of shallow reef between the outer islands where currents converge and the water hides rock just below…"
       },
       {
         "id": "6dsBI02sx4vBYOddT0Vvr",
@@ -656,7 +670,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "The Lighthouse — Pelican Rock. Pelican Rock Lighthouse stands on a lone outcrop at the entrance to Saltmere's bay — a stone tower with a rotating lamp that guides ships…"
       },
       {
         "id": "cuv7Vag9mrSMpudw-ERHD",
@@ -699,7 +714,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Hidden Cove — Smuggler's Rest. Smuggler's Rest is an inlet on the uninhabited side of Saltmere's island, accessible only through a narrow channel obscured by rock…"
       },
       {
         "id": "yJrxAz2VlGeUZKek9-no2",
@@ -742,7 +758,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Governor's Island — Whitecliff. Whitecliff is the seat of whatever central authority the Dunwater Coast acknowledges — a fortified island with a governor's mansion, a…"
       },
       {
         "id": "EfeQ5rVxafHS00YIHpYzC",
@@ -785,7 +802,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "The Deep Water. Beyond the island chains, the ocean floor drops into trenches of unknown depth."
       },
       {
         "id": "UecbaCtxeTwIY1Tb8SPFP",
@@ -828,7 +846,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Pirate crews on the Dunwater Coast are organized enterprises — each with a captain, a hierarchy, a set of operating principles, and a…"
       },
       {
         "id": "EHaJ_l-KtZWePP2xJh8ws",
@@ -870,7 +889,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Merchant guilds organize the coast's legal trade — or at least the trade that is declared legal at the customs house."
       },
       {
         "id": "A3TSYtKfJhw7Yxa8D-Xg5",
@@ -913,7 +933,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "Port magistrates govern the major port towns with a pragmatism that reflects the coast's priorities."
       },
       {
         "id": "bBh2Soj4NEx0auWxsAzRV",
@@ -956,7 +977,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.855Z",
-        "updatedAt": "2026-04-24T21:08:12.855Z"
+        "updatedAt": "2026-04-24T21:08:12.855Z",
+        "description": "The Navy. The Dunwater Coast's navy operates from Whitecliff with a fleet that is small, aging, and spread too thin to patrol the waters it is…"
       },
       {
         "id": "eL_zMq-YfKptbygLAq1IT",
@@ -998,7 +1020,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Smuggler Networks. Smuggling on the Dunwater Coast is organized into networks that span multiple islands and involve contacts at every level of the coast's…"
       },
       {
         "id": "PCvBDB1Qdtb8kQT4cmK0n",
@@ -1040,7 +1063,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Deep-water fishermen are a distinct community within the Dunwater Coast's seafaring population."
       },
       {
         "id": "jdpGbrwKik3PVP3oQ4Ylu",
@@ -1082,7 +1106,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Captain Archetype. Captains on the Dunwater Coast are defined by their ships and their crews."
       },
       {
         "id": "9a8t3OO_WapAyVsoVRlvZ",
@@ -1124,7 +1149,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Navigator Archetype. Navigators on the Dunwater Coast are the most technically skilled sailors — people who can read the stars, the currents, the wind, and the…"
       },
       {
         "id": "SBaSYo43uwYrjZi6lQt7s",
@@ -1167,7 +1193,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Dockworker Archetype. Dockworkers are the Dunwater Coast's backbone — the people who load and unload cargo, maintain the docks, and keep the machinery of trade…"
       },
       {
         "id": "w767hlCI6yN4bAzdHTqdL",
@@ -1209,7 +1236,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Smuggler Archetype. Smugglers on the Dunwater Coast are pragmatists who have identified the gap between what the law allows and what the market demands and…"
       },
       {
         "id": "MucXAh6ztJFexv_tyDma9",
@@ -1251,7 +1279,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Magistrate Archetype. Magistrates on the Dunwater Coast are administrators first and law enforcers second."
       },
       {
         "id": "WkFANvP5ZQ8-qZ5pjLodM",
@@ -1294,7 +1323,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "The Old Sailor. Every port on the Dunwater Coast has at least one old sailor — someone who has sailed for decades, survived storms that killed better…"
       },
       {
         "id": "1MBJiU8H9pfw0GHlR5xP0",
@@ -1337,7 +1367,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Sailing and Navigation. Sailing the Dunwater Coast requires knowledge of winds, currents, tides, and the specific behavior of water around each island chain."
       },
       {
         "id": "xh920EyaQqomrlcwG5m-c",
@@ -1380,7 +1411,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Ship Combat. Combat at sea on the Dunwater Coast is fast, violent, and decided by positioning rather than firepower."
       },
       {
         "id": "7T43yvg1MU4rYKJ5cZ83V",
@@ -1423,7 +1455,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Weather and Storms. Weather on the Dunwater Coast is the constant negotiation between warm water, unstable air, and the open ocean's capacity to generate…"
       },
       {
         "id": "kHhJ1x2cHR2xBnpq4PYlS",
@@ -1465,7 +1498,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Law at Sea vs Law on Land. Law on the Dunwater Coast operates on two systems that intersect but do not align."
       },
       {
         "id": "ureeUjjpkjuffiUJBNUsX",
@@ -1507,7 +1541,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "The Things Below. The deep water around the Dunwater Coast contains things."
       },
       {
         "id": "YfXh48gaHgFkdqUhNt-aI",
@@ -1550,7 +1585,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Shipbuilding and Repair. Ships on the Dunwater Coast are built and repaired at shipyards in the major ports — Saltmere has the largest, Blackpool has the most…"
       },
       {
         "id": "HH4RxZ88QLU5s3uOouklh",
@@ -1592,7 +1628,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "The Sea Lets You Start Over. The Dunwater Coast's most valuable commodity is not spice or timber or stolen cargo — it is the opportunity to become someone new."
       },
       {
         "id": "7AAr6saxjnJFPRrh-xYjN",
@@ -1634,7 +1671,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Pirate vs Merchant. The distinction between pirate and merchant on the Dunwater Coast is largely a matter of perspective, current activity, and who is telling…"
       },
       {
         "id": "bEZ6boWju8tXKF47UEHWi",
@@ -1677,7 +1715,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "What the Fishermen Won't Talk About. Deep-water fishermen on the Dunwater Coast observe a collective silence about certain subjects."
       },
       {
         "id": "fqNBVWelYaNUKvmOuZPSo",
@@ -1720,7 +1759,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Salt as Culture. Salt is the Dunwater Coast's defining substance. It is in the air, on every surface, in the food, on the skin."
       },
       {
         "id": "dCvkDGonVOaq4Smb7LWkK",
@@ -1763,7 +1803,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "The horizon at sea is different from the horizon on land. On land, it is a line where earth meets sky."
       },
       {
         "id": "1Tt8gL1doCMm2ci58_uYP",
@@ -1805,7 +1846,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Magistra Fenn governs Saltmere with the pragmatic efficiency of someone who understands that her authority extends exactly as far as trade…"
       },
       {
         "id": "rAhCkOVGfH5UI_J_IzAOW",
@@ -1846,7 +1888,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Corsair is a pirate captain operating out of Blackpool — a broad-shouldered woman with sun-darkened skin and a voice that carries across a…"
       },
       {
         "id": "AxxbqipJWgPG9gMAuWp4E",
@@ -1888,7 +1931,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Tallow operates at the intersection of legal and illegal trade — a thin, quiet man who can be found at the Saltmere docks most evenings,…"
       },
       {
         "id": "VEyRIUUCVLOJF3mxg91gA",
@@ -1930,7 +1974,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.856Z",
-        "updatedAt": "2026-04-24T21:08:12.856Z"
+        "updatedAt": "2026-04-24T21:08:12.856Z",
+        "description": "Brine has fished the Dunwater Coast for fifty years and his body shows it — salt-weathered skin, hands like rope, and eyes that have…"
       }
     ]
   }

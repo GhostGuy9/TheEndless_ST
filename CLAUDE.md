@@ -21,9 +21,13 @@ TheEndless_ST/
 ├── CLAUDE.md               ← You are here
 ├── README.md
 ├── core/
-│   ├── The Endless.json        ← Core lorebook (door mechanics, Manifold rules, Explorer NPCs)
-│   ├── TheEndless_GM.json      ← GM/narrator character card
+│   ├── The Endless.json        ← Core lorebook (door mechanics, Manifold rules, world catalog)
+│   ├── TheEndless_GM.json      ← GM/narrator character card (v3.0, Game Mode native)
 │   └── TheEndless - Profile Photo.png
+├── gamemode/                   ← Game Mode setup recipes (paste-ready)
+│   ├── SETTING.md              ← Wizard Setting + Player Goals text + agent enable list
+│   ├── CUSTOM_TRACKER.md       ← Custom Tracker agent schema (perception filter, taboo, world)
+│   └── GENRE_MATRIX.md         ← Per-world Genre/Tone/Difficulty reference
 ├── characters/
 │   ├── Threshold.json          ← Experienced Explorer NPC card
 │   ├── Cairn.json              ← Younger Explorer NPC card
@@ -65,60 +69,96 @@ Getting these wrong silently breaks things on import.
 - `keys` = primary keywords array; `secondaryKeys` = secondary keywords
 - `content` must be self-contained — keywords and titles are NOT injected, only content
 - `constant: true` entries always fire regardless of keywords — use sparingly (max 2-3 per lorebook)
-- `position` is an **integer**: `0` = before character definitions (world/setting lore), `1` = after character definitions (immediate scene context), `2`/`3` = around author's note, `4` = at chat depth
+- `position` is an **integer**: `0` = before character definitions, `1` = after character definitions, `2` = depth-injected (uses `depth` field for placement). **Range is 0–2 only** — Marinara collapsed ST's 0–4. Anything higher will be rejected by Marinara's Zod schema on import.
+- `depth` is the integer offset for `position: 2` injection (in messages from the end)
 - `order` (equivalent to ST's `insertion_order`) — higher = injected closer to end of prompt = stronger model influence
 - `role` is a string: `"system"`, `"user"`, or `"assistant"`
-- `selectiveLogic` is a string: `"and"` or `"or"`
-- Lorebook-level `category`: use `"world"` for world lorebooks and the core Endless lorebook
+- `selectiveLogic` is a string: `"and"`, `"or"`, or `"not"`
+- `description` (per-entry, string) — short summary used by the **Knowledge Router** agent to decide which entries to inject. Keep it tight (80–160 chars). Already populated on every entry; keep new entries consistent.
+- Lorebook-level `category` is **mostly cosmetic** — affects only UI sidebar grouping/icons. Five values: `"world"`, `"character"`, `"npc"`, `"spellbook"`, `"uncategorized"` (UI label: "Other"). The ONE category with mechanical effect: `"spellbook"` — read wholesale into Game Mode combat encounters via `EncounterModal`'s spellbook attachment dropdown. Currently all worlds + core use `"world"`.
 
 ### Character Cards
 - Top-level envelope: `{ "type": "marinara_character", "version": 1, "exportedAt": "...", "data": { "spec": "chara_card_v2", "spec_version": "2.0", "data": {...}, "metadata": {...} } }`
 - Inner `data.data` is the standard chara_card_v2 spec (name, description, personality, scenario, first_mes, etc.)
 - Use `{{char}}` and `{{user}}` macros instead of real names
-- `first_mes` length calibrates AI response length — write it the length you want responses to be
-- `mes_example` exchanges MUST each start with `<START>` on its own line
-- `system_prompt` left as `""` uses the user's global Marinara settings
-- M.E.-specific extensions bag fields:
-  - `nameColor` / `dialogueColor` / `boxColor`: hex or CSS gradient (e.g., `linear-gradient(...)`). Threshold uses `#E88D67`, GM card uses `#C4A882`
-  - `backstory` / `appearance`: optional prose fields (alternative to embedding everything in `description`)
-  - `talkativeness`: 0.0–1.0 (affects how often the model volunteers dialogue)
-  - `conversationStatus`: `"online"` default
-- `character_book`: set to `null` unless the card embeds its own private lorebook
+
+**CRITICAL: This project targets Marinara Game Mode. Game Mode reads ONLY these fields from a card:**
+- `name`
+- `description`
+- `personality`
+- `extensions.backstory` (or root `backstory`)
+- `extensions.appearance` (or root `appearance`)
+
+These five are concatenated into a `<gm_role>` block injected every turn. Game Mode IGNORES: `scenario`, `first_mes`, `mes_example`, `alternate_greetings`, `system_prompt`, `post_history_instructions`, `extensions.depth_prompt`, `character_book`. **Do not put load-bearing content in those fields.** Cards in this repo have those fields cleared.
+
+- `character_book` (embedded lorebook on a card): **never read in Game Mode.** Standalone `core/The Endless.json` is the source of truth. Embedded books are kept `null` on cards in this repo.
+- M.E.-specific `extensions` bag fields:
+  - `nameColor` / `dialogueColor` / `boxColor`: hex or CSS gradient (cosmetic; not used by Game Mode but harmless). Threshold uses `#E88D67`, GM card uses `#C4A882`.
+  - `backstory` / `appearance`: prose fields, **read by Game Mode**.
+  - `talkativeness`: 0.0–1.0 (affects how often the model volunteers dialogue).
+  - `conversationStatus`: `"online"` default.
 
 ---
 
 ## How Marinara Engine Loads This
 
-### Loading Order (Context Priority)
-```
-System Prompt → Character Card → Lorebooks → Chat History
-```
+### Game Mode is the target play mode
+
+This project is built for **Marinara Game Mode**. Game Mode setup happens in a wizard, the `game-master` agent is the responder, and per-turn world anchoring lives in:
+
+1. The wizard's free-text **Setting** field (interpolated into `<gm_rules>` every turn — most reliable anchor)
+2. The wizard's **Player Goals** field (used at `/game/setup` only, not re-injected each turn)
+3. Active lorebooks (constant entries always fire; non-constant fire on keyword match against chat content)
+4. Custom Tracker agent state (auto-injected as `<custom_state>` every turn)
+
+The actual setup recipes live in `gamemode/`:
+- `gamemode/SETTING.md` — paste-ready Setting text + Player Goals + recommended agents
+- `gamemode/CUSTOM_TRACKER.md` — Custom Tracker schema (perception filter, current world, taboo offenses, etc.)
+- `gamemode/GENRE_MATRIX.md` — per-world Genre/Tone/Difficulty reference
+
+### Lorebook activation model
+
+A lorebook is visible to the AI in a chat only when **both**:
+- `enabled: true` (master kill switch, set per-lorebook), AND
+- One of: in chat's `activeLorebookIds` (manual toggle) / matched `characterId` / matched `personaId` / matched `chatId`
+
+`enabled: true` alone does NOT load a lorebook. There is no auto-discovery — Marinara never browses dormant lorebooks. **Whatever isn't toggled in does not exist for the AI.**
 
 ### Recommended Setup
 | What | How |
 |---|---|
-| `core/TheEndless_GM.json` | Import as character, use as primary chat partner. Core lore is embedded — no separate lorebook bind needed |
-| `core/The Endless.json` | Standalone copy of the core lorebook. Optional import for SillyTavern users or anyone who wants it as a separate lorebook |
-| A world lorebook | Activate for the chat ONLY while the player is in that world |
-| Explorer character cards | Optional — import for group chats where Explorers appear |
+| `core/TheEndless_GM.json` | Import as Character. In Game Mode wizard, set GM Mode = "Character GM" and pick this card. |
+| `core/The Endless.json` | Attach in the wizard's Lorebooks step (`activeLorebookIds`). Always-on for The Endless campaigns. |
+| `worlds/<world>.json` | Toggle ON in the chat's lorebook drawer **only when the player is currently in that world**. Toggle OFF when they leave. |
+| `characters/Threshold.json` etc. | Optional — add as Party Members when an Explorer should join the player. |
 
-**Do NOT activate all world lorebooks at once.** The GM card carries thumbnail descriptions of all worlds. Full world lorebooks only activate when the player is inside that world. This is a deliberate token budget decision.
+**Do NOT pre-attach all world lorebooks.** With 17 worlds attached, every world's constant entries fire simultaneously — the AI tries to write in 17 tones at once and produces nondescript blend-soup ("not in any world"). The single most common configuration error.
+
+### Catalog pattern for dynamic door storytelling
+
+Marinara has no built-in mechanism for the AI to activate dormant lorebooks. To preserve the "AI picks where the door leads" feel, two layered injection points carry world thumbnails into context:
+
+1. **Wizard Setting field** — compressed catalog string (see `gamemode/SETTING.md`), guaranteed every turn.
+2. **`[Catalog] World Thumbnails — The Endless`** — constant entry in `core/The Endless.json` (~3500 chars), reinforces the catalog from the lorebook side.
+
+When the player commits to a destination, manually toggle the matching world lorebook on. The AI's first impression comes from the catalog + genre knowledge; full world detail loads when you toggle.
 
 ### Token Budget Reality
-At 8GB VRAM Danny runs local models (currently testing ~7-9B uncensored GGUF models). Token budget is tight. Every active element costs:
-- GM card description: ~800-900 tokens
-- Lorebook constant entries: ~300 tokens always
-- Triggered lorebook entries: ~150-300 each per message
-- World lorebook entries: fire only when active
+At 8GB VRAM, local models (~7-9B uncensored GGUF) run with tight budgets. Every active element costs:
+- GM card fields (description + personality + backstory + appearance): ~1000–1500 tokens, every turn
+- Core lorebook constants (Overview + Catalog + Tone + Dialogue Format): ~1500 tokens, every turn
+- Wizard Setting text: ~800 tokens, every turn
+- One world lorebook attached: ~300 tokens of constants + ~150–300 per keyword-triggered entry
+- Custom Tracker `<custom_state>`: ~200–400 tokens
 
-Keep world lorebook entries lean. 100-250 tokens per entry target.
+Keep world lorebook entries lean. 100–250 tokens per entry target. Use `description` (80–160 chars per entry) so the **Knowledge Router** agent can semantically prune irrelevant entries.
 
 ### Marinara-Native Features Available
-These are exposed by the file format but require activation in the Marinara UI:
-- **Agents** (25+ built-in): world tracking, quests, combat, expression detection — particularly relevant for Night City (combat), Ironwater Station (status tracking), Pale Fog (sanity)
-- **Game mode**: party systems, NPC dialogue tracking — natural fit for The Frontier, Aldenmoor, Dunwater Coast
-- **Dynamic weather / sprite switching**: not currently wired into any card, but `extensions.dialogueColor` preset on Threshold and the GM
-- **Local Gemma model**: can be assigned to tracker agents or game scene analysis — useful for keeping VRAM headroom on the main model
+- **Built-in agents** (25+): see `gamemode/SETTING.md` for which to enable. Recommended core: `game-master`, `world-state`, `quest`, `custom-tracker`, `knowledge-router`. Optional: `combat`, `lorebook-keeper`.
+- **Custom Tracker** is the home for Endless-specific state (perception filter, taboo offenses) — see `gamemode/CUSTOM_TRACKER.md`.
+- **Custom Widgets** are LLM-generated HUD widgets (8 types: progress bars, gauges, counters, etc.). User toggles the feature; LLM picks types at setup based on the Setting text. User cannot define new widget types.
+- **Spellbook lorebooks** are the only `category` with mechanical effect — read wholesale into combat encounters via `EncounterModal`. None are built yet; candidates per `gamemode/GENRE_MATRIX.md`.
+- **Custom Agents** can be created with full prompt templates if the built-ins don't fit a need.
 
 Danny decides what to wire up per-playthrough rather than baking feature assumptions into the data.
 
@@ -138,7 +178,7 @@ Danny decides what to wire up per-playthrough rather than baking feature assumpt
 
 ### The Perception Filter
 - Bonds to a person on first touch of any door — passive and automatic
-- Progression is feel-based (tracked by RPG Companion card, not this GM card):
+- Progression is feel-based (tracked by the **Custom Tracker** agent, see `gamemode/CUSTOM_TRACKER.md`):
   - Early: notices doors others miss
   - Mid: senses active doors before seeing them
   - Deep: can will an active door to reroute its destination to The Manifold (one function only — compass home)
@@ -234,12 +274,13 @@ Used by the GM card to generate contextually appropriate NPC names.
 
 ## GM Card Notes
 
-- **Version**: 2.1 (inner `character_version` field)
-- **Voice**: GM character with narrative voice. Uses `{{char}}` framing. Asterisk action beats. NOT a pure text adventure narrator.
-- **Dialogue color**: `#C4A882` (preset in `extensions.dialogueColor`)
-- **No separate NPC cards needed for worlds** — GM generates NPCs organically using the naming conventions above. Standalone NPC cards (Threshold, Cairn, GenericExplorer) exist for group chats if desired.
-- The Taboo enforcement, No-Death Rule description, and Glimpse World descriptions are all handled by the GM card
-- **Core lorebook is embedded** in the GM card's `character_book` field — door mechanics, Manifold rules, and Endless overview ship with the card. `core/The Endless.json` exists as a standalone copy too. **If you edit one, update both** (the embedded copy is plain chara_card_v2 spec format, the standalone is M.E. format)
+- **Version**: 3.0 (inner `character_version` field) — Marinara Game Mode native
+- **Voice**: GM narrative voice. Uses `{{char}}` framing. Asterisk action beats. NOT a pure text adventure narrator.
+- **Dialogue color**: `#C4A882` (preset in `extensions.dialogueColor`; cosmetic, not consumed by Game Mode but harmless)
+- **Game Mode reads only**: `name`, `description`, `personality`, `extensions.backstory`, `extensions.appearance`. Everything else on the card is cleared (scenario, first_mes, mes_example, alternate_greetings, system_prompt, post_history_instructions, depth_prompt, character_book).
+- **No separate NPC cards needed for worlds** — GM generates NPCs organically using the naming conventions above. Standalone NPC cards (Threshold, Cairn, GenericExplorer) exist as optional Party Members.
+- The Taboo enforcement, No-Death Rule description, and Glimpse World descriptions live in the GM card's `description` and the core lorebook's constant entries.
+- **Core lorebook lives at `core/The Endless.json`** — single source of truth. The GM card no longer embeds a `character_book` (Game Mode doesn't read it).
 
 ---
 

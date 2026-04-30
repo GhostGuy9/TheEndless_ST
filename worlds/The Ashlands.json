@@ -62,7 +62,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "NPC Naming Convention. When generating new NPCs in The Ashlands, use heavy, old-world names that sound worn down by time."
       },
       {
         "id": "39jNSaYqTtOqxIB0dFB-2",
@@ -103,7 +104,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "Mourne is the last knight of a fallen order whose name no one remembers. Grey armor, dented and scratched, never removed."
       },
       {
         "id": "k39nJA66m-aLnxtX6nvDi",
@@ -144,7 +146,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "Edric keeps the gate of the last standing fortress in The Ashlands."
       },
       {
         "id": "Z6MjWBZc-oS-5zB1ndDdR",
@@ -186,7 +189,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "The Ashlands is a dying kingdom under skies of perpetual grey ash."
       },
       {
         "id": "VjVaXqc2-eHRS1ZY5N3mT",
@@ -229,7 +233,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "Culture of Endurance. The people of the Ashlands define themselves by what they endure rather than what they achieve."
       },
       {
         "id": "YtuLyYBqBgGVEJ84Q06DE",
@@ -272,7 +277,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "The Dying Age. The Ashlands is in its final age. This is not metaphor or prophecy — it is observable fact."
       },
       {
         "id": "SjlCkHoI3g5epcKCvXX_h",
@@ -316,7 +322,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "Faith and the Sacred Flame. The dominant faith of the Ashlands centers on fire — specifically the Sacred Flame, maintained in hearths and temples across the kingdom."
       },
       {
         "id": "-UJ9nQxTKuVLxXv41ZB7x",
@@ -359,7 +366,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "Crestfall is the largest remaining settlement in the Ashlands, built into the side of a mountain ridge where the ash fall is partially…"
       },
       {
         "id": "Z1nIcVKEJKYNsA5jyN4Xu",
@@ -402,7 +410,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "The Grey Plains stretch between the mountain settlements and the coast, covered in a layer of fine ash that ranges from ankle-deep to…"
       },
       {
         "id": "h_sAt8RdxRcNgsOm-Ynz5",
@@ -445,7 +454,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "The Ember Keeps are a chain of fortresses along the northern ridgeline, each visible from the next, originally built as a defensive line…"
       },
       {
         "id": "vsCLE6XaH45_n7lDvETp7",
@@ -488,7 +498,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.887Z",
-        "updatedAt": "2026-04-24T21:08:12.887Z"
+        "updatedAt": "2026-04-24T21:08:12.887Z",
+        "description": "The Ashen Cathedral stands at the center of Crestfall, the largest intact structure in the Ashlands."
       },
       {
         "id": "jpS97aYSvxDg1LbIwhx7j",
@@ -531,7 +542,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Underhalls are a network of tunnels and chambers beneath the mountain settlements, originally mines, then expanded into living spaces…"
       },
       {
         "id": "dH9vbtw_W4a6AvkqobDmL",
@@ -574,7 +586,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Bone Fields are a stretch of low ground between two ridgelines where the last major battle of the kingdom's final war was fought."
       },
       {
         "id": "1vte27j7Covx1mPjeoimC",
@@ -617,7 +630,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Hearthwatch Tower stands at the highest point of the northern ridge, visible from Crestfall on clear days."
       },
       {
         "id": "gB1pg3NcHlfPeTUA_zzDL",
@@ -660,7 +674,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Forge Quarter occupies the eastern section of Crestfall, built around natural vents that provide the heat needed for metalwork."
       },
       {
         "id": "Nok2nRDCB7DvziCLF41G3",
@@ -703,7 +718,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Fire Keepers are the closest thing the Ashlands has to a religious order."
       },
       {
         "id": "UDe-tsdXH1KKzb_NY9Aai",
@@ -746,7 +762,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Ash Wardens patrol the roads and paths between settlements, maintaining routes, marking safe passage through the Grey Plains, and…"
       },
       {
         "id": "v-naIGKA4RbfrzfhugQqX",
@@ -789,7 +806,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Remnant Court is what remains of the Ashlands' former aristocracy — a handful of families who still claim titles tied to lands that no…"
       },
       {
         "id": "58moCp09uPehzoRzrfwdf",
@@ -832,7 +850,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Cursed are individuals who carry afflictions that defy medical treatment — wounds that do not heal, limbs that move against their…"
       },
       {
         "id": "hdpM27SpxKShEYBQ97Rt_",
@@ -875,7 +894,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Last Knights are the remaining members of military orders that once served kingdoms that no longer exist."
       },
       {
         "id": "kfqUa5XGVlIrM2Cgq_de9",
@@ -918,7 +938,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Ash Wanderers are people who have chosen to move rather than settle — traveling between communities, trading goods and information,…"
       },
       {
         "id": "38k6QLgib6uX8DYk0M3Og",
@@ -961,7 +982,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Knight Archetype. Knights in the Ashlands wear armor that has been repaired more times than it has been replaced."
       },
       {
         "id": "dgdvjA4_xrhChBnHCxv3Q",
@@ -1003,7 +1025,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Fire Keeper Archetype. Fire Keepers carry themselves with the calm of people whose purpose is clear and unchanging."
       },
       {
         "id": "hPNCgNdt9nSDld0dcssKQ",
@@ -1046,7 +1069,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Smith Archetype. Smiths in the Ashlands are essential workers and are treated as such — respected, well-supplied, and never short of purpose."
       },
       {
         "id": "NUST1bs4Y9SBKIhnCo8pZ",
@@ -1089,7 +1113,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Wanderer Archetype. Wanderers in the Ashlands are lean, weathered, and observant."
       },
       {
         "id": "2alS-fFdZ4NU0RMPEZeIL",
@@ -1132,7 +1157,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Scholar Archetype. Scholars in the Ashlands study what remains."
       },
       {
         "id": "w4Vis7qGk3xvhTNEg_IUX",
@@ -1175,7 +1201,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Elder of Crestfall Archetype. Elders in Crestfall carry the weight of memory in a kingdom that is running out of people to remember."
       },
       {
         "id": "CKSqgZ6Jp4LEgLjPtk7tc",
@@ -1218,7 +1245,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Curses in the Ashlands are real, observable conditions with physical manifestations and no understood cause or cure."
       },
       {
         "id": "eZc8LkbTs8A_79h1MsIEq",
@@ -1261,7 +1289,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Sacred Fire and Ember Travel. The Sacred Flame is maintained as an unbroken chain connecting all inhabited settlements in the Ashlands."
       },
       {
         "id": "A06cmCeLhyune7qt6hv0h",
@@ -1305,7 +1334,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Steel and Weapons. Steel is the most valuable material in the Ashlands."
       },
       {
         "id": "ISirtDSiUGpuoISRgO7MS",
@@ -1348,7 +1378,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Ash and Its Effects. The ash that falls continuously across the Ashlands is fine volcanic particulate from a source that has never been identified."
       },
       {
         "id": "whvYF_qaJhaG45eibEsqv",
@@ -1391,7 +1422,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Travel Between Settlements. Travel in the Ashlands is slow, dangerous, and necessary."
       },
       {
         "id": "iQ-nCVeDiKtQfd0ip7cXk",
@@ -1434,7 +1466,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Resources and Scarcity. The Ashlands operates on scarcity. Clean water comes from underground sources accessed through the Underhalls."
       },
       {
         "id": "PnxkDhM-0ByRvuFQ8uMWV",
@@ -1477,7 +1510,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "What It Means to Refuse to Fall. The phrase 'refuse to fall' is the closest thing the Ashlands has to a motto."
       },
       {
         "id": "S8qPu10obBMhxPNx6h0oL",
@@ -1520,7 +1554,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The Weight of Names. Names in the Ashlands carry weight."
       },
       {
         "id": "uVUd1E-b_e2RFLRwQLOAU",
@@ -1563,7 +1598,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Why Fire Matters. Fire matters in the Ashlands because everything else is grey."
       },
       {
         "id": "kSpWhGP9k50GXLt-KSysb",
@@ -1606,7 +1642,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Witness as Duty. The dominant philosophy of the Ashlands is witness — the belief that the most important thing a person can do is see clearly and remember…"
       },
       {
         "id": "Zthm-1Y4ou_XMKc8_mhYp",
@@ -1649,7 +1686,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Silence as Communication. Silence in the Ashlands is not absence — it is a form of speech."
       },
       {
         "id": "WBvRRAbfLNwjKcGk0s88Q",
@@ -1692,7 +1730,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "The End Without Apocalypse. The Ashlands is not ending in fire or flood or invasion."
       },
       {
         "id": "drVEV863C7l1vnG76zJM9",
@@ -1734,7 +1773,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Mourne commands what remains of the Last Knights — a woman in repaired armor who carries a sword that has been reforged so many times only…"
       },
       {
         "id": "5QYDLsY12k0BanunS9Xzu",
@@ -1776,7 +1816,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Edric tends the oldest Sacred Flame in the Ashlands — the central hearth of the Ashen Cathedral."
       },
       {
         "id": "8aDZAFS0IPASRYSpaC6Ic",
@@ -1818,7 +1859,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Vara is an Ash Wanderer who has traveled every road in the Ashlands and slept in every Ember Keep that still burns."
       },
       {
         "id": "RyO-BVowT2YyPuocuYQiL",
@@ -1860,7 +1902,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.888Z",
-        "updatedAt": "2026-04-24T21:08:12.888Z"
+        "updatedAt": "2026-04-24T21:08:12.888Z",
+        "description": "Aldous is the senior scholar of the Ashen Cathedral archives — an old man with ink-stained fingers and the quiet intensity of someone who…"
       }
     ]
   }

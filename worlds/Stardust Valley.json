@@ -62,7 +62,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "NPC Naming Convention. When generating new NPCs in Stardust Valley, use soft, nature-adjacent names — typically two syllables."
       },
       {
         "id": "go3uacP2C576p9FhRfMZw",
@@ -104,7 +105,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Sora runs a curiosity shop at the Lantern Market."
       },
       {
         "id": "AXomTS5KFju-FG9d8uyXH",
@@ -145,7 +147,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Bramble is an herbalist who lives at the valley's edge where the forest thickens."
       },
       {
         "id": "J7sUGXO7b0N1OSBzzmesP",
@@ -186,7 +189,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Yuki makes the lanterns that light the valley's evening markets. Each one is unique — shapes, colors, the way they move in the wind."
       },
       {
         "id": "1NwXGFTbeQ9fqjXpznAtm",
@@ -228,7 +232,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Stardust Valley is a warm coastal valley world where supernatural beings and humans live side by side without conflict or curiosity."
       },
       {
         "id": "IYJJM6sjMXYDcOhmp7_lm",
@@ -271,7 +276,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Daily Life and Culture. Life in Stardust Valley follows a rhythm tied to seasons and markets rather than clocks."
       },
       {
         "id": "dr_NvbQ-dw7UWspZ6L7ZG",
@@ -315,7 +321,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Supernatural Coexistence. Supernatural beings in Stardust Valley are not rare, exotic, or hidden. They are neighbors."
       },
       {
         "id": "kWjz2knB_iQCKCE9dsdra",
@@ -360,7 +367,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Seasons and Weather. Stardust Valley experiences four distinct seasons, each with its own character."
       },
       {
         "id": "XtekeFxHkwN8gFJ5zSQcm",
@@ -403,7 +411,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Lantern Market. The Lantern Market opens every evening at dusk in the town square of Hearthstone, the valley's largest settlement."
       },
       {
         "id": "uPX1obnudFHan009PJSos",
@@ -446,7 +455,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Hearthstone is the largest settlement in Stardust Valley, built where the river meets the coast."
       },
       {
         "id": "iX005nmbkohj2LejOyqFY",
@@ -489,7 +499,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "The Coastal Villages. A string of small fishing villages lines the rocky coast south of Hearthstone."
       },
       {
         "id": "5B6NKb6PUqTFnLUuGP6m_",
@@ -532,7 +543,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "The Foxglove Tea House sits on the corner of the town square in Hearthstone, run by a soft-spoken kitsune named Sora who has operated it…"
       },
       {
         "id": "mON3htDMR4Rn0BNFn3dna",
@@ -575,7 +587,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Moonveil Shrine sits at the top of the forested hill overlooking Hearthstone."
       },
       {
         "id": "A5PVpF0LB2yq3RlaZLAyp",
@@ -618,7 +631,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Whispering Woods. The Whispering Woods cover the hills along the valley's northern edge."
       },
       {
         "id": "zfeovojhRqVOUZ-WAD0Bt",
@@ -661,7 +675,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "The Hot Springs. Natural hot springs emerge from the hillside above Hearthstone, feeding a series of stone pools that have been used for communal bathing…"
       },
       {
         "id": "FUZGD45ZiZcFrp0L7ASE2",
@@ -704,7 +719,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Driftwood Cove is a sheltered beach at the southern end of the coastal path, accessible through a narrow gap in the sea cliffs."
       },
       {
         "id": "HAUk3wpPz5dfUTXzcCGiO",
@@ -747,7 +763,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Bramble Row is a narrow street in Hearthstone where most of the valley's artisans keep their workshops."
       },
       {
         "id": "C-1GMiqSyNrEwre0AJfZs",
@@ -789,7 +806,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "The Shrine Keepers are a small group of volunteers who maintain Moonveil Shrine and the smaller roadside shrines scattered throughout the…"
       },
       {
         "id": "AWo3suTGswn55KYD-DvDl",
@@ -832,7 +850,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "The Fishing Cooperative is an informal organization of the coastal village fisherfolk who share boats, equipment, and catches."
       },
       {
         "id": "A-4kW2IwoLo3LAqYe4di1",
@@ -875,7 +894,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Market Vendors Guild. The Market Vendors Guild is a loose association of Lantern Market merchants who coordinate stall placement, resolve disputes, and organize…"
       },
       {
         "id": "FSvNCKYj9-U7kVuAbO3zi",
@@ -918,7 +938,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "The Herbalists Circle is a collective of healers, foragers, and remedy-makers who gather weekly to share knowledge, trade ingredients, and…"
       },
       {
         "id": "5HaGPm_b-uyHxWKD9wsQj",
@@ -961,7 +982,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "The Storytelling Circle meets on the last evening of each month in the town square after the Lantern Market closes."
       },
       {
         "id": "SiQcUh4nIn4yR0dAiTlYr",
@@ -1004,7 +1026,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "The Valley Watch is a volunteer patrol that walks the paths between villages, checks on isolated homesteads, and helps travelers who have…"
       },
       {
         "id": "kIDlaE65TCHkOsQsxND-i",
@@ -1046,7 +1069,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Shopkeeper Archetype. Shopkeepers in Stardust Valley run their businesses with warmth and minimal urgency."
       },
       {
         "id": "_bnjNP6tpiwADfIQkX1SS",
@@ -1089,7 +1113,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Fisher Archetype. Fisherfolk in Stardust Valley are practical, weather-aware, and generous with their catch."
       },
       {
         "id": "h2L1LfrxO-jZ8cKYAA6aE",
@@ -1132,7 +1157,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Herbalist Archetype. Herbalists in Stardust Valley are part healer, part forager, part counselor."
       },
       {
         "id": "i37KlwRUTrLPt4mLJqgd5",
@@ -1175,7 +1201,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Supernatural residents of Stardust Valley are beings with animal features, extended lifespans, and casual access to small magic."
       },
       {
         "id": "VS0uQ9uxDFltfeYkD6WDT",
@@ -1218,7 +1245,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Wandering Musician Archetype. Wandering musicians pass through Stardust Valley regularly, drawn by the Lantern Market's welcoming atmosphere and the valley's…"
       },
       {
         "id": "62524308nVafrL0MpUtsO",
@@ -1262,7 +1290,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.883Z",
-        "updatedAt": "2026-04-24T21:08:12.883Z"
+        "updatedAt": "2026-04-24T21:08:12.883Z",
+        "description": "Elder Archetype. Elders in Stardust Valley are the keepers of memory and the settlers of disputes."
       },
       {
         "id": "9ZfJgx-D8hzmPVO2rYFWA",
@@ -1305,7 +1334,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Soft Magic. Magic in Stardust Valley is soft, domestic, and thoroughly integrated into daily life."
       },
       {
         "id": "xXI1vhu-8a26MoAWQJKnZ",
@@ -1348,7 +1378,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Festivals and Seasonal Events. Stardust Valley marks the passage of seasons with festivals that blend practical function with communal joy."
       },
       {
         "id": "Bokz0eGrrgUom_ywL7XKf",
@@ -1392,7 +1423,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Trade and Economy. Stardust Valley operates on a mixed economy of coin and barter, with barter being more common for everyday transactions."
       },
       {
         "id": "QppXI4je5cFcUC0Gji0_B",
@@ -1437,7 +1469,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Food Culture. Food in Stardust Valley is central to social life. Meals are shared, generous, and made from whatever is fresh and local."
       },
       {
         "id": "zEhR6XJTCFIp7mUTMab8p",
@@ -1481,7 +1514,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Craftsmanship in Stardust Valley is valued as a primary form of expression and contribution."
       },
       {
         "id": "4gE-MxnetYJrmx1lvGEqF",
@@ -1524,7 +1558,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "The Glowing Tide Pools. The tide pools along the coast of Stardust Valley contain bioluminescent organisms that glow in soft blues and greens after dark."
       },
       {
         "id": "hPBmii6T2Q9h5I0tT_hs_",
@@ -1567,7 +1602,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Hospitality as Law. Hospitality in Stardust Valley is the closest thing the community has to a universal law."
       },
       {
         "id": "TfS-W1b89vQok12pLRMMu",
@@ -1610,7 +1646,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Memory and Storytelling. Stardust Valley preserves its history through storytelling rather than written record."
       },
       {
         "id": "4cZqD6K_gmrhyv7Pytlp1",
@@ -1654,7 +1691,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "The Pace of Life. The deliberate slowness of life in Stardust Valley is not laziness or stagnation — it is a conscious cultural choice."
       },
       {
         "id": "-174I-BaMT3rB0nLTQ1NG",
@@ -1697,7 +1735,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "The Coast's Significance. The coast of Stardust Valley holds a particular significance for the community."
       },
       {
         "id": "VbFDcgcM8Yaaad1Jm_2Gl",
@@ -1740,7 +1779,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Coexistence Without Explanation. The most remarkable thing about Stardust Valley is how unremarkable it finds itself."
       },
       {
         "id": "pmPCXyeAvI-_exhTncI2Z",
@@ -1783,7 +1823,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "What Home Means Here. Home in Stardust Valley is defined by presence rather than origin. You are from here if you are here."
       },
       {
         "id": "5gk8D1ZZg7NoH87A8tTXR",
@@ -1825,7 +1866,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Sora is the kitsune who runs the Foxglove Tea House in Hearthstone."
       },
       {
         "id": "LUgyFAR6eyVdcTRFvHmit",
@@ -1867,7 +1909,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Finn coordinates the Valley Watch — the volunteer patrol that walks the paths between villages."
       },
       {
         "id": "OZ9vKHPhtfILSxigijsIU",
@@ -1909,7 +1952,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Bramble is the eldest of the tanuki family that operates the hot springs bathhouse above Hearthstone."
       },
       {
         "id": "KniLN4uZPljxevriWReoE",
@@ -1951,7 +1995,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.884Z",
-        "updatedAt": "2026-04-24T21:08:12.884Z"
+        "updatedAt": "2026-04-24T21:08:12.884Z",
+        "description": "Maeve is the head keeper of Moonveil Shrine — an elderly human woman who has tended the hilltop shrine for forty years."
       }
     ]
   }

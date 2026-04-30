@@ -63,7 +63,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "NPC Naming Convention. When generating NPCs on Ironwater Station, use names from worn badges, manifests, and walls."
       },
       {
         "id": "B46M2E0vcS-4E-DN5FQc4",
@@ -105,7 +106,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Specialist Vael might be the last crew member on Ironwater Station. Might be something wearing a uniform."
       },
       {
         "id": "17d9lRGfh8uK2DWp6yV22",
@@ -146,7 +148,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Okonkwo is a name on a badge found clipped to an empty bunk in crew quarters."
       },
       {
         "id": "P6_ff0WeGowfFPTTRtkfg",
@@ -188,7 +191,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Ironwater Station is a deep space station orbiting a gas giant in a system that no star chart identifies."
       },
       {
         "id": "iqKvu5jf8PhbakBdlDa32",
@@ -231,7 +235,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "The silence of Ironwater Station is mechanical."
       },
       {
         "id": "ng-1gzxKHyAR6_EcAJba6",
@@ -274,7 +279,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Current State. Ironwater Station is operational in the sense that its systems function."
       },
       {
         "id": "fMbHU93t6q2P8L92INoGE",
@@ -317,7 +323,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "The crew of Ironwater Station is absent."
       },
       {
         "id": "vUqEdypmPtS2HlQVBqrvv",
@@ -360,7 +367,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Command Deck. The Command Deck is on the uppermost accessible level — a wide room with a curved viewport looking out at the gas giant the station orbits."
       },
       {
         "id": "J9XFVzAW45VEWGEGsqrek",
@@ -403,7 +411,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Crew quarters are arranged along Deck Three — thirty-seven rooms of identical layout, each personalized by its occupant."
       },
       {
         "id": "M0FB6K7qEt0IJx6HJbdGF",
@@ -446,7 +455,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Engineering occupies the station's lowest accessible deck — a vast space of machinery, conduits, and the reactor that powers everything."
       },
       {
         "id": "5ZBbJrJ1kd3DrBZ6G1yMc",
@@ -489,7 +499,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Medical Bay. The Medical Bay is on Deck Two, fully equipped with diagnostic equipment, surgical tools, and pharmaceutical stores."
       },
       {
         "id": "OOoCwP-LOwwX401LLa68f",
@@ -532,7 +543,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Hydroponics Lab. The Hydroponics Lab on Deck Four is still growing food."
       },
       {
         "id": "IvfaGy2CZ1wyZf24bC9_b",
@@ -575,7 +587,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Cargo Hold. The Cargo Hold occupies most of Deck Six — a cavernous space filled with sealed containers arranged in rows."
       },
       {
         "id": "jTO_vN14UAN2cUVcNIflQ",
@@ -618,7 +631,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Observation Deck. The Observation Deck is a wide, curved room on Deck One with floor-to-ceiling viewports that look out at the gas giant."
       },
       {
         "id": "hBCb0PmCYzoo4BRPzBq0G",
@@ -661,7 +675,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "Maintenance tunnels run between the main decks — narrow corridors with exposed conduits and emergency lighting that casts everything in…"
       },
       {
         "id": "58IovXN14YV6sIe0BZk5e",
@@ -704,7 +719,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "The Sealed Section. A section of Deck Five has been sealed by automated protocol."
       },
       {
         "id": "P0GzR6EMaLk3sk0hM2R14",
@@ -746,7 +762,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "The Absent Crew — Through Belongings. The crew of Ironwater Station is known through what they left behind."
       },
       {
         "id": "Jdzb1tE5MeLoAJpmapb16",
@@ -789,7 +806,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.868Z",
-        "updatedAt": "2026-04-24T21:08:12.868Z"
+        "updatedAt": "2026-04-24T21:08:12.868Z",
+        "description": "The Automated Systems. The station's automated systems respond to voice commands with a synthetic voice that is functional and impersonal."
       },
       {
         "id": "Cx9dJAUxfRBof6rakLb0q",
@@ -832,7 +850,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Signs of Someone. Certain observations in Ironwater Station resist explanation by automated systems alone."
       },
       {
         "id": "n4auuPnlbMABrjXPdS0US",
@@ -875,7 +894,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Specialist Vael's journal was found in their quarters and is the most detailed personal account from the crew."
       },
       {
         "id": "HqL8FiNR1Okc8sHGz4TKQ",
@@ -918,7 +938,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "DEMI WAS HERE appears scratched into a wall in Maintenance Tunnel 7B. The handwriting is deliberate — not panicked, not rushed."
       },
       {
         "id": "NxDZ7827wu3Xv7zYmuoea",
@@ -961,7 +982,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Station Systems. Ironwater Station's systems operate autonomously and have done so for a period that exceeds their designed maintenance intervals by a…"
       },
       {
         "id": "FYxtPZ9gkQxmWdwPl8yDO",
@@ -1004,7 +1026,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Gravity. Artificial gravity on Ironwater Station is maintained by generators on each deck."
       },
       {
         "id": "SAQgN9newqqirnb9D7Nzx",
@@ -1047,7 +1070,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "The communications array on Ironwater Station is functional. It transmits. It receives."
       },
       {
         "id": "CTcbiOVn-hRQdvxVTCCcn",
@@ -1090,7 +1114,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Power Fluctuations. Power on Ironwater Station fluctuates in specific areas at specific intervals."
       },
       {
         "id": "6QhSxMLOSSVMXWX0dQFU1",
@@ -1133,7 +1158,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Door Access and Security. Doors on Ironwater Station operate on a security clearance system that remains active."
       },
       {
         "id": "0-zS0C_fIkCbkXnTThUne",
@@ -1176,7 +1202,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Log Entries and Their Gaps. The station maintains continuous logs: environmental data, system performance, security events, crew activity."
       },
       {
         "id": "WIFKHvkxmkAukzRtdQEAq",
@@ -1219,7 +1246,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "The Station's Impossible Dimensions. Ironwater Station's internal volume exceeds its external dimensions."
       },
       {
         "id": "_H-I0peiNWWx8v_GL33I9",
@@ -1262,7 +1290,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "The Gap in the Logs. The central mystery of Ironwater Station is the gap in the logs — the period between the last normal crew activity and the current moment."
       },
       {
         "id": "BADo_N1uJd2jvqJBD3do8",
@@ -1304,7 +1333,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Why the Lights Flicker. The flickering of lights in specific corridors follows a pattern that is too regular to be mechanical failure and too complex to be simple…"
       },
       {
         "id": "A2FtwjExPUZsKGvYOHfTD",
@@ -1347,7 +1377,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "What the Crew Was Researching. Ironwater Station's mission records indicate a research assignment: deep space observation, long-range scanning, and data collection."
       },
       {
         "id": "aOyaiM-dDWiTVC3vrfWsn",
@@ -1390,7 +1421,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "The Feeling of Being Watched. Visitors to Ironwater Station universally report a sensation of being observed."
       },
       {
         "id": "xo_hinRwAMhpwypLYvhT3",
@@ -1432,7 +1464,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "The Hydroponics Paradox. The Hydroponics Lab continues to grow food for a crew that is not here."
       },
       {
         "id": "cOICkQhe1xjbKbjTuYsCA",
@@ -1475,7 +1508,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "The gas giant that Ironwater Station orbits dominates the view from the Observation Deck and the Command Deck."
       },
       {
         "id": "idR-UxtgYa6nRWFvl32Mk",
@@ -1517,7 +1551,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Maintenance Without Maintenance. Ironwater Station maintains itself."
       },
       {
         "id": "IjB9oRAWYhg1my2MOw4zk",
@@ -1559,7 +1594,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "DEMI WAS HERE — The Thirty-Eighth. If thirty-seven crew members are accounted for by the manifest, the quarters, the lockers, and the meal rotation, then Demi is the…"
       },
       {
         "id": "2UP6N0lVxavrKWgx2zA68",
@@ -1601,7 +1637,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "The Station as Entity. The question of whether Ironwater Station is alive is one that visitors arrive at independently and do not resolve."
       },
       {
         "id": "_YRC-sZmiG4QprlDay1Rm",
@@ -1642,7 +1679,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Specialist Vael is known through their journal found in crew quarters."
       },
       {
         "id": "uSPCM_gil3zASACUjWhOD",
@@ -1683,7 +1721,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.869Z",
-        "updatedAt": "2026-04-24T21:08:12.869Z"
+        "updatedAt": "2026-04-24T21:08:12.869Z",
+        "description": "Okonkwo — Chief Engineer (Absent). Chief Engineer Okonkwo is known through their quarters and their work."
       }
     ]
   }

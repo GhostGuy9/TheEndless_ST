@@ -62,7 +62,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "NPC Naming Convention. When generating NPCs in Pale Fog, names should feel slightly wrong — familiar but off."
       },
       {
         "id": "5ImZWO3QhvHHlnPavYX5C",
@@ -104,7 +105,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "The Residents — Pale Fog. People in Pale Fog are difficult to describe after the fact. Their features blur in memory."
       },
       {
         "id": "OItTeSsnoB1ad1TddXvky",
@@ -146,7 +148,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "Pale Fog is a town. It has streets, buildings, a lake, a school, a church. These facts are verifiable."
       },
       {
         "id": "c0KvI-H6zBZFT49xDE9Ze",
@@ -189,7 +192,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "The wrongness of Pale Fog is not dramatic. It is not monsters or gore or darkness."
       },
       {
         "id": "a79q6KiBP8suIex3JHUmd",
@@ -232,7 +236,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "The Fog Itself. The fog of Pale Fog is not weather. It does not behave like weather."
       },
       {
         "id": "tQZpdmubrZdfY49Af4bCD",
@@ -275,7 +280,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "Time in Pale Fog passes, but it does not pass consistently. Clocks work but disagree with each other."
       },
       {
         "id": "e4XQn7bbGpfOsdUAfUxIL",
@@ -317,7 +323,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "Main Street is the primary road through Pale Fog — or at least, it appears to be."
       },
       {
         "id": "jYKahpaCL_PXmj-7cc6dX",
@@ -359,7 +366,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "The school sits two blocks east of Main Street — or three, depending on when you walk there."
       },
       {
         "id": "GRS2dhZVqVjcu4X88JibA",
@@ -401,7 +409,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "The hospital is a three-story building on the south side of town. The emergency room entrance is always unlocked."
       },
       {
         "id": "KRM8QrDK5J0o40zDCbMzR",
@@ -444,7 +453,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "The lake is at the edge of town in a direction that changes. It is always reachable but never from the same approach twice."
       },
       {
         "id": "ZISFO4y_Wy_o4E2eulTnZ",
@@ -487,7 +497,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "The church stands at the end of a street that may or may not connect to Main Street depending on the day."
       },
       {
         "id": "bah5yvoAM9m2xvEkvrWZK",
@@ -530,7 +541,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.878Z",
-        "updatedAt": "2026-04-24T21:08:12.878Z"
+        "updatedAt": "2026-04-24T21:08:12.878Z",
+        "description": "The Houses. The residential streets of Pale Fog contain houses that look like houses."
       },
       {
         "id": "mNgYq0vaGoROSwnPCLGpo",
@@ -573,7 +585,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Park. There is a park between Main Street and the residential area."
       },
       {
         "id": "Q5GIuRTVqWWqfN1VP4xmv",
@@ -616,7 +629,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Place That Isn't On the Map. There is a building in Pale Fog that does not appear on any map, is not visible from any street, and can only be reached by walking in a…"
       },
       {
         "id": "8hxkywTcZjWjQJzzZUFf0",
@@ -659,7 +673,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Resident Who Doesn't Notice. Some people in Pale Fog behave as though everything is normal."
       },
       {
         "id": "QXgx9uI9J47z28I4edbYF",
@@ -701,7 +716,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Resident Who Almost Notices. Some residents of Pale Fog exist in a state of near-awareness."
       },
       {
         "id": "o8cIoBesX7meJjMVhXM89",
@@ -744,7 +760,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Helpful One. There is at least one resident of Pale Fog who actively helps visitors."
       },
       {
         "id": "_VdD9wO0tak_ykOlY5hiB",
@@ -787,7 +804,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The One Who Was Just Here. Visitors to Pale Fog occasionally encounter a person who is clearly present — visible, audible, interacting with the environment — and…"
       },
       {
         "id": "K867lpLAlgOQkdXaA0gSo",
@@ -830,7 +848,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Diner Staff. The diner on Main Street is staffed by a cook and a server who are always present during what passes for business hours."
       },
       {
         "id": "RcsMKcmH7PDH-QphdI7ER",
@@ -873,7 +892,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Figure at the Edge. At the edge of visibility — where the fog becomes a solid white wall — figures are occasionally visible."
       },
       {
         "id": "Bqo9WKQVRHgFlfEgwIe8d",
@@ -916,7 +936,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "How Space Works. Space in Pale Fog does not obey consistent rules. Streets that run parallel on one visit intersect on the next."
       },
       {
         "id": "FfSXzYb2nIbbLw5bHqcqu",
@@ -958,7 +979,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "How the Fog Behaves. The fog thickens and thins on a schedule that does not correspond to any external factor."
       },
       {
         "id": "RsMbLtSPnBSUxC1jOcHZ5",
@@ -1001,7 +1023,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "What Happens When You Try to Leave. Leaving Pale Fog is theoretically possible. The roads lead out of town. The signs point to other places."
       },
       {
         "id": "0sC9bW0Opua0czKEs7RMk",
@@ -1044,7 +1067,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "Perception Distortion. Perception in Pale Fog degrades along specific axes. Vision is the first affected — the fog handles that."
       },
       {
         "id": "ulPWJyPWhj9Ixv8issxuS",
@@ -1086,7 +1110,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "Mirrors in Pale Fog work. They show reflections accurately."
       },
       {
         "id": "37gTI6HdvSR8HoLx54AnP",
@@ -1129,7 +1154,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "Sound in the Fog. Sound in Pale Fog is curated. Footsteps on pavement are audible at normal range."
       },
       {
         "id": "DEdq0Cl4No94BjqDa3wui",
@@ -1172,7 +1198,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "Memory in Pale Fog is subject to a specific kind of erosion."
       },
       {
         "id": "8zrkcz_CEbIeE_pUFLQXK",
@@ -1215,7 +1242,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Diner's Food. The diner on Main Street serves food that is hot, real, and satisfying. The menu is limited: coffee, soup, sandwiches, pie."
       },
       {
         "id": "fOe9waOOIHoAa33ICrisj",
@@ -1257,7 +1285,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Things at the Edge. The figures at the edge of the fog are the most discussed and least understood phenomenon in Pale Fog."
       },
       {
         "id": "--VjxVUc6P6WXOfPfPaIe",
@@ -1300,7 +1329,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "Why Nothing Decays. Nothing in Pale Fog decays. Food left on tables remains as it was placed — not preserved, not frozen, simply unchanged."
       },
       {
         "id": "IVqb0fQhD0dwn9lAljx65",
@@ -1343,7 +1373,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "What the Town Wants. The question of what Pale Fog wants assumes the town has intent, which cannot be confirmed."
       },
       {
         "id": "BvFb8URhFbqsh7t1n_iN4",
@@ -1386,7 +1417,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Sound the Fog Makes. In deep fog — the kind that reduces visibility to arm's length — there is a sound."
       },
       {
         "id": "jGl92Qocu823rKBghlR3D",
@@ -1428,7 +1460,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "Why Mirrors Matter. In a town where every surface lies — where walls contain rooms that shouldn't fit, where streets rearrange, where the sky shows weather…"
       },
       {
         "id": "Ji5WH7SsWuPEj5hWPSWp2",
@@ -1470,7 +1503,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Way Memories Change. Memories of events in Pale Fog do not hold their shape. A conversation remembered an hour later will have different words."
       },
       {
         "id": "iWADhEx55UQ5eAwK3K8mh",
@@ -1513,7 +1547,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "Familiarity. Pale Fog feels familiar. Not in the way that similar towns feel familiar — there is no specific feature that triggers recognition."
       },
       {
         "id": "JEMFeVMfuFH7NTjFVVljA",
@@ -1556,7 +1591,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Notebook. Writing things down in Pale Fog is the only reliable method of preserving accurate information."
       },
       {
         "id": "TVMT1Uekw3mvInANY48wX",
@@ -1599,7 +1635,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "Why Nothing Is Explained. Pale Fog does not explain itself because it does not need to. The wrongness does not serve a narrative."
       },
       {
         "id": "J6dWI-Yd07jrSzmFp7HNX",
@@ -1642,7 +1679,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "Mark (or Martin, or Mitchell). The helpful one. He introduces himself shortly after visitors arrive. His name is Mark."
       },
       {
         "id": "WP0gfzoE-CVqSqVjWncx3",
@@ -1684,7 +1722,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Diner Server. The server at the Main Street diner calls everyone 'hon' and delivers food with the efficiency of someone who has performed these motions…"
       },
       {
         "id": "LzM7DtH8xSaWutcHwdhac",
@@ -1726,7 +1765,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.879Z",
-        "updatedAt": "2026-04-24T21:08:12.879Z"
+        "updatedAt": "2026-04-24T21:08:12.879Z",
+        "description": "The Woman at the Lake. A woman is sometimes present at the lake, sitting on the muddy shore, watching the water."
       }
     ]
   }

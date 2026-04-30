@@ -62,7 +62,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.901Z",
-        "updatedAt": "2026-04-24T21:08:12.901Z"
+        "updatedAt": "2026-04-24T21:08:12.901Z",
+        "description": "NPC Naming Convention. When generating new NPCs in The Frontier, use names that earned themselves — practical, earned, sometimes just descriptions that stuck."
       },
       {
         "id": "C1ETSvpSoSybckcqThy6H",
@@ -102,7 +103,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.901Z",
-        "updatedAt": "2026-04-24T21:08:12.901Z"
+        "updatedAt": "2026-04-24T21:08:12.901Z",
+        "description": "Clay is the sheriff of the nearest town. Fair, tired, outnumbered by everything wrong in the territory."
       },
       {
         "id": "Mh5KfMTh_HwU4O4bZmFBJ",
@@ -144,7 +146,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.901Z",
-        "updatedAt": "2026-04-24T21:08:12.901Z"
+        "updatedAt": "2026-04-24T21:08:12.901Z",
+        "description": "Sister Rue arrived from somewhere else and doesn't talk about where."
       },
       {
         "id": "h6iQSujjnJPFv9feI-x7e",
@@ -184,7 +187,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.901Z",
-        "updatedAt": "2026-04-24T21:08:12.901Z"
+        "updatedAt": "2026-04-24T21:08:12.901Z",
+        "description": "The Judge — Unknown. Nobody knows the Judge's real name."
       },
       {
         "id": "KwkExqYFPBKY9_sQqbTti",
@@ -226,7 +230,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.901Z",
-        "updatedAt": "2026-04-24T21:08:12.901Z"
+        "updatedAt": "2026-04-24T21:08:12.901Z",
+        "description": "The Frontier is a vast open territory of red rock, dry wind, and distances that make a person small."
       },
       {
         "id": "mh9T91bZSRwcexNrRqB3Y",
@@ -269,7 +274,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.901Z",
-        "updatedAt": "2026-04-24T21:08:12.901Z"
+        "updatedAt": "2026-04-24T21:08:12.901Z",
+        "description": "Culture and Values. The Frontier values self-reliance, honesty, and the ability to endure."
       },
       {
         "id": "edsO5RY5-evOyXlNfMfWO",
@@ -312,7 +318,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.901Z",
-        "updatedAt": "2026-04-24T21:08:12.901Z"
+        "updatedAt": "2026-04-24T21:08:12.901Z",
+        "description": "The Land. The Frontier's landscape is the territory's defining feature and its most honest resident."
       },
       {
         "id": "gLYSl1lg9zcbMz209HEz2",
@@ -355,7 +362,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.901Z",
-        "updatedAt": "2026-04-24T21:08:12.901Z"
+        "updatedAt": "2026-04-24T21:08:12.901Z",
+        "description": "Law and Lawlessness. Law on the Frontier is a negotiation between principle and pragmatism."
       },
       {
         "id": "3EsS8h2VEJ30mbdAclBBO",
@@ -397,7 +405,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.901Z",
-        "updatedAt": "2026-04-24T21:08:12.901Z"
+        "updatedAt": "2026-04-24T21:08:12.901Z",
+        "description": "Redstone is the largest town on the Frontier — population around four hundred, which makes it a metropolis by local standards."
       },
       {
         "id": "J3qzLloljcvRIg9V14vjE",
@@ -440,7 +449,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Coppermine sits against the base of the northern mountains, built around a copper deposit that drew miners and kept them."
       },
       {
         "id": "tGQKI3sFwAkSMmuy9KsPG",
@@ -483,7 +493,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "The Open Desert. The southern desert is the Frontier's most honest landscape: it will kill you if you are unprepared and it will not apologize."
       },
       {
         "id": "NJKjM_iJkzXG2y29UnPZS",
@@ -526,7 +537,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Canyon Pass is a narrow route through the red rock formations east of Redstone — the only reliable passage between the plains and the…"
       },
       {
         "id": "K9IG4Lb90k5ZP_qGe7onL",
@@ -569,7 +581,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Fort Perseverance is a frontier military post on the northern border, built to project authority over territory the military does not…"
       },
       {
         "id": "WoFEYDLlAaKuf2ceGsi4o",
@@ -612,7 +625,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "The Dusty Rose Saloon. The Dusty Rose is Redstone's primary saloon — a two-story timber building with swinging doors, a long bar, card tables, and rooms upstairs…"
       },
       {
         "id": "3iK6eIkIW-LSIUYYANag7",
@@ -655,7 +669,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "The Rocking H Ranch. The Rocking H is the largest ranch on the Frontier — thousands of acres of grassland where cattle graze under the supervision of hired…"
       },
       {
         "id": "0I7Ua2UCU2Kh5IphOJ5Xp",
@@ -698,7 +713,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Ghost Hollow is a town that didn't make it."
       },
       {
         "id": "fsFiv7EMUOv34ZKoL7LOp",
@@ -741,7 +757,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "River Fork Crossing is where the territory's two main rivers converge, creating a reliable crossing point that has made the location…"
       },
       {
         "id": "4VJ4p4XhS6_6hlGlJSlOh",
@@ -783,7 +800,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Ranchers are the Frontier's landed establishment — families who claimed land, built fences, and now run livestock operations that supply…"
       },
       {
         "id": "33C63VvJ6OaGd3amz_L2e",
@@ -825,7 +843,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "The Miners. Miners work the northern mountain deposits — copper, silver, and whatever else the earth yields."
       },
       {
         "id": "vhFcgJ1My-LaNQmOGgeeU",
@@ -868,7 +887,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "The law on the Frontier is embodied by town sheriffs, occasional circuit judges, and rare federal marshals who ride in from the east with…"
       },
       {
         "id": "rGlJBCViBMz3Dmo7Turmn",
@@ -911,7 +931,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Outlaws on the Frontier range from desperate individuals stealing to survive to organized groups who have chosen crime as a career."
       },
       {
         "id": "zzSpSa8jBcaNB90S7ourm",
@@ -954,7 +975,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "The railroad is coming. Track is being laid from the east, and advance teams have been surveying routes through the territory for months."
       },
       {
         "id": "duQWYgiDXntEWAtLeL4PR",
@@ -997,7 +1019,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "The Church of the Western Star is the Frontier's primary religious institution — a loose network of congregations led by itinerant…"
       },
       {
         "id": "crMnRraKY5IeZjfbpjKFM",
@@ -1039,7 +1062,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Sheriff Archetype. Sheriffs on the Frontier carry a badge that represents authority backed by nothing except their willingness to exercise it."
       },
       {
         "id": "0xgMoY7TLlROto8Z7LQwj",
@@ -1081,7 +1105,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Outlaw Archetype. Outlaws on the Frontier are people who crossed a line — sometimes pushed, sometimes walking freely."
       },
       {
         "id": "HJH6VlwpJT70g4hhjfo4-",
@@ -1123,7 +1148,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Bartender — Clay. Clay tends bar at the Dusty Rose in Redstone with the efficiency of someone who has heard every story, poured every drink, and broken up…"
       },
       {
         "id": "Uluj9UzYKej2ZiuZLNayH",
@@ -1166,7 +1192,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Preacher Archetype — Sister Rue. Sister Rue rides the circuit between Frontier towns, conducting services for the Church of the Western Star and providing counsel to…"
       },
       {
         "id": "TivZTKbIHiEoEuJ4Q32UL",
@@ -1208,7 +1235,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Rancher Archetype. Ranchers on the Frontier are defined by their land and their livestock."
       },
       {
         "id": "VDyra_83qKExcCh_qWl-0",
@@ -1251,7 +1279,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Drifter Archetype. Drifters pass through the Frontier regularly — people with no fixed address, no declared purpose, and no inclination to explain either."
       },
       {
         "id": "RpQVj9cinnpkO7Ruc0hrN",
@@ -1294,7 +1323,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Horses and Travel. Horses are the Frontier's primary mode of transportation and one of its most valuable assets."
       },
       {
         "id": "5LQW0KBjw-g7gWZ4QmrfO",
@@ -1337,7 +1367,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Duels and Violence. Violence on the Frontier is real, consequential, and not the spectacle that stories from the east make it."
       },
       {
         "id": "6oPqINOsBZW5Xq1yU4Nf3",
@@ -1381,7 +1412,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Trade and Currency. The Frontier runs on a mix of coin, barter, and credit."
       },
       {
         "id": "UE8eilhOEySueicXhAWLz",
@@ -1425,7 +1457,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Weather and Survival. Weather on the Frontier is a force that demands respect and planning. Summers are hot enough to kill through dehydration."
       },
       {
         "id": "7q0Ca8z-KdF9vUbhvREC8",
@@ -1469,7 +1502,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Firearms on the Frontier are tools — as fundamental as a knife or a horse."
       },
       {
         "id": "qyqvAxZziJQG1mmSP2qsI",
@@ -1512,7 +1546,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "The Code. The Frontier operates on unwritten rules that are understood by everyone who lives here and must be learned by everyone who arrives."
       },
       {
         "id": "x08wD39V4AOmzug40pwMR",
@@ -1554,7 +1589,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Freedom and Its Cost. Freedom is the Frontier's primary export and its hidden price. People come here because the territory asks nothing of them except survival."
       },
       {
         "id": "hAzjE0ELx7xxT_gZw128f",
@@ -1597,7 +1633,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Why People Came. Everyone on the Frontier came from somewhere else, and the reason they left is usually the reason they stay."
       },
       {
         "id": "udOpLp7yRbWrMSQsK2Yel",
@@ -1640,7 +1677,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Stories Around the Fire. Stories are the Frontier's primary culture."
       },
       {
         "id": "l55BfX7EVtUdRuOd886UR",
@@ -1683,7 +1721,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "The horizon on the Frontier is the most visible thing in the territory and the hardest to reach."
       },
       {
         "id": "jpQ6PleVXInn4-6kIG2Ib",
@@ -1726,7 +1765,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Endurance. The Frontier values endurance above all other qualities. Not strength — the land is stronger than any person."
       },
       {
         "id": "IaILHPH-ILDFQzN22p7ly",
@@ -1768,7 +1808,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.902Z",
-        "updatedAt": "2026-04-24T21:08:12.902Z"
+        "updatedAt": "2026-04-24T21:08:12.902Z",
+        "description": "Clay tends bar at the Dusty Rose in Redstone with the efficiency of someone who has heard every story, poured every drink, and broken up…"
       },
       {
         "id": "sJuo1SMGs-PGLimJqAigg",
@@ -1810,7 +1851,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.903Z",
-        "updatedAt": "2026-04-24T21:08:12.903Z"
+        "updatedAt": "2026-04-24T21:08:12.903Z",
+        "description": "Sister Rue rides the circuit between Frontier towns conducting services for the Church of the Western Star."
       },
       {
         "id": "O-UAQOYwB6LYiYlN3anUg",
@@ -1852,7 +1894,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.903Z",
-        "updatedAt": "2026-04-24T21:08:12.903Z"
+        "updatedAt": "2026-04-24T21:08:12.903Z",
+        "description": "Esperanza Voss runs the Rocking H — the largest ranch on the Frontier."
       },
       {
         "id": "XZQthCRwOF7k7bssFj7VD",
@@ -1894,7 +1937,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.903Z",
-        "updatedAt": "2026-04-24T21:08:12.903Z"
+        "updatedAt": "2026-04-24T21:08:12.903Z",
+        "description": "The Judge is a figure who passes through Frontier towns at irregular intervals. No one knows where he comes from or where he goes."
       }
     ]
   }

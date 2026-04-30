@@ -62,7 +62,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Northside Industrial District: The industrial heart of Watson, now largely abandoned or repurposed by scavengers and gangs."
       },
       {
         "id": "mKXhme7lqGQkL1cToXsuj",
@@ -104,7 +105,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Japantown: The Japanese district in Westbrook, controlled by the Tyger Claws."
       },
       {
         "id": "ALyyTg4NxyoVuvRGBP1LG",
@@ -147,7 +149,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Kabuki Market: The black market bazaar in Watson. Three floors of everything illegal, immoral, or hard to find."
       },
       {
         "id": "XYmxpV9IL74RQXbUt6-vQ",
@@ -190,7 +193,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Ganger Archetype. Ganger: Street-level gang members fighting for territory, cred, and survival. Tyger Claws favor blades and bikes."
       },
       {
         "id": "l1170oWvKIrBRsfeM44oM",
@@ -232,7 +236,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Corporate Warfare: When corporations disagree, they don't sue—they fight. Open warfare between megacorps is common."
       },
       {
         "id": "KLyBQpy8mbKezr47GzCN5",
@@ -275,7 +280,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Trauma Team: High-speed medical response service."
       },
       {
         "id": "FZhibXmGBeiocOu3fO9y0",
@@ -318,7 +324,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Afterlife Bar. The Afterlife: Legendary mercenary bar in the Industrial Zone."
       },
       {
         "id": "B1whdOMbluVsVJ6D7mWA9",
@@ -361,7 +368,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "ICE (Intrusion Countermeasures Electronics): Security programs that protect data."
       },
       {
         "id": "-F4zrNVp8JC0c-u7Qv3iS",
@@ -403,7 +411,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "DataKrash. The DataKrash: The event that destroyed the Old Net. Rache Bartmoss's dying act released a digital weapon that crashed global networks."
       },
       {
         "id": "nLVujj7tFUk73DMyjYRTb",
@@ -446,7 +455,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "The Badlands: Outside Night City's walls lies the Badlands—desert, ruins, and the remains of the old world."
       },
       {
         "id": "cbasEDLCyE-YtDbfwfi2t",
@@ -489,7 +499,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Cyberpsychosis: The result of too much cyberware and too little humanity. Victims lose empathy, then sanity, then become violent."
       },
       {
         "id": "SmNSB0nd5cGEQeY3fjMk7",
@@ -532,7 +543,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Ripperdoc: Underground surgeons who install cyberware. They range from licensed professionals to basement butchers."
       },
       {
         "id": "ZXSJuHmcotvCPg4NF1o6l",
@@ -576,7 +588,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Currency. Eurodollars (Eddies): The standard currency. Physical bills and digital credits."
       },
       {
         "id": "K-4cUNKedVy5eAqvk7U5q",
@@ -619,7 +632,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "CHOOH2: Synthetic alcohol-based fuel developed by Biotechnica. Powers most vehicles in 2045."
       },
       {
         "id": "JALa0vuo75Eh7LAt4pBwN",
@@ -663,7 +677,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Vehicles: Ground cars, motorcycles, and aerodynes (flying cars for the rich). Nomads use armored convoy vehicles."
       },
       {
         "id": "BqEo5XBrUgt1YLnPTmLcr",
@@ -707,7 +722,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Weapons: Weapons are everywhere. Street level: pistols, SMGs, blades. Corporate: smart-guns that never miss, linked to optics."
       },
       {
         "id": "gcY7Pk-TopYpqEJz2DsCp",
@@ -751,7 +767,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "The NET (2045): The Old Net died with Rache Bartmoss."
       },
       {
         "id": "4YUlloXbSlxokpW7QHKH9",
@@ -794,7 +811,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Cyberware: Cyberware ranges from basic neural links to full body replacement."
       },
       {
         "id": "9KVYhWwzrvQ1OJxhZYDDT",
@@ -838,7 +856,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Unification War. The Unification War (2069-2077): The New United States tried to force Free States back into the union."
       },
       {
         "id": "4LCLOrZsCo0Oekvg-prBe",
@@ -881,7 +900,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Rache Bartmoss and the Data Bomb: Rache Bartmoss, legendary netrunner, released a data bomb as he died (2023)."
       },
       {
         "id": "gVxZU3RkQBqsISlIOE8u-",
@@ -924,7 +944,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "4th Corporate War. The 4th Corporate War (2020-2023): Arasaka vs. Militech open warfare. Ended with a nuclear device detonated in Night City (2023)."
       },
       {
         "id": "cbZfP01UiK0i2yx0w3R_i",
@@ -966,7 +987,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "NPC Naming Convention. When generating new NPCs in Night City, use street handles and cultural mix surnames."
       },
       {
         "id": "Fzl7-PqSg_NxROvrLqul8",
@@ -1007,7 +1029,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Rook is a fixer who runs jobs from a noodle shop in Watson. Mid-40s, chrome arm from the elbow down, face like carved stone."
       },
       {
         "id": "bPDWBG5RfffM7JIq1Zls9",
@@ -1048,7 +1071,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Ghost is a netrunner who lives as much in the Net as in meatspace."
       },
       {
         "id": "IzSvA95rI-bDqOH7wgmB5",
@@ -1090,7 +1114,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Marta Szabo is a ripperdoc operating from a clean clinic in Westbrook. Hungarian accent, steady hands, warm but professional."
       },
       {
         "id": "4ilJSQCuMRgkhts0YbnNZ",
@@ -1133,7 +1158,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Rockerboy Archetype. Rockerboy: Musicians, artists, and rebels who use performance to fight the system."
       },
       {
         "id": "TDSuVDaR7AaQDhETsWj5Q",
@@ -1176,7 +1202,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Media Archetype. Media: In a world of corporate control, the Media are the last truth-tellers—or the best-paid liars."
       },
       {
         "id": "i7ePLMUwbMzTYianftt8f",
@@ -1219,7 +1246,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Police Archetype. Police: Night City Police Department (NCPD) is underfunded, corrupt, and outgunned."
       },
       {
         "id": "QYRDCAIF3fmffQ5pHzUhe",
@@ -1263,7 +1291,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.873Z",
-        "updatedAt": "2026-04-24T21:08:12.873Z"
+        "updatedAt": "2026-04-24T21:08:12.873Z",
+        "description": "Corporate Archetype. Corporate: Corpos live in towers, breathe filtered air, and see street-level people as resources or obstacles."
       },
       {
         "id": "52E54T21W4rJ8liec3xiY",
@@ -1306,7 +1335,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Nomad Archetype. Nomad: Nomads travel the highways in armed convoys, living outside city laws. They value family (pack) above all."
       },
       {
         "id": "H_uF7XwzTfPRzXQ8sr_Cu",
@@ -1349,7 +1379,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Tech Archetype. Tech: Techs build, modify, and repair. Ripperdocs install cyberware in basement clinics."
       },
       {
         "id": "UdbR53uOXrzPlRicer8CE",
@@ -1392,7 +1423,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Netrunner Archetype. Netrunner: Netrunners navigate the fragmented NET, hacking systems that were never meant to connect."
       },
       {
         "id": "ffAAd4UCtLKA7_xZb0sDJ",
@@ -1435,7 +1467,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Solo Archetype. Solo: Solos are hired muscle—bodyguards, assassins, soldiers for hire. They live and die by their reputation and their chrome."
       },
       {
         "id": "26bWyNWbg75Ea2ksZc4cX",
@@ -1478,7 +1511,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Fixer Archetype. Fixer: Fixers know who's buying, who's selling, and who needs a problem to disappear."
       },
       {
         "id": "hAna4LGjLELdPjFmrTSHJ",
@@ -1522,7 +1556,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Scavengers: Nomadic looters who pick through the abandoned areas of Night City, especially Watson and Pacifica."
       },
       {
         "id": "ttpgOZrJkTed7r5M0ux2b",
@@ -1566,7 +1601,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Voodoo Boys: Haitian netrunner gang controlling Coastview in Pacifica. They are master netrunners who navigate the Old Net's ruins."
       },
       {
         "id": "JJLF6YONSMhAk0sDENIl5",
@@ -1611,7 +1647,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Animals: Gang focused on physical supremacy through steroids and combat drugs. They reject cyberware—'pure flesh' is their motto."
       },
       {
         "id": "QrdKIIMTzEKKwJ8NTqgDV",
@@ -1656,7 +1693,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Valentinos: Latino gang focused on family, honor, and territory."
       },
       {
         "id": "0hES3n3iwRgDcH2KgGw3O",
@@ -1700,7 +1738,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "6th Street: Gang of military veterans and NUSA patriots based in Santo Domingo."
       },
       {
         "id": "2tQY895X-1ANHpxRrBhrH",
@@ -1744,7 +1783,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Maelstrom: Gang of cyberware addicts and chrome enthusiasts based in Watson. They believe flesh is weak—replace everything."
       },
       {
         "id": "Yq7ufKIMpNuGsKQ_oytai",
@@ -1787,7 +1827,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Tyger Claws: Japanese-Korean gang controlling Japantown in Westbrook and protection rackets throughout Night City."
       },
       {
         "id": "oyRpe2b6rk2qUtef-mEw7",
@@ -1830,7 +1871,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Petrochem: Energy and petrochemical giant."
       },
       {
         "id": "3a_9UAMwdmgS43dxQi5Jd",
@@ -1874,7 +1916,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Biotechnica: Agricultural and genetic engineering giant. They developed CHOOH2 (alcohol-based synthetic fuel) that powers most vehicles."
       },
       {
         "id": "txSKec1JBbt6yv0J5obiK",
@@ -1917,7 +1960,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Kang Tao: Chinese arms manufacturer—the 'new kid' among megacorps. Aggressive expansion into Night City."
       },
       {
         "id": "pCdqM6-iPNY3oxwELLH0L",
@@ -1961,7 +2005,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Militech: American weapons manufacturer and military contractor. Dominates defense in the New United States (NUSA)."
       },
       {
         "id": "rCKQe_n4_LLVteoBXPWba",
@@ -2005,7 +2050,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Arasaka Corporation: Japanese security giant."
       },
       {
         "id": "JZIBGpEsRSXM4CYRtrKFw",
@@ -2048,7 +2094,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Santo Domingo District. Santo Domingo: Industrial and residential district in southeastern Night City."
       },
       {
         "id": "j0K4MdZQB6AD2XYsiN8bW",
@@ -2091,7 +2138,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Pacifica District. Pacifica: The failed resort district. Once meant to be Night City's playground, now a lawless combat zone."
       },
       {
         "id": "pti4VeG9q0fncRdCXEJhR",
@@ -2134,7 +2182,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Heywood District. Heywood: Suburban district that has fallen on hard times. The Glen was once middle-class paradise; now it's gang territory."
       },
       {
         "id": "MuXyAiHInMYPdBTK8nh5y",
@@ -2177,7 +2226,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Westbrook District. Westbrook: Upscale district home to Japantown, Charter Hill, and the wealthy."
       },
       {
         "id": "GhjCZ6VHt9fYnCKnUDPLX",
@@ -2220,7 +2270,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Watson District. Watson: Working-class district in northern Night City. Once the industrial heart, now a mix of factories, markets, and combat zones."
       },
       {
         "id": "znO-BVcm80E_F2n6yvWO4",
@@ -2263,7 +2314,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "City Center District. City Center (Corporate Center): The gleaming towers of downtown Night City."
       },
       {
         "id": "JZt5Lg8cOFoVNcmbEccsV",
@@ -2306,7 +2358,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Night City is located on the west coast of the United States in Del Coronado Bay, right on the border of northern and southern California."
       },
       {
         "id": "mzbw090ZP_a2kv_ayJgym",
@@ -2350,7 +2403,8 @@
         "preventRecursion": false,
         "embedding": null,
         "createdAt": "2026-04-24T21:08:12.874Z",
-        "updatedAt": "2026-04-24T21:08:12.874Z"
+        "updatedAt": "2026-04-24T21:08:12.874Z",
+        "description": "Setting Timeline. The year is 2045. The 4th Corporate War ended 7 years ago. The Old Net was destroyed by Rache Bartmoss's data bomb."
       }
     ]
   }
