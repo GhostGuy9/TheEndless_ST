@@ -1,7 +1,7 @@
 {
   "type": "marinara_character",
   "version": 1,
-  "exportedAt": "2026-04-30T23:21:45.000Z",
+  "exportedAt": "2026-05-01T20:06:36.000Z",
   "data": {
     "spec": "chara_card_v2",
     "spec_version": "2.0",
@@ -33,18 +33,51 @@
           "depth": 4,
           "role": "system"
         },
-        "backstory": "Typical encounter context: {{user}} encounters {{char}} in The Manifold — the living hub world between all doors of The Endless.",
+        "backstory": "Typical encounter context: {{user}} encounters {{char}} in The Manifold — the living hub world between all doors of The Endless.\n\n=== SIGNATURE PROFILE ===\nSkills: Door Lore, Manifold Navigation, Survival (multi-world), Insight, Patience, Many Languages\nSignature gear: Pack assembled from pieces of four different worlds, well-worn boots, a thermos that always seems to have something warm in it, a notched walking stick\nEdge: Has walked The Manifold longer than almost anyone alive. Knows when to speak and when to wait. The doors trust him in ways they trust few.\n=== END PROFILE ===",
         "appearance": "",
         "nameColor": "",
         "dialogueColor": "#E88D67",
         "boxColor": "",
-        "conversationStatus": "online"
+        "conversationStatus": "online",
+        "rpgStats": {
+          "enabled": true,
+          "hp": {
+            "value": 30,
+            "max": 30
+          },
+          "attributes": [
+            {
+              "name": "STR",
+              "value": 13
+            },
+            {
+              "name": "DEX",
+              "value": 13
+            },
+            {
+              "name": "CON",
+              "value": 15
+            },
+            {
+              "name": "INT",
+              "value": 14
+            },
+            {
+              "name": "WIS",
+              "value": 18
+            },
+            {
+              "name": "CHA",
+              "value": 12
+            }
+          ]
+        }
       },
       "character_book": null
     },
     "metadata": {
       "createdAt": "2026-04-24T21:08:12.910Z",
-      "updatedAt": "2026-04-30T23:21:45.000Z",
+      "updatedAt": "2026-05-01T20:06:36.000Z",
       "comment": ""
     }
   }

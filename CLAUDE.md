@@ -28,10 +28,27 @@ TheEndless_ST/
 │   ├── SETTING.md              ← Wizard Setting + Player Goals text + agent enable list
 │   ├── CUSTOM_TRACKER.md       ← Custom Tracker agent schema (perception filter, taboo, world)
 │   └── GENRE_MATRIX.md         ← Per-world Genre/Tone/Difficulty reference
-├── characters/
-│   ├── Threshold.json          ← Experienced Explorer NPC card
-│   ├── Cairn.json              ← Younger Explorer NPC card
-│   └── GenericExplorer.json    ← Template for unnamed Explorers
+├── characters/                ← 18 Party-Member-eligible character cards (rpgStats enabled)
+│   │   Manifold Explorers (cross-world ensemble):
+│   ├── Threshold.json          ← Experienced Explorer (the eldest)
+│   ├── Cairn.json              ← Younger Explorer
+│   ├── Sable.json              ← Quiet observer Explorer
+│   ├── Match.json              ← Restless collector Explorer
+│   ├── Once.json                ← Slow, gentle, past-tense Explorer
+│   ├── Wren.json                ← New Explorer (still amazed)
+│   ├── GenericExplorer.json    ← Template for unnamed Explorers
+│   │   World-specific joinable NPCs:
+│   ├── Caelith.json             ← Aldenmoor — elven ranger
+│   ├── Aldren Voss.json         ← Aldenmoor — Silver Keep knight
+│   ├── Sister Thea.json         ← Aldenmoor — old-faith priestess (healer)
+│   ├── Corsair.json             ← Dunwater Coast — pirate captain
+│   ├── Sirocco.json             ← Dunwater Coast — sky-reading navigator
+│   ├── Rook.json                ← Night City — Watson fixer
+│   ├── Ghost.json               ← Night City — netrunner
+│   ├── Mourne.json              ← Ashlands — last knight
+│   ├── Clay.json                ← The Frontier — sheriff
+│   ├── Sister Rue.json          ← The Frontier — circuit preacher
+│   └── Shovel.json              ← Fallout Wastes — scavenger
 └── worlds/                 ← 17 world lorebooks
     ├── Aldenmoor.json
     ├── Dunwater Coast.json
@@ -82,14 +99,15 @@ Getting these wrong silently breaks things on import.
 - Inner `data.data` is the standard chara_card_v2 spec (name, description, personality, scenario, first_mes, etc.)
 - Use `{{char}}` and `{{user}}` macros instead of real names
 
-**CRITICAL: This project targets Marinara Game Mode. Game Mode reads ONLY these fields from a card:**
+**CRITICAL: This project targets Marinara Game Mode. Game Mode reads these fields from a card:**
 - `name`
 - `description`
 - `personality`
-- `extensions.backstory` (or root `backstory`)
+- `extensions.backstory` (or root `backstory`) — also where signature skill/gear blocks live (`=== SIGNATURE PROFILE ===`)
 - `extensions.appearance` (or root `appearance`)
+- `extensions.rpgStats` — read by the `character-tracker` agent and the d20 combat system. Schema: `{enabled: bool, hp: {value, max}, attributes: [{name, value}]}`. All cards in this repo use the standard D&D 5e six (STR/DEX/CON/INT/WIS/CHA), `enabled: true`, with HP+attributes tuned per archetype. Marinara's combat math uses `floor((score - 10) / 2)` modifier on these names — **don't rename the six** or skill checks break.
 
-These five are concatenated into a `<gm_role>` block injected every turn. Game Mode IGNORES: `scenario`, `first_mes`, `mes_example`, `alternate_greetings`, `system_prompt`, `post_history_instructions`, `extensions.depth_prompt`, `character_book`. **Do not put load-bearing content in those fields.** Cards in this repo have those fields cleared.
+These fields are concatenated into a `<gm_role>` (for the GM card) or `<party_member>` (for Party Members) block injected every turn. Game Mode IGNORES: `scenario`, `first_mes`, `mes_example`, `alternate_greetings`, `system_prompt`, `post_history_instructions`, `extensions.depth_prompt`, `character_book`. **Do not put load-bearing content in those fields.** Cards in this repo have those fields cleared.
 
 - `character_book` (embedded lorebook on a card): **never read in Game Mode.** Standalone `core/The Endless.json` is the source of truth. Embedded books are kept `null` on cards in this repo.
 - M.E.-specific `extensions` bag fields:

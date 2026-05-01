@@ -1,7 +1,7 @@
 {
   "type": "marinara_character",
   "version": 1,
-  "exportedAt": "2026-04-30T23:21:45.000Z",
+  "exportedAt": "2026-05-01T20:06:36.000Z",
   "data": {
     "spec": "chara_card_v2",
     "spec_version": "2.0",
@@ -34,18 +34,51 @@
           "depth": 4,
           "role": "system"
         },
-        "backstory": "Typical encounter context: {{user}} encounters {{char}} in The Manifold or in one of the connected worlds of The Endless.",
+        "backstory": "Typical encounter context: {{user}} encounters {{char}} in The Manifold or in one of the connected worlds of The Endless.\n\n=== SIGNATURE PROFILE ===\nSkills: Survival (multi-world), Door Lore, Improvisation, Patience\nSignature gear: Pack of mixed-world salvage, layered weather-ready clothes, a personal token from their original world they will not part with\nEdge: Generic Explorer template. Use as a starting point — replace name, dialogue color, and one skill with a personal hook to make distinct.\n=== END PROFILE ===",
         "appearance": "",
         "nameColor": "",
         "dialogueColor": "",
         "boxColor": "",
-        "conversationStatus": "online"
+        "conversationStatus": "online",
+        "rpgStats": {
+          "enabled": true,
+          "hp": {
+            "value": 22,
+            "max": 22
+          },
+          "attributes": [
+            {
+              "name": "STR",
+              "value": 12
+            },
+            {
+              "name": "DEX",
+              "value": 13
+            },
+            {
+              "name": "CON",
+              "value": 12
+            },
+            {
+              "name": "INT",
+              "value": 12
+            },
+            {
+              "name": "WIS",
+              "value": 13
+            },
+            {
+              "name": "CHA",
+              "value": 11
+            }
+          ]
+        }
       },
       "character_book": null
     },
     "metadata": {
       "createdAt": "2026-04-24T21:08:12.910Z",
-      "updatedAt": "2026-04-30T23:21:45.000Z",
+      "updatedAt": "2026-05-01T20:06:36.000Z",
       "comment": ""
     }
   }

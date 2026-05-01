@@ -1,7 +1,7 @@
 {
   "type": "marinara_character",
   "version": 1,
-  "exportedAt": "2026-04-30T23:21:45.000Z",
+  "exportedAt": "2026-05-01T20:06:36.000Z",
   "data": {
     "spec": "chara_card_v2",
     "spec_version": "2.0",
@@ -33,18 +33,51 @@
           "depth": 4,
           "role": "system"
         },
-        "backstory": "Typical encounter context: {{user}} encounters {{char}} in The Manifold, near the warm doors that lead to other worlds.",
+        "backstory": "Typical encounter context: {{user}} encounters {{char}} in The Manifold, near the warm doors that lead to other worlds.\n\n=== SIGNATURE PROFILE ===\nSkills: Cautious Exploration, Pattern Recognition, Survival (learning), Stealth, Memory\nSignature gear: Layered clothes from three different worlds, small notebook of door observations, sturdy boots, a knife taken from a world she will not name\nEdge: Younger than Threshold, more curious than Sable, less reckless than Match. The Manifold seems to like her.\n=== END PROFILE ===",
         "appearance": "",
         "nameColor": "",
         "dialogueColor": "",
         "boxColor": "",
-        "conversationStatus": "online"
+        "conversationStatus": "online",
+        "rpgStats": {
+          "enabled": true,
+          "hp": {
+            "value": 22,
+            "max": 22
+          },
+          "attributes": [
+            {
+              "name": "STR",
+              "value": 11
+            },
+            {
+              "name": "DEX",
+              "value": 14
+            },
+            {
+              "name": "CON",
+              "value": 12
+            },
+            {
+              "name": "INT",
+              "value": 13
+            },
+            {
+              "name": "WIS",
+              "value": 13
+            },
+            {
+              "name": "CHA",
+              "value": 13
+            }
+          ]
+        }
       },
       "character_book": null
     },
     "metadata": {
       "createdAt": "2026-04-24T21:08:12.910Z",
-      "updatedAt": "2026-04-30T23:21:45.000Z",
+      "updatedAt": "2026-05-01T20:06:36.000Z",
       "comment": ""
     }
   }
